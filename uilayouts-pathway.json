@@ -9,10 +9,10 @@
         "description": "Katacoda Scenario Example"
       },
       {
-        "course_id": "Visualise Environment Tab",
-        "title": "Learn how to add the Visualise Tab",
+        "title": "Visualise Environment Tab",
+        "description": "Learn how to add the Visualise Tab",
         "pathway_id": "scenario-examples",
-        "description": "visualise-docker"
+        "course_id": "visualise-docker"
       }
     ]
 }
