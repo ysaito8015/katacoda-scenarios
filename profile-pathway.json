@@ -16,6 +16,11 @@
         "title": "Jupyter Notebook",
         "description": "sample scenario using Docker image",
         "id": "jupyter-notebook"
+      },
+      {
+        "title": "Visualise Environment Tab",
+        "description": "Learn how to add the Visualise Tab",
+        "id": "visualise-docker"
       }
     ]
 }

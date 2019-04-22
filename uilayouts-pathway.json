@@ -7,6 +7,12 @@
         "course_id": "uilayout-editor-terminal",
         "title": "Scenario with Editor Terminal UI",
         "description": "Katacoda Scenario Example"
+      },
+      {
+        "course_id": "Visualise Environment Tab",
+        "title": "Learn how to add the Visualise Tab",
+        "pathway_id": "scenario-examples",
+        "description": "visualise-docker"
       }
     ]
 }
