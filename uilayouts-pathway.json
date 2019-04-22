@@ -1,0 +1,13 @@
+
+{
+    "title": "Katacoda UI Layouts Example",
+    "description": "Example of different Katacoda UI Layouts. Also, an example of creating a Katacoda Course!",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "uilayout-editor-terminal",
+        "title": "Scenario with Editor Terminal UI",
+        "description": "Katacoda Scenario Example"
+      }
+    ]
+}
