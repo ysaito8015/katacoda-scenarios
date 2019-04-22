@@ -1,0 +1,21 @@
+{
+    "courses": [
+      {
+        "title": "Katacoda UI Layouts Example",
+        "description": "Example of different Katacoda UI Layouts. Also, an example of creating a Katacoda Course!",
+        "id": "uilayouts"
+      }
+    ],
+    "scenarios": [
+      {
+        "title": "Hello World Scenario",
+        "description": "My First Scenario",
+        "id": "hello-world"
+      },
+      {
+        "title": "Jupyter Notebook",
+        "description": "sample scenario using Docker image",
+        "id": "jupyter-notebook"
+      }
+    ]
+}
