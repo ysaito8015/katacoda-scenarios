@@ -21,6 +21,11 @@
         "title": "Visualise Environment Tab",
         "description": "Learn how to add the Visualise Tab",
         "id": "visualise-docker"
+      },
+      {
+        "title": "Jenkins Scenarios",
+        "description": "Example of Jenkins scenarios",
+        "id": "jenkins-scenarios"
       }
     ]
 }
