@@ -21,6 +21,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+      "app.js", "index.js"
+      ],
   "environment": {
     "showdashboard": true,
     "dashboards": [{"name": "LiveView", "port": 4000}],
