@@ -24,7 +24,9 @@
   "environment": {
     "showdashboard": true,
     "dashboards": [{"name": "LiveView", "port": 4000}],
-    "uilayout": "editor-terminal-split"
+    "uilayout": "editor-terminal",
+    "uisettings": "javascript",
+    "uieditorpath": "/home/scrapbook/tutorial/example"
   },
   "backend": {
     "imageid": "ubuntu1904"
