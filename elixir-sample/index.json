@@ -15,13 +15,16 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code":"background.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "LiveView", "port": 4000}],
     "uilayout": "editor-terminal-split"
   },
   "backend": {
