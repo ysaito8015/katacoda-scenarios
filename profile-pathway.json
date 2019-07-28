@@ -28,7 +28,7 @@
         "id": "jenkins-scenarios"
       },
       {
-        "title": "elixir-smple Scenarios",
+        "title": "elixir-sample Scenarios",
         "description": "Example of Elixir scenarios",
         "id": "elixir-sample"
       },
