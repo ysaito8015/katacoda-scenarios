@@ -15,15 +15,13 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
-  "files": [
-      "app.js", "index.js"
-      ],
   "environment": {
     "showdashboard": true,
     "dashboards": [{"name": "LiveView", "port": 4000}],
