@@ -27,7 +27,7 @@
     "dashboards": [{"name": "LiveView", "port": 4000}],
     "uilayout": "editor-terminal",
     "uisettings": "javascript",
-    "uieditorpath": "/home/scrapbook/tutorial/example"
+    "uieditorpath": "/elixir/live_dendron"
   },
   "backend": {
     "imageid": "ubuntu1904"
