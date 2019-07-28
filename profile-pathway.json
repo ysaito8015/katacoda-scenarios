@@ -26,6 +26,17 @@
         "title": "Jenkins Scenarios",
         "description": "Example of Jenkins scenarios",
         "id": "jenkins-scenarios"
+      },
+      {
+        "title": "elixir-smple Scenarios",
+        "description": "Example of Elixir scenarios",
+        "id": "elixir-sample"
+      },
+      {
+        "title": "Demo Scenarios",
+        "description": "Example of Demo Scenarios",
+        "id": "demo-scenarios"
       }
     ]
 }
+
