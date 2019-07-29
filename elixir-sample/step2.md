@@ -17,4 +17,4 @@
 
 起動
 
-`docker-compose up`{{execeute}}
+`docker-compose up`{{execute}}
