@@ -24,7 +24,12 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "LiveView", "port": 4000}],
+    "dashboards": [
+      {
+        "name": "LiveDendron",
+        "port": 4000
+      }
+    ],
     "uilayout": "editor-terminal",
     "uisettings": "javascript",
     "uieditorpath": "/elixir/live_dendron"
