@@ -11,6 +11,6 @@
 
 `./install.sh`{{execute}}
 
-パーミッションエラーが起きた場合は、 `instal.sh` の１０行目を以下に書き換えます
+パーミッションエラーが起きた場合は、 `install.sh` の１０行目を以下に書き換えます
 
 `docker-compose run -u root --rm app /bin/sh -c "$command1; $command2; $command3; $command4"`{{copy}}
