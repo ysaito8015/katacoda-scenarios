@@ -23,14 +23,22 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "showdashboard": true,
+    "dashboards": [
+      "name": "ModestGreeter",
+      "port": 4000
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "elixir",
+    "uieditorpath": "/elixir/modest_greeter"
   },
   "backend": {
     "imageid": "ubuntu1904"

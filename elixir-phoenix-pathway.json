@@ -1,0 +1,12 @@
+{
+    "title": "elixir/phoenix 初級シリーズをもとにしたハンズオンサンプル",
+    "description": "表題の書籍を参考にした elixir/phoenix ハンズオン資料",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "elixir-phoenix-first-01",
+        "title": "各種ソフトウェアのインストール",
+        "description": "環境構築"
+      }
+    ]
+}

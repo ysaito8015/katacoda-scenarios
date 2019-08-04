@@ -4,6 +4,11 @@
         "title": "Katacoda UI Layouts Example",
         "description": "Example of different Katacoda UI Layouts. Also, an example of creating a Katacoda Course!",
         "id": "uilayouts"
+      },
+      {
+        "title": "elixir/phoenix 初級１に基づいたハンズオン",
+        "description": "表題書籍に基づいたハンズオン資料",
+        "id": "elixir-phoenix"
       }
     ],
     "scenarios": [
