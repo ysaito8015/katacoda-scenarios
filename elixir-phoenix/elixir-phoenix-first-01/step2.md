@@ -4,7 +4,7 @@
 
 `cd /tmp`{{execute}}
 
-`curl -O https://raw.githubusercontent.com/kerl/master/kerl`{{execute}}
+`curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl`{{execute}}
 
 `chmod a+x ./kerl`{{execute}}
 
