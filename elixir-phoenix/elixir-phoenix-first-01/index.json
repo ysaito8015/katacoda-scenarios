@@ -33,8 +33,10 @@
   "environment": {
     "showdashboard": true,
     "dashboards": [
-      "name": "ModestGreeter",
-      "port": 4000
+      {
+        "name": "ModestGreeter",
+        "port": 4000
+      }
     ],
     "uilayout": "editor-terminal",
     "uisettings": "elixir",
