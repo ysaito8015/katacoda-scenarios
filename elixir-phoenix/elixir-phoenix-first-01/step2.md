@@ -18,7 +18,11 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 19.3 では, openssl の場所が見つけられないようなので、指定します
 
-`echo 'KERL_CONFIGURE_OPTIONS="--enable-dynamic-ssl-lib --with-ssl=/usr/lib/x86_64-linux-gnu/openssl-1.0.0"' >> ~/.kerlrc`{{execute}}
+* 参考
+  * [Mac で erlenv を使う際 Erlang/OTP が OpenSSL 付きでビルドできない問題](https://qiita.com/noto/items/21098c240264319e8d63)
+  * [Erlang/OTP ソースコードインストールノススメ](https://gist.github.com/voluntas/303d0ca6cfe3869497a8da37f143f946)
+
+`echo 'KERL_CONFIGURE_OPTIONS="--enable-dynamic-ssl-lib --with-ssl=/usr/include/openssl"' >> ~/.kerlrc`{{execute}}
 
 バージョンを指定してインストールします
 
