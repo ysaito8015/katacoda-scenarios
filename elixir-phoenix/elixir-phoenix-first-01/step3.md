@@ -12,7 +12,7 @@
 
 `source $HOME/.kiex/scripts/kiex`{{execute}}
 
-`echo '$HOME/.kiex/scripts/kiex' >> ~/.bashrc`{{execute}}
+`echo 'test -s "$HOME/.kiex/scripts/kiex" & source "$HOME/.kiex/scripts/kiex"' >> ~/.bashrc`{{execute}}
 
 ### Elixir のインストール
 
