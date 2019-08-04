@@ -45,6 +45,8 @@ Erlang のインストールに必要なパッケージをインストールし�
 
 `apt install -y build-essential libncurses5-dev openssl libssl-dev`{{execute}}
 
+`apt install -y autoconf automake`{{execute}}
+
 `apt install -y curl git-core`{{execute}}
 
 ファイルイベント監視ツールをインストールしてください

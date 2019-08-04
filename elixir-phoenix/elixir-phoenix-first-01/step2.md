@@ -14,7 +14,7 @@
 
 Erlang/OTP のインストール可能なバージョン一覧を表示します
 
-`kerl list release`{{execute}}
+`kerl list releases`{{execute}}
 
 バージョンを指定してインストールします
 
