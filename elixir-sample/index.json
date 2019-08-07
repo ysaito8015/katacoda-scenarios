@@ -31,7 +31,7 @@
       }
     ],
     "uilayout": "editor-terminal",
-    "uisettings": "javascript",
+    "uisettings": "elixir",
     "uieditorpath": "/elixir/live_dendron"
   },
   "backend": {
