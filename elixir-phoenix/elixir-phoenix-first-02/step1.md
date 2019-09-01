@@ -1,57 +1,13 @@
 ## 環境
 
-`ubuntu19.04` 
+このコースが始まると、右のターミナルで、環境構築が始まります
 
+## IEx の使い方
 
-## 構築
+IEx を起動します
 
-### アップデート
-apt によるアップデートを行います
+`iex`{{execute}}
 
-`apt update`{{execute}}
+![](https://i.gyazo.com/2b9e70577434285a10b5763b806f6b5c.png)
 
-`apt upgrade -y`{{execute}}
-
-### Node.js インストール
-
-#### nvm のインストール
-
-`touch ~/.bashrc`{{execute}}
-
-`cd /tmp`{{execute}}
-
-`NVMURL=https://rawgit.com/creationix/nvm/v0.33.6/install.sh`{{execute}}
-
-`wget --no-check-certificate $NVMURL`{{execute}}
-
-`bash ./install.sh`{{execute}}
-
-`rm -f ./install.sh`{{execute}}
-
-`source ~/.bashrc`{{execute}}
-
-nvm のバージョンを確認します
-
-`nvm --version`{{execute}}
-
-Node.js をインストールします
-
-`nvm install 8.9`{{execute}}
-
-Node.js のバージョンを確認します
-
-`node --version`{{execute}}
-
-Erlang のインストールに必要なパッケージをインストールします
-
-`apt install -y build-essential libncurses5-dev openssl libssl-dev`{{execute}}
-
-`apt install -y curl git-core`{{execute}}
-
-`apt install -y autoconf automake`{{execute}}
-
-ファイルイベント監視ツールをインストールしてください
-
-`apt install -y inotify-tools`{{execute}}
-
-
+`1 + 1`{{execute}}

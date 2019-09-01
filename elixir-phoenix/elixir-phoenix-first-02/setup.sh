@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /elixir; cd /elixir/
+mkdir -p /elixir-primer/v01/ch03; cd $_ # $_ 直前に打ったコマンドの最後の引数が参照できる
 
 cat << 'EOS' > ./Dockerfile
 FROM elixir:1.3.4
@@ -15,9 +15,8 @@ RUN touch ~/.bashrc && cd /tmp && wget --no-check-certificate $NVMURL && bash ./
 
 RUN mix local.hex --force && mix local.rebar && mix archive.install $TEMP/phoenix_new-1.2.5.ez --force
 
-WORKDIR /app
 EOS
 
 docker build -t modest_greeter:1.2.5 .
 
-docker run -it modest_greeter:1.2.5 /bin/bash
+docker run -it -v /elixir-primer/v01/ch03:/root/elixir-primer/v01/ch03 modest_greeter:1.2.5 /bin/bash
