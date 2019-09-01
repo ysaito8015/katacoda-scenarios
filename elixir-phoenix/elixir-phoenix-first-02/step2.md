@@ -67,7 +67,7 @@
 ファイル名: `string1.exs`
 `touch ./string1.exs`{{execute}}
 
-<pre class="file" data-filename="string2.exs" data-target="replace">
+<pre class="file" data-filename="string1.exs" data-target="replace">
 a = "AAA"
 b = "BBB"
 IO.puts a <> b # 文字列連結記号 <>
@@ -80,7 +80,7 @@ IO.puts a <> b # 文字列連結記号 <>
 ファイル名: `string2.exs`
 `touch ./string2.exs`{{execute}}
 
-<pre class="file" data-filename="string1.exs" data-target="replace">
+<pre class="file" data-filename="string2.exs" data-target="replace">
 name = "world"
 IO.puts "Hello, #{name}!"
 </pre>

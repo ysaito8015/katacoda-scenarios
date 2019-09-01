@@ -30,9 +30,12 @@ IEx を起動します
 
 ![](https://i.gyazo.com/92a1d5775f8976227f3d33e3e70e8021.png)
 
-下記の `copy to editor` ボタンは、ファイル名を基準にしてコピーします
+下記の `copy to editor` ボタンは, ファイル名を基準にして, katacoda エディタで同じ名前のファイルが開かれていればその内容をコピーします
 
 ファイル名: `variable.exs`
+
+上記の方法か, `touch` でファイルを作成します
+
 `touch ./variable.exs`{{execute}}
 
 <pre class="file" data-filename="variable.exs" data-target="replace">
@@ -53,3 +56,5 @@ n = 1
 n = n + 1
 IO.puts n # 行末のコメント
 </pre>
+
+`elixir variable.exs`{{execute}}
