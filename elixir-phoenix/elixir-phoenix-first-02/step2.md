@@ -1,62 +1,66 @@
 ## 基本データ型
 
+`iex`{{execute}}
+
 ## 整数
 
-`elixir -e 255 #integer`{{execute}}
+`255 #integer`{{execute}}
 
-`elixir -e 0xff #hexdecimal`{{execute}}
+`0xff #hexdecimal`{{execute}}
 
-`elixir -e 0b11111111 #binary`{{execute}}
+`0b11111111 #binary`{{execute}}
 
-`elixir -e 0o377 #binary`{{execute}}
+`0o377 #binary`{{execute}}
 
-`elixir -e 1_000_000 #integer`{{execute}}
+`1_000_000 #integer`{{execute}}
 
 ## 比較演算子
 
-`elixir -e  1 == 1`{{execute}}
+`1 == 1`{{execute}}
 
-`elixir -e  1 == 2`{{execute}}
+`1 == 2`{{execute}}
 
-`elixir -e  1 != 1`{{execute}}
+`1 != 1`{{execute}}
 
-`elixir -e  1 != 2`{{execute}}
+`1 != 2`{{execute}}
 
 ## 四則演算
 
-`elixir -e 5 + 2 #=> 7`{{execute}}
+`5 + 2 #=> 7`{{execute}}
 
-`elixir -e 5 - 2 #=> 3`{{execute}}
+`5 - 2 #=> 3`{{execute}}
 
-`elixir -e 5 * 2 #=> 10`{{execute}}
+`5 * 2 #=> 10`{{execute}}
 
-`elixir -e 5 / 2 #=> 2.5 浮動小数点(float)`{{execute}}
+`5 / 2 #=> 2.5 浮動小数点(float)`{{execute}}
 
-`elixir -e div(5, 2) #=> 2`{{execute}}
+`div(5, 2) #=> 2`{{execute}}
 
 ## 剰余演算
 
-`elixir -e rem(7, 4) #=> 3`{{execute}}
+`rem(7, 4) #=> 3`{{execute}}
 
-`elixir -e rem(-7, 4) #=> -3`{{execute}}
+`rem(-7, 4) #=> -3`{{execute}}
 
 ## 文字列
 
 文字列は""ダブルクォートで囲みます
 
-`elixir -e "ABC"`{{execute}}
+`"ABC"`{{execute}}
 
-`elixir -e "あいうえお"`{{execute}}
+`"あいうえお"`{{execute}}
 
 '' シングルクォートは文字リスト(charlist)として扱われる
 
-`elixir -e 'abc'`{{execute}}
+`'abc'`{{execute}}
 
 ### 比較演算
 
-`elixir -e "ABC" == "ABC"`{{execute}}
+`"ABC" == "ABC"`{{execute}}
 
-`elixir -e "ABC" != "abc"`{{execute}}
+`"ABC" != "abc"`{{execute}}
+
+!!`CTRL C` を二回押し, iex を終了してください
 
 ### 文字列連結
 
@@ -85,9 +89,9 @@ IO.puts "Hello, #{name}!"
 
 ### 文字列を表すシジル
 
-`elixir -e ~s(AAA)`{{execute}}
+`~s(AAA)`
 
-`elixir -e ~s(BBB)`{{execute}}
+`~s(BBB)`
 
 ### シジルと式展開
 
