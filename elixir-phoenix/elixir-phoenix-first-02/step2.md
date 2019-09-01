@@ -110,7 +110,6 @@ IO.puts ~S(Hello, #{name}!) #=> Hello, #{name}!
 `touch ./string4.exs`{{execute}}
 
 <pre class="file" data-filename="string4.exs" data-target="replace">
-name = "world"
 IO.puts ~s(A\nB\tC) #=> A
                     #   B    C
 IO.puts ~S(D\nE\tF) #=> D\nE\tF
