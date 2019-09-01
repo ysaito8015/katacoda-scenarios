@@ -5,8 +5,13 @@
     "courses": [
       {
         "course_id": "elixir-phoenix-first-01",
-        "title": "各種ソフトウェアのインストール",
+        "title": "第二章 各種ソフトウェアのインストール",
         "description": "環境構築"
+      },
+      {
+        "course_id": "elixir-phoenix-first-02",
+        "title": "第三章 Elixirの初歩",
+        "description": "プログラム実行方法"
       }
     ]
 }

@@ -16,25 +16,27 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 `kerl list releases`{{execute}}
 
-19.3 では, openssl の場所が見つけられないようなので、指定します
-
-* 参考
-  * [Mac で erlenv を使う際 Erlang/OTP が OpenSSL 付きでビルドできない問題](https://qiita.com/noto/items/21098c240264319e8d63)
-  * [Erlang/OTP ソースコードインストールノススメ](https://gist.github.com/voluntas/303d0ca6cfe3869497a8da37f143f946)
-
-`echo 'KERL_CONFIGURE_OPTIONS="--enable-dynamic-ssl-lib --with-ssl=/usr/include/openssl"' >> ~/.kerlrc`{{execute}}
+バージョン 19.3 では, elixir のインストール時に, `uncaught error in rebar_core` が起こるので、書籍とは別のバージョンを指定しています
 
 バージョンを指定してインストールします
 
-`kerl build 19.3 19.3`{{execute}}
+`kerl build 20.3 20.3`{{execute}}
 
-`kerl install 19.3 ~/erlang/19.3`{{execute}}
+書式 `kerl build [Erlang/OTP バージョン] [ラベル]`
+
+`kerl install 20.3 ~/erlang/20.3`{{execute}}
+
+書式 `kerl install [Erlang/OTP バージョン] [ラベル]`
+
+次のような表示が出れば Erlang/OTP のビルドに成功しています
+
+![](https://i.gyazo.com/67e9de0209e26b09e0cedc0710873fdc.png)
 
 ### Erlang/OTP の有効化
 
 インストールしたバージョンを指定してアクティベート
 
-`source ~/erlang/19.3/activate`{{execute}}
+`source ~/erlang/20.3/activate`{{execute}}
 
 * デアクティベートの方法
 
@@ -42,4 +44,4 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 環境変数 `PATH` に追加します
 
-`echo 'export PATH="$HOME/erlang/19.3/bin:$PATH"' >> ~/.bashrc`{{execute}}
+`echo 'export PATH="$HOME/erlang/21.3/bin:$PATH"' >> ~/.bashrc`{{execute}}
