@@ -33,6 +33,8 @@ IEx を起動します
 下記の `copy to editor` ボタンは、ファイル名を基準にしてコピーします
 
 ファイル名: `variable.exs`
+`touch ./variable.exs`{{execute}}
+
 <pre class="file" data-filename="variable.exs" data-target="replace">
 n = 1
 n = n + 1
@@ -44,6 +46,7 @@ IO.puts n
 ## コメント
 
 ファイル名: `variable.exs`
+
 <pre class="file" data-filename="variable.exs" data-target="replace">
 # この行全体がコメント
 n = 1
