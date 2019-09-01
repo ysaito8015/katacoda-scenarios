@@ -11,8 +11,8 @@ ENV TEMP =https://github.com/phoenixframework/archives/raw/master
 
 RUN cd /tmp && wget --no-check-certificate $NVMURL && bash ./install.sh && rm -f ./install.sh
 
-ENV NVM_DIR $HOME/.nvm
-RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+ENV NVM_DIR /root/.nvm
+RUN $NVM_DIR/nvm.sh && $NVM_DIR/bash_completion && $NVM_DIR/bash_completion
 
 RUN nvm install 8.9
 
