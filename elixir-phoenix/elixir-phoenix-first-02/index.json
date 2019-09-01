@@ -32,7 +32,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "elixir",
-    "uieditorpath": "/elixir-primer/v01/ch03"
+    "uieditorpath": "/elixir-primer/v01/"
   },
   "backend": {
     "imageid": "ubuntu1904"

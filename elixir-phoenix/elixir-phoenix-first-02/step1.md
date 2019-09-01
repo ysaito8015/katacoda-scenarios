@@ -4,6 +4,10 @@
 
 docker イメージが立ち上がりますので、その後次へ進んでください
 
+作業ディレクトリに移動します
+
+`cd /root/elixir-primer/v01/ch03`{{execute}}
+
 ## IEx の使い方
 
 IEx を起動します
@@ -28,21 +32,21 @@ IEx を起動します
 
 下記の `copy to editor` ボタンは、ファイル名を基準にしてコピーします
 
-`variables.exs`
+ファイル名: `variable.exs`
 <pre class="file" data-filename="variable.exs" data-target="replace">
 n = 1
 n = n + 1
-IO.puts. n
+IO.puts n
 </pre>
 
 `elixir variable.exs`{{execute}}
 
 ## コメント
 
-`variables.exs`
+ファイル名: `variable.exs`
 <pre class="file" data-filename="variable.exs" data-target="replace">
 # この行全体がコメント
 n = 1
 n = n + 1
-IO.puts. n # 行末のコメント
+IO.puts n # 行末のコメント
 </pre>
