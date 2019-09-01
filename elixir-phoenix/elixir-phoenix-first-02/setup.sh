@@ -2,7 +2,7 @@
 
 mkdir -p /elixir; cd /elixir/
 
-cat - << EOS > ./Dockerfile
+cat << 'EOS' > ./Dockerfile
 FROM elixir:1.3.4
 
 ENV NVMURL https://rawgit.com/creationix/nvm/v0.33.6/install.sh
