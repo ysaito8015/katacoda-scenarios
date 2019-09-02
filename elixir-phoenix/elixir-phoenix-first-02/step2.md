@@ -148,9 +148,11 @@ IO.puts ~S(D\nE\tF) #=> D\nE\tF
 
 `true, false, nil` は、それぞれのアトムへの別名として定義されています
 
-`elixir -e "i(true)"`{{execute}}
+`iex`{{execute}}
 
-`elixir -e "i(false)"`{{execute}}
+`i(true)`{{execute}}
 
-`elixir -e "i(nil)"`{{execute}}
+`i(false)`{{execute}}
+
+`i(nil)`{{execute}}
 
