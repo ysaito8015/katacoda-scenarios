@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /elixir-primer/v01/ch03; cd $_ # $_ 直前に打ったコマンドの最後の引数が参照できる
+mkdir -p /root/elixir-primer/v01/ch03; mkdir -p /root/projects; cd /root
 
 cat << 'EOS' > ./Dockerfile
 FROM elixir:1.3.4
@@ -19,4 +19,4 @@ EOS
 
 docker build -t modest_greeter:1.2.5 .
 
-docker run -it -v /elixir-primer/v01/ch03:/root/elixir-primer/v01/ch03 modest_greeter:1.2.5 /bin/bash
+docker run -it -v /root:/root modest_greeter:1.2.5 /bin/bash
