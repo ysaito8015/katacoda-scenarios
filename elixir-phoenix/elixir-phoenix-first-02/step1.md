@@ -36,7 +36,7 @@ IEx を起動します
 
 `touch ./variable.exs`{{execute}}
 
-<span style="color: red; "下記の `copy to editor` ボタンは, ファイル名を基準にしています. katacoda エディタで同じ名前のファイルが開かれていればその内容をエディタ内へコピーします</span>
+下記の `copy to editor` ボタンは, ファイル名を基準にしています. katacoda エディタで同じ名前のファイルが開かれていればその内容をエディタ内へコピーします
 
 <pre class="file" data-filename="variable.exs" data-target="replace">
 n = 1
