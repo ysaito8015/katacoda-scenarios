@@ -8,6 +8,10 @@
 
 ![](https://i.gyazo.com/8b69deaa2b4657a8a4f34d45191c329d.png)
 
+作業ディレクトリを移動します
+
+`cd ./modest_greeter`{{execute}}
+
 ### gettext をダウングレードする
 
 gettext をダウングレードする必要があります
