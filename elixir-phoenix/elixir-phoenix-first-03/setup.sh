@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /root/oiax/elixir-primer/v01/ch03; cd /root/oiax
+mkdir -p /root/oiax/projects; cd /root/oiax
 
 cat << 'EOS' > ./Dockerfile
 FROM elixir:1.3.4

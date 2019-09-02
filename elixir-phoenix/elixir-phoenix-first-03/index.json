@@ -1,5 +1,5 @@
 {
-  "title": "elixir-phoenix-first-02",
+  "title": "elixir-phoenix-first-03",
   "description": "",
   "difficulty": "Beginner",
   "time": "30minites",
@@ -12,6 +12,10 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -32,7 +36,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "elixir",
-    "uieditorpath": "/root/oiax/elixir-primer/v01/ch03"
+    "uieditorpath": "/root/oiax/projects/modest_greeter"
   },
   "backend": {
     "imageid": "ubuntu1904"

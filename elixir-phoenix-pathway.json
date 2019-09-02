@@ -12,6 +12,11 @@
         "course_id": "elixir-phoenix-first-02",
         "title": "第三章 Elixirの初歩, 第四章 基本データ型",
         "description": "プログラム実行方法"
+      },
+      {
+        "course_id": "elixir-phoenix-first-03",
+        "title": "第五章 Hello, world!",
+        "description": "phoenix.server の稼働方法"
       }
     ]
 }
