@@ -30,7 +30,7 @@ katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の�
 
 ![](https://i.gyazo.com/a44ea812e3dc622e26f39f5a6e4aa27c.png)
 
-`sed -e 's/~> 0.11/~> 0.14.1/g' ~/oiax/projects/modest_greeter/mix.exs > ~/oiax/projects/modest_greeter/mix.exs`{{execute}}
+`sed -i -e 's/:gettext, "~> 0.11"/:gettext, "~> 0.14.1"/g' ~/oiax/projects/modest_greeter/mix.exs`{{execute}}
 
 一旦, `clean` します
 
