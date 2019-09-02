@@ -36,7 +36,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "elixir",
-    "uieditorpath": "/root"
+    "uieditorpath": "/root/oiax"
   },
   "backend": {
     "imageid": "ubuntu1904"

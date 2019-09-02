@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /root/elixir-primer/v01/ch03; mkdir -p /root/projects; cd /root
+mkdir -p /root/oiax/elixir-primer/v01/ch03; mkdir -p /root/oiax/projects; cd /root/oiax
 
 cat << 'EOS' > ./Dockerfile
 FROM elixir:1.3.4
@@ -19,4 +19,4 @@ EOS
 
 docker build -t modest_greeter:1.2.5 .
 
-docker run -it -v /root:/root modest_greeter:1.2.5 /bin/bash
+docker run -it -v /root/oiax:/root/oiax modest_greeter:1.2.5 /bin/bash

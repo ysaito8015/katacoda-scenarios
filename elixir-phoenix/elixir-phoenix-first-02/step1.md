@@ -6,7 +6,7 @@ docker イメージが立ち上がりますので、その後次へ進んでく�
 
 作業ディレクトリに移動します
 
-`cd /root/elixir-primer/v01/ch03`{{execute}}
+`cd /root/oiax/elixir-primer/v01/ch03`{{execute}}
 
 ## IEx の使い方
 
