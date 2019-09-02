@@ -24,13 +24,17 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 書式 `kerl build [Erlang/OTP バージョン] [ラベル]`
 
+次のような表示が出れば Erlang/OTP のビルドに成功しています
+
+![](https://i.gyazo.com/b1d482e594b20d063e050babfbca073b.png)
+
 `kerl install 20.3 ~/erlang/20.3`{{execute}}
 
 書式 `kerl install [Erlang/OTP バージョン] [ラベル]`
 
-次のような表示が出れば Erlang/OTP のビルドに成功しています
+次のような表示が出れば Erlang/OTP のインストールに成功しています
 
-![](https://i.gyazo.com/67e9de0209e26b09e0cedc0710873fdc.png)
+![](https://i.gyazo.com/eb82b091c90c53119e458b442022e7fd.png)
 
 ### Erlang/OTP の有効化
 
@@ -40,7 +44,7 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 * デアクティベートの方法
 
-`kerl_deactivate'
+`kerl_deactivate`
 
 環境変数 `PATH` に追加します
 
