@@ -17,6 +17,7 @@ katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の�
 ![](https://i.gyazo.com/2c568e9bfa5eae19213883ba9db5ac03.png)
 
 ファイル名: `~/oiax/projects/modest_greeter/mix.exs`
+
 修正前
 
 ![](https://i.gyazo.com/3b5497c84ff8c2125b4ab11577f84ee7.png)
@@ -25,7 +26,7 @@ katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の�
 
 ![](https://i.gyazo.com/a44ea812e3dc622e26f39f5a6e4aa27c.png)
 
-`sed -e 's/~> 0.11/~> 0.14.1/g' ./mix.exs > ./mix.exs`{{execute}}
+`sed -e 's/~> 0.11/~> 0.14.1/g' ~/oiax/projects/modest_greeter/mix.exs > ~/oiax/projects/modest_greeter/mix.exs`{{execute}}
 
 一旦, `clean` します
 
