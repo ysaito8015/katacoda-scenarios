@@ -156,3 +156,4 @@ IO.puts ~S(D\nE\tF) #=> D\nE\tF
 
 `i(nil)`{{execute}}
 
+`CTRL C` を二回押し, `iex` を終了してください
