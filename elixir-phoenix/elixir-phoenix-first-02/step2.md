@@ -8,7 +8,7 @@
 
 `0xff #hexdecimal`{{execute}}
 
-`0b11111111 #binary`{{execute}}
+`0b1111_1111 #binary`{{execute}}
 
 `0o377 #binary`{{execute}}
 
