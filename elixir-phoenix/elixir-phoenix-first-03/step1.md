@@ -16,7 +16,7 @@
 
 gettext をダウングレードする必要があります
 
-katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の箇所を修正するか `sed` を実行してください
+katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の箇所を修正してください
 
 ![](https://i.gyazo.com/2f5cbfe1276b810e91d9f383221d6ca2.png)
 
@@ -29,8 +29,6 @@ katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の�
 修正後
 
 ![](https://i.gyazo.com/a44ea812e3dc622e26f39f5a6e4aa27c.png)
-
-`sed -i.new -e 's/:gettext, "~> 0.11"/:gettext, "~> 0.14.1"/g' ~/oiax/projects/modest_greeter/mix.exs && rm ./mix.exs && mv ./mix.exs.new ./mix.exs`{{execute}}
 
 一旦, `clean` します
 
