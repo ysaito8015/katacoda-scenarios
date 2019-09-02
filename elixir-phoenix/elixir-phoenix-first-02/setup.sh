@@ -19,4 +19,4 @@ EOS
 
 docker build -t modest_greeter:1.2.5 .
 
-docker run -it -v /root/oiax:/root/oiax modest_greeter:1.2.5 /bin/bash
+docker run -it -v /root/oiax:/root/oiax -p 4000:4000 modest_greeter:1.2.5 /bin/bash
