@@ -65,13 +65,13 @@
 
 変更後
 
-![](https://i.gyazo.com/c0be12ca8456ba15c245b426d2ac1608.png)
+![](https://i.gyazo.com/e400050e57f530e5e6575db8f7694360.png)
 
 さらに, 同ファイルを書き換えます
 
 変更前
 
-![](https://i.gyazo.com/c0be12ca8456ba15c245b426d2ac1608.png)
+![](https://i.gyazo.com/e400050e57f530e5e6575db8f7694360.png)
 
 変更後
 
