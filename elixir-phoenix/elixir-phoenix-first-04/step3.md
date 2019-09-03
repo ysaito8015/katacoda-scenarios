@@ -39,7 +39,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 
 ファイル名: `./web/templates/layout/app.html.eex`
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/hello_controller.ex" data-target="replace">
+<pre class="html" data-filename="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex" data-target="replace">
 <!DOCTYPE html>
 <html lang="en">
   <head>

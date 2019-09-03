@@ -4,6 +4,8 @@
 
 `./get_source.sh`{{execute}}
 
+`cd ./modest_greeter`{{execute}}
+
 ## 第五章の復習
 
 ### 行ったこと
