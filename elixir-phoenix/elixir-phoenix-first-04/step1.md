@@ -1,12 +1,6 @@
 ## 環境構築
 
-第五章を終了した状態を構築します
-
-`cd ~/oiax/projects/`{{execute}}
-
-`wget -qO- https://github.com/ysaito8015/modest_greeter/archive/ch05.tar.gz| tar --transform 's/modest_greeter-ch[0-9][0-9]/modest_greeter/' -zx`{{execute}}
-
-`cd ~/oiax/projects/modest_greeter`{{execute}}
+第五章を終了した状態を構築されています
 
 ## 第五章の復習
 

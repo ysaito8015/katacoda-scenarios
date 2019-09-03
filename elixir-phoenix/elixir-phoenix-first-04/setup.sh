@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p /root/oiax/projects; cd /root/oiax
+mkdir -p /root/oiax/projects; cd /root/oiax/projects
 
 docker pull ysaito8015/modest_greeter:ph1.2.5
 
