@@ -25,15 +25,7 @@
 
 ### HTML 文書の基本構造
 
-`<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-</body>
-</html>`
+i![](https://i.gyazo.com/3f5931bd0b7559690378ffb0ea9c59b2.png)
 
 - `<head>` 要素: 文書に関するメタデータ, タイトルなど
 - `<body>` 要素: 文書の中身
@@ -58,32 +50,3 @@
 static_path @conn, "/JavaScriptファイルへのパス"
 </pre>
 
-## テンプレートに値を渡す
-
-`hello_controller.ex` を書き換えます
-
-
-ファイル名: `./web/template/layout/app.html.eex`
-
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/hello_controller.ex" data-target="replace">
-defmodule ModestGreeter.HelloController do
-  use ModestGreeter.Web, :controller
-
-  def show(conn, _params) do
-    render conn, "show.html", name: "Alice"
-  end
-end
-</pre>
-
-`hello_controller.ex` の `show` アクション向けのテンプレートを書き換えます
-
-ファイル名: `./web/templates/hello/show.html.eex`
-
-` <p>Hello, <%= @name %>!</p>`
-
-
-phoenix server を起動して, URL にアクセスします
-
-`mix phoenix.server`{{execute}}
-
-https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
