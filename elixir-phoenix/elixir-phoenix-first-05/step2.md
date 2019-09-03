@@ -1,52 +1,178 @@
-## HTML とテンプレート
+## HTML 文書の区分とスタイルシート
 
-### タグと要素
+### 主部、ヘッダ、フッタ
 
-![](https://i.gyazo.com/aa87fc59c6e72a3f7ae450c89529e4be.png)
+![](https://i.gyazo.com/3f5931bd0b7559690378ffb0ea9c59b2.png)
 
-- タグの例: `<p></p>`
-  - タグ名: p
-  - 開始タグ: `<p>`
-  - 終了タグ: `</p>`
-  - 要素: `<p>Hello, world!</p>` タグを含んだ全て
-  - コンテンツ: `Hello, world!` タグに挟まれた中身
+- `<main>` 要素: HTML 文書の主部
+- `<header>` 要素: HTML 文書のヘッダ
+- `<footer>` 要素: HTML 文書のフッタ
 
-- 改行タグ
-  - `<br>`
-  - `<br/>`
-  - `<br />`
+ファイル名: `./web/templates/layout/app.html.eex`
 
-- 空白文字
-  - 連続する２つ以上の半角スペース, タブ文字, 改行文字はひとつの空白文字として解釈されます
+変更前:
 
-- 属性指定の例: `<p id='message' class='lead'>Hello, world!</p>`
-  - 書式: `属性名='属性値'`
-  - ブーリアン属性の例: `<p hidden=''>Hello, world!</p>` 指定されているかどうかのみ
+![](https://i.gyazo.com/768c28e2fd727478f6f67588245b417e.png)
 
-### HTML 文書の基本構造
+変更後:
 
-i![](https://i.gyazo.com/3f5931bd0b7559690378ffb0ea9c59b2.png)
+![](https://i.gyazo.com/e9679b9cc1bb50c08885e15fab70002d.png)
 
-- `<head>` 要素: 文書に関するメタデータ, タイトルなど
-- `<body>` 要素: 文書の中身
+## スタイルシート
 
-### テンプレートと「ページのソース」の関係
+SCSS 用のパッケージを導入します
 
-- レイアウトテンプレートに, `show.html.eex` の内容が差し込まれます
+`npm install --save-dev sass-brunch`{{execute}}
 
-ファイル名:
+適用後の `./package.json`
 
-`./web/template/layout/app.html.eex`
+![](https://i.gyazo.com/a002edcc5e694a8c5c2754c204b56bf9.png)
 
-![](https://i.gyazo.com/a9f7c93adc7568d9171f76d90f888594.png)
+`brunch-config.js` の変更
 
-- JavaScript ファイルの読み込み
+ファイル名: `./bunch-config.js`
 
-![](https://i.gyazo.com/5fd8547412f95c22d2814812d8ca879d.png)
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/bunch-config.js" data-target="replace">
+exports.config = {
+  // See http://brunch.io/#documentation for docs.
+  files: {
+    javascripts: {
+      joinTo: "js/app.js"
 
-書式:
+      // To use a separate vendor.js bundle, specify two files path
+      // http://brunch.io/docs/config#-files-
+      // joinTo: {
+      //  "js/app.js": /^(web\/static\/js)/,
+      //  "js/vendor.js": /^(web\/static\/vendor)|(deps)/
+      // }
+      //
+      // To change the order of concatenation of files, explicitly mention here
+      // order: {
+      //   before: [
+      //     "web/static/vendor/js/jquery-2.1.1.js",
+      //     "web/static/vendor/js/bootstrap.min.js"
+      //   ]
+      // }
+    },
+    stylesheets: {
+      joinTo: "css/app.css",
+      order: {
+        after: ["web/static/css/app.css"] // concat app.css last
+      }
+    },
+    templates: {
+      joinTo: "js/app.js"
+    }
+  },
 
-<pre class="file" data-target="">
-static_path @conn, "/JavaScriptファイルへのパス"
+  conventions: {
+    // This option sets where we should place non-css and non-js assets in.
+    // By default, we set this to "/web/static/assets". Files in this directory
+    // will be copied to `paths.public`, which is "priv/static" by default.
+    assets: /^(web\/static\/assets)/
+  },
+
+  // Phoenix paths configuration
+  paths: {
+    // Dependencies and current project directories to watch
+    watched: [
+      "web/static",
+      "test/static"
+    ],
+
+    // Where to compile files to
+    public: "priv/static"
+  },
+
+  // Configure your plugins
+  plugins: {
+    babel: {
+      // Do not use ES6 compiler in vendor code
+      ignore: [/web\/static\/vendor/]
+    }
+  },
+
+  modules: {
+    autoRequire: {
+      "js/app.js": ["web/static/js/app"]
+    }
+  },
+
+  npm: {
+    enabled: true
+  },
+
+  watcher: {
+    usePolling: true
+  }
+};
 </pre>
+
+Phoenix サーバを起動しておきます
+
+`mix phoenix.server`{{execute}}
+
+### 主部にスタイルシートを適用
+
+ファイル名: `./web/static/css/main.scss`
+
+`touch ./web/static/css/main.scss`{{execute}}
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/main.scss" data-target="replace">
+main {
+  text-align: center;
+}
+</pre>
+
+- セレクタ: スタイルが適用される対象 `main`
+- 宣言ブロック: `{}` で囲まれた部分
+- 宣言の書式: `プロパティ: 値;`
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
+
+### フッタにスタイルシートを適用
+
+ファイル名: `./web/static/css/footer.scss`
+
+`touch ./web/static/css/footer.scss`{{execute}}
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/footer.scss" data-target="replace">
+footer {
+  background-color: #eee;
+  color: #777;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+</pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
+
+### ヘッダにスタイルシートを適用
+
+ファイル名: `./web/static/css/header.scss`
+
+`touch ./web/static/css/header.scss`{{execute}}
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/header.scss" data-target="replace">
+header {
+  background-color: #ddd;
+  boder-style: solid;
+  boder-width: 1px;
+  border-color: #ccc;
+
+  h1 {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+  }
+}
+</pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
 

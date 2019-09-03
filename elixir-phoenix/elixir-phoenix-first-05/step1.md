@@ -6,88 +6,88 @@
 
 `cd ./modest_greeter`{{execute}}
 
-## 第五章の復習
+## アクションへ付加情報を加える
 
-### 行ったこと
+- クエリ文字列: URL に `?` に続く文字列 `name=Bob` など
+- `クエリパラメータ=クエリパラメータの値`
 
-1. 経路(route)の設定
-1. アクションの作成
-1. ビューの作成
-1. テンプレートの作成
-1. Phoenix サーバの起動
-1. ブラウザでアクセス
+### params を利用する
 
-## routing
+controller を書き換えます
+
+ファイル名: `./web/controllers/hello_controller.ex`
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/hello_controller.ex" data-target="replace">
+defmodule ModestGreeter.HelloController do
+  use ModestGreeter.Web, :controller
+
+  def show(conn, params) do
+    render conn, "show.html", name: params["name"]
+  end
+end
+</pre>
+
+## URL パスにパラメータを埋め込む
+
+### クエリパラメータがある場合
+
+- `/hello?name=Bob` を `/hello/Bob` に変えたい
+
+router を書き換えます
 
 ファイル名: `./router.ex`
 
-![](https://i.gyazo.com/f7ad65e9eecd63cc6ba8792f725c0efb.png)
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/router.ex" data-target="replace">
+defmodule ModestGreeter.Router do
 
-経路設定書式:
+  scope "/", ModestGreeter do
+    pipe_through :browser
 
-`get "パス文字列", コントローラ名, :アクション名`
-
-- HTTP動詞(HTTP verbs) get, post など
-- コントローラ名, 大文字始まりのアトム
-- アクション名, :始まりのアトム
-
-## コントローラ
-
-### コントローラ名
-
-ファイル名: `./web/controller/hello_controller.ex`
-
-![](https://i.gyazo.com/94364f2f104dc65df321ccc09a61f366.png)
-
-- ファイル全体で一つのモジュールを定義
-- モジュール=関数の入れ物, モジュールを入れることもできる
-
-書式:
-
-<pre class="file" data-target="">
-defmodule アプリケーション名.コントローラ名 do
+    get "/hello/:name", HelloController, :show
+  end
 end
 </pre>
 
-### use マクロ
-
-![](https://i.gyazo.com/ac63402ad7f741b6e2c97b2a79b73c15.png)
-
-マクロを用いることで他のモジュールを利用して現在のモジュールの定義を変更することができます
-
- コード上で`use`を呼び出すと, 実際には提供されたモジュールに定義されている`__using__/1`コールバックを呼び出します
-
-`__using__/1`コールバックが呼び出されたあと, その結果のコードを呼び出し元のモジュールに追加します
-
-`phoenixframework`の, この[ファイル](https://github.com/phoenixframework/phoenix/blob/0b6fe832296ea20cb2d2e987dbffd42e27bd41ed/installer/templates/phx_single/lib/app_name_web.ex#L20)で定義されています
-
-### アクション
-
-- アクション:コントローラモジュールで定義された関数
-
-![](https://i.gyazo.com/f2ccd872cf742188ab6121624e4e26e9.png)
-
-- conn: ブラウザからのリクエストに関する情報を格納した構造体
-- _params: ブラウザから送られてきたパラメータを格納したマップ
-  - _始まりなのは, show 関数内で使われないため
-  - 使われない変数があるとコンパイル時にエラーが起こる
-
 書式:
 
 <pre class="file" data-target="">
-def 関数名(仮引数...) do
+get "URL パターン文字列", コントローラ名, :アクション名
+</pre>
+
+### クエリパラメータがない場合
+
+router を書き換えます
+
+ファイル名: `./router.ex`
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/router.ex" data-target="replace">
+defmodule ModestGreeter.Router do
+
+  scope "/", ModestGreeter do
+    pipe_through :browser
+
+    get "/hello", HelloController, :show
+    get "/hello/:name", HelloController, :show
+  end
 end
 </pre>
 
+### デフォルト値を設定する
 
-### render 関数
+controller を書き換えます
 
-- HTML テンプレートを HTML 文書に変換し, ブラウザに返します
+ファイル名: `./web/controllers/hello_controller.ex`
 
-書式:
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/hello_controller.ex" data-target="replace">
+defmodule ModestGreeter.HelloController do
+  use ModestGreeter.Web, :controller
 
-<pre class="file" data-target="">
-render conn, "テンプレート文字列"
+  def show(conn, params) do
+    render conn, "show.html", name: params["name"] || "world"
+  end
+end
 </pre>
 
-
+- Elixir での真偽値
+  - 偽とみなされる値: `false`, `nil`
+  - しんとみなされる値: それ以外すべて
