@@ -30,7 +30,7 @@
     "host01": [
       {
         "file": "get_source.sh",
-        "target": "/root/oiax/projects",
+        "target": "/usr/local/bin/",
         "chmod": "+x"
       }
     ]
