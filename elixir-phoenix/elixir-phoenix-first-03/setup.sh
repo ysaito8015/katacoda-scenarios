@@ -2,28 +2,6 @@
 
 mkdir -p /root/oiax/projects; cd /root/oiax
 
-cat << 'EOS' > ./Dockerfile
-FROM elixir:1.3.4
+docker pull ysaito8015/modest_greeter:ph1.2.5
 
-SHELL ["/bin/bash", "-c"]
-
-ENV NVMURL https://rawgit.com/creationix/nvm/v0.33.6/install.sh
-
-ENV TEMP https://github.com/phoenixframework/archives/raw/master
-
-RUN touch ~/.bashrc && cd /tmp \
-&& wget --no-check-certificate $NVMURL \
-&& bash ./install.sh \
-&& rm -f ./install.sh \
-&& source ~/.bashrc \
-&& nvm install 8.9 \
-&& apt update \
-&& apt install -y inotify-tools
-
-RUN mix local.hex --force && mix local.rebar && mix archive.install $TEMP/phoenix_new-1.2.5.ez --force
-
-EOS
-
-docker build -t modest_greeter:1.2.5 .
-
-docker run -it -v /root/oiax:/root/oiax -p 4000:4000 modest_greeter:1.2.5 /bin/bash
+docker run -it -v /root/oiax:/root/oiax -p 4000:4000 ysaito8015/modest_greeter:ph1.2.5 /bin/bash
