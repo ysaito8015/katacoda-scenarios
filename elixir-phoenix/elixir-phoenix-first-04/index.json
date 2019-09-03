@@ -24,16 +24,16 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "get_source.sh",
+          "target": "/root/oiax/projects",
+          "chmod": "+x"
+        }
+      ]
     }
-  },
-  "assets": {
-    "host01": [
-      {
-        "file": "get_source.sh",
-        "target": "/usr/local/bin/",
-        "chmod": "+x"
-      }
-    ]
   },
   "environment": {
     "showdashboard": true,
