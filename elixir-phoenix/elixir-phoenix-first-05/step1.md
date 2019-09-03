@@ -39,6 +39,16 @@ router を書き換えます
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/router.ex" data-target="replace">
 defmodule ModestGreeter.Router do
+  use ModestGreeter.Web, :router
+
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+  end
+
 
   scope "/", ModestGreeter do
     pipe_through :browser
@@ -62,6 +72,15 @@ router を書き換えます
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/router.ex" data-target="replace">
 defmodule ModestGreeter.Router do
+  use ModestGreeter.Web, :router
+
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+  end
 
   scope "/", ModestGreeter do
     pipe_through :browser
