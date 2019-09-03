@@ -4,7 +4,7 @@
 
 `wget -qO- https://github.com/ysaito8015/modest_greeter/archive/ch05.tar.gz| tar xvz - -C /root/oiax/projects/modest_greeter`{{execute}}
 
-`cd ~/oiax/projects/`{{execute}}
+`cd ~/oiax/projects/modest_greeter`{{execute}}
 
 ## 第五章の復習
 
