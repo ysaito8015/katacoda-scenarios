@@ -42,7 +42,7 @@
 
 書式:
 
-<pre>
+<pre class="file" data-target="">
 defmodule アプリケーション名.コントローラ名 do
 end
 </pre>
@@ -72,7 +72,7 @@ end
 
 書式:
 
-<pre>
+<pre class="file" data-target="">
 def 関数名(仮引数...) do
 end
 </pre>
@@ -84,7 +84,7 @@ end
 
 書式:
 
-<pre>
+<pre class="file" data-target="">
 render conn, "テンプレート文字列"
 </pre>
 
