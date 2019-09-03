@@ -4,7 +4,7 @@
 `hello_controller.ex` を書き換えます
 
 
-ファイル名: `./web/template/layout/app.html.eex`
+ファイル名: `./web/controllers/hello_controller.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/hello_controller.ex" data-target="replace">
 defmodule ModestGreeter.HelloController do
