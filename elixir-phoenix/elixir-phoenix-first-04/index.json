@@ -30,7 +30,7 @@
     "client": [
       {
         "file": "get_source.sh",
-        "target": "/root/oiax/"
+        "target": "/root/oiax/projects"
       }
     ]
   },
