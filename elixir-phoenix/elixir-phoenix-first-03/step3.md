@@ -44,7 +44,9 @@ end
 ファイル名: `./web/templates/hello/show.html.eex`
 `touch ./web/templates/hello/show.html.eex`{{execute}}
 
-` <p>Hello, world!</p>`
+<pre class="file" data-target="clipboard">
+\<p\>Hello, world!\</p\>
+</pre>
 
 
 ## 表示の確認
