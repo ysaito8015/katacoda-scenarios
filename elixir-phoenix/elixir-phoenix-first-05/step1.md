@@ -8,7 +8,7 @@
 
 ## アクションへ付加情報を加える
 
-- クエリ文字列: URL に `?` に続く文字列 `name=Bob` など
+- クエリ文字列: URL 中の `?` に続く文字列 `name=Bob` など
 - `クエリパラメータ=クエリパラメータの値`
 
 ### params を利用する
@@ -49,7 +49,6 @@ defmodule ModestGreeter.Router do
     plug :put_secure_browser_headers
   end
 
-
   scope "/", ModestGreeter do
     pipe_through :browser
 
@@ -63,6 +62,14 @@ end
 <pre class="file" data-target="">
 get "URL パターン文字列", コントローラ名, :アクション名
 </pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello?name=Bob
+
+クエリパラメータがない場合
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
 
 ### クエリパラメータがない場合
 
@@ -91,6 +98,10 @@ defmodule ModestGreeter.Router do
 end
 </pre>
 
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
+
 ### デフォルト値を設定する
 
 controller を書き換えます
@@ -109,4 +120,8 @@ end
 
 - Elixir での真偽値
   - 偽とみなされる値: `false`, `nil`
-  - しんとみなされる値: それ以外すべて
+  - 真とみなされる値: それ以外すべて
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
