@@ -44,9 +44,7 @@ end
 ファイル名: `./web/templates/hello/show.html.eex`
 `touch ./web/templates/hello/show.html.eex`{{execute}}
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/hello/show.html.eex" data-target="replace">
-<p>Hello, world!</p>
-</pre>
+` <p>Hello, world!</p>`
 
 
 ## 表示の確認
