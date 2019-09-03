@@ -26,6 +26,14 @@
       "text": "finish.md"
     }
   },
+  "assets": {
+    "client": [
+      {
+        "file": "get_source.sh",
+        "target": "/root/oiax/"
+      }
+    ]
+  },
   "environment": {
     "showdashboard": true,
     "dashboards": [
