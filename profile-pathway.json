@@ -18,6 +18,11 @@
         "id": "hello-world"
       },
       {
+        "title": "Upload assets",
+        "description": "test upload assets",
+        "id": "upload-assets"
+      },
+      {
         "title": "Jupyter Notebook",
         "description": "sample scenario using Docker image",
         "id": "jupyter-notebook"
