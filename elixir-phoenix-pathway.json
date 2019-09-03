@@ -17,6 +17,12 @@
         "course_id": "elixir-phoenix-first-03",
         "title": "第五章 Hello, world!",
         "description": "phoenix.server の稼働方法"
+      },
+      {
+        "course_id": "elixir-phoenix-first-04",
+        "title": "第六章 経路設定の初歩, 第七章 コントローラとアクション, 第八章 HTML とテンプレート",
+        "description": "それぞれのつながりと概要説明"
+      }
       }
     ]
 }
