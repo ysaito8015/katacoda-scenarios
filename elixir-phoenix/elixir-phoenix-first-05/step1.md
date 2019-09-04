@@ -27,6 +27,14 @@ defmodule ModestGreeter.HelloController do
 end
 </pre>
 
+Phoenix サーバを立ち上げます
+
+`mix phoenix.server`{{execute}}
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello?name=Bob
+
 ## URL パスにパラメータを埋め込む
 
 ### クエリパラメータがある場合
@@ -65,7 +73,7 @@ get "URL パターン文字列", コントローラ名, :アクション名
 
 ブラウザでアクセスして確認します
 
-https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello?name=Bob
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello/Bob
 
 クエリパラメータがない場合
 
@@ -125,3 +133,5 @@ end
 ブラウザでアクセスして確認します
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
+
+`CTRL C` を二回押し, Phoenix サーバを止めておきます

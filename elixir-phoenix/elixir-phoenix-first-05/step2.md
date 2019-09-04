@@ -12,7 +12,7 @@
 
 変更前:
 
-![](https://i.gyazo.com/768c28e2fd727478f6f67588245b417e.png)
+![](https://i.gyazo.com/5b367952cf66b8ae201d72d24457096f.png)
 
 変更後:
 
@@ -22,17 +22,41 @@
 
 SCSS 用のパッケージを導入します
 
-`npm install --save-dev sass-brunch`{{execute}}
+書籍では, `npm install --save-dev sass-brunch` で導入していますが
 
-適用後の `./package.json`
+いくつかのバージョンでは, sass cpmpiler がうまく動かないため
 
-![](https://i.gyazo.com/a002edcc5e694a8c5c2754c204b56bf9.png)
+`package.json` に直接指定します
+
+ファイル名: `./package.json`
+
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/package.json" data-target="replace">
+{
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "deploy": "brunch build --production",
+    "watch": "brunch watch --stdin"
+  },
+  "dependencies": {
+    "phoenix": "file:deps/phoenix",
+    "phoenix_html": "file:deps/phoenix_html"
+  },
+  "devDependencies": {
+    "babel-brunch": "6.0.6",
+    "brunch": "2.10.7",
+    "clean-css-brunch": "2.10.0",
+    "sass-brunch": "2.7.0",
+    "uglify-js-brunch": "2.1.1"
+  }
+}
+</pre>
 
 `brunch-config.js` の変更
 
-ファイル名: `./bunch-config.js`
+ファイル名: `./brunch-config.js`
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/bunch-config.js" data-target="replace">
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/brunch-config.js" data-target="replace">
 exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
@@ -108,6 +132,10 @@ exports.config = {
 };
 </pre>
 
+編集するファイルを作成しておきます
+
+`touch ./web/static/css/{main,header,footer}.scss`{{execute}}
+
 Phoenix サーバを起動しておきます
 
 `mix phoenix.server`{{execute}}
@@ -115,8 +143,6 @@ Phoenix サーバを起動しておきます
 ### 主部にスタイルシートを適用
 
 ファイル名: `./web/static/css/main.scss`
-
-`touch ./web/static/css/main.scss`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/main.scss" data-target="replace">
 main {
@@ -136,8 +162,6 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 
 ファイル名: `./web/static/css/footer.scss`
 
-`touch ./web/static/css/footer.scss`{{execute}}
-
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/footer.scss" data-target="replace">
 footer {
   background-color: #eee;
@@ -155,8 +179,6 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 ### ヘッダにスタイルシートを適用
 
 ファイル名: `./web/static/css/header.scss`
-
-`touch ./web/static/css/header.scss`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/header.scss" data-target="replace">
 header {
