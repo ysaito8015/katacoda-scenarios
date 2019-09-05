@@ -187,8 +187,9 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 - `p-`: パディング調整の場合
 - `-[0, 1, 2, 3, 4, 5]` 0, 0.25rem, 0.5rem, 1rem, 1.5rem, 3rem に相当します
 - 各辺を個別に指定する場合 `mt-1` のように設定します
+
 |文字|対象|
-|----|----|
+|------|------|
 |t|上辺|
 |r|右辺|
 |b|下辺|
@@ -216,7 +217,9 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 ### 背景色とフォントの調整
 
 - 背景色を設定するクラス
+
 |クラス名|背景色|16進数表示|
+|------|------|------|
 |bg-primary|青|#007bff|
 |bg-secondary|灰色|#868e96|
 |bg-success|緑|#28a745|
