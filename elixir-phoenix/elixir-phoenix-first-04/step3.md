@@ -45,25 +45,25 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 
 ファイル名: `./web/templates/layout/app.html.eex`
 
-<pre class="file" data-target="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex">
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex" data-target="replace">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="author" content=""&gt;
 
-    <title>ModestGreeter (<%= @name %>)</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-  </head>
+    &lt;title&gt;ModestGreeter (&lt;%= @name %&gt;)&lt;/title&gt;
+    &lt;link rel="stylesheet" href="&lt;%= static_path(@conn, "/css/app.css") %&gt;"&gt;
+  &lt;/head&gt;
 
-  <body>
-    <%= render @view_module, @view_template, assigns %>
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-  </body>
-</html>
+  &lt;body&gt;
+    &lt;%= render @view_module, @view_template, assigns %&gt;
+    &lt;script src="&lt;%= static_path(@conn, "/js/app.js") %&gt;"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 <pre>
 
 
