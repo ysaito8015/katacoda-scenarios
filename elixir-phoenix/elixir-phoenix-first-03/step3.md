@@ -45,7 +45,7 @@ end
 `touch ./web/templates/hello/show.html.eex`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/hello/show.html.eex" data-target="replace">
- &lt;p&gt;Hello, &lt;%= @name %&gt;!&lt;/p&gt;
+ &lt;p&gt;Hello, world!&lt;/p&gt;
 </pre>
 
 
