@@ -198,3 +198,5 @@ header {
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
 
+次のステップに進む前に `CTRL C` を二回押し,  Phoenix サーバを停止しておきます
+
