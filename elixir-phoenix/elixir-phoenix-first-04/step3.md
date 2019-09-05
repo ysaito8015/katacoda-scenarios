@@ -22,7 +22,9 @@ end
 
 ファイル名: `./web/templates/hello/show.html.eex`
 
-` <p>Hello, <%= @name %>!</p>`
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/hello/show.html.eex" data-target="replace">
+ &lt;p&gt;Hello, &lt;%= @name %&gt;!&lt;/p&gt;
+</pre>
 
 
 phoenix server を起動して, URL にアクセスします
@@ -43,13 +45,27 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 
 ファイル名: `./web/templates/layout/app.html.eex`
 
-変更前:
+<pre class="file" data-target="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-![](https://i.gyazo.com/19883703f6a2f4544c0d8a48439cd6ef.png)
+    <title>ModestGreeter (<%= @name %>)</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
 
-変更後:
+  <body>
+    <%= render @view_module, @view_template, assigns %>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
+<pre>
 
-![](https://i.gyazo.com/768c28e2fd727478f6f67588245b417e.png)
 
 ブラウザの表示(タイトル部):
 

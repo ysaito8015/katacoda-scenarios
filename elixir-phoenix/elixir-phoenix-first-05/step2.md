@@ -10,13 +10,34 @@
 
 ファイル名: `./web/templates/layout/app.html.eex`
 
-変更前:
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/layout/app.html.eex" data-target="replace">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="author" content=""&gt;
 
-![](https://i.gyazo.com/5b367952cf66b8ae201d72d24457096f.png)
+    &lt;title&gt;ModestGreeter (&lt;%= @name %&gt;)&lt;/title&gt;
+    &lt;link rel="stylesheet" href="&lt;%= static_path(@conn, "/css/app.css") %&gt;"&gt;
+  &lt;/head&gt;
 
-変更後:
-
-![](https://i.gyazo.com/e9679b9cc1bb50c08885e15fab70002d.png)
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;ModestGreeter&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;%= render @view_module, @view_template, assigns %&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &copy; 2016 Oiax Inc.
+    &lt;/footer&gt;
+    &lt;script src="&lt;%= static_path(@conn, "/js/app.js") %&gt;"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
 ## スタイルシート
 

@@ -25,7 +25,18 @@
 
 ### HTML 文書の基本構造
 
-i![](https://i.gyazo.com/3f5931bd0b7559690378ffb0ea9c59b2.png)
+<pre class="file" data-target="">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
 - `<head>` 要素: 文書に関するメタデータ, タイトルなど
 - `<body>` 要素: 文書の中身
