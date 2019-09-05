@@ -64,7 +64,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
     &lt;script src="&lt;%= static_path(@conn, "/js/app.js") %&gt;"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-<pre>
+</pre>
 
 
 ブラウザの表示(タイトル部):
