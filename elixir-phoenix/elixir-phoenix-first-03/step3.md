@@ -3,13 +3,25 @@
 
 ファイル名: `./web/router.ex`
 
-変更前
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/router.ex" data-target="replace">
+defmodule ModestGreeter.Router do
+  use ModestGreeter.Web, :router
 
-![](https://i.gyazo.com/816d965fb239601d50402cef9fda9736.png)
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+    plug :put_secure_browser_headers
+  end
 
-変更後
+  scope "/", ModestGreeter do
+    pipe_through :browser
 
-![](https://i.gyazo.com/e96d1fe0adfae4df29ad07f5b494fd30.png)
+    get "/hello", HelloControler, :show
+  end
+end
+</pre>
 
 ## アクションの作成
 
