@@ -66,6 +66,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hell
 &lt;/html&gt;
 </pre>
 
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello
 
 ブラウザの表示(タイトル部):
 

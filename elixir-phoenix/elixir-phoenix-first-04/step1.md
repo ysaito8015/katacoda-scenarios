@@ -59,7 +59,7 @@ end
 
 `__using__/1`コールバックが呼び出されたあと, その結果のコードを呼び出し元のモジュールに追加します
 
-`phoenixframework`の, この[ファイル](https://github.com/phoenixframework/phoenix/blob/0b6fe832296ea20cb2d2e987dbffd42e27bd41ed/installer/templates/phx_single/lib/app_name_web.ex#L20)で定義されています
+`phoenixframework`の, この[ファイル](https://github.com/phoenixframework/phoenix/blob/0b6fe832296ea20cb2d2e987dbffd42e27bd41ed/installer/templates/phx_single/lib/app_name_web.ex#L1)で定義されています
 
 ### アクション
 
