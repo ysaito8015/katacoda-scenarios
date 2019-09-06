@@ -210,7 +210,7 @@ header {
 
   h1 {
     font-size: 1.25rem;
-    margin: 0.5rem;
+    margin: 0.5em;
   }
 }
 </pre>

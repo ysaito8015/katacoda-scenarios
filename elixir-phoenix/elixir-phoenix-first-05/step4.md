@@ -103,7 +103,7 @@ exports.config = {
     globals: {
       $: "jquery",
       jQuery: "jquery",
-      Poper: "popper.js",
+      Popper: "popper.js",
       Tether: "tether"
     }
   },
