@@ -1,118 +1,45 @@
 ## Font Awesome
 
 - HTML タグを書くだけで, アイコンが利用できるもの
+- 書籍と違う導入方法です
 
 ## Font Awesome の導入
 
-`cd ~/oiax/projects/modest_greeter`{{execute}}
+`./web/templates/layout/app.html.eex` を書き換えます
 
-`npm install --save font-awesome`{{execute}}
+ファイル名: `./web/templates/layout/app.html.eex`
 
-`app.scss` を書き換えます
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex" data-target="replace">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-ファイル名: `./web/static/css/app.scss`
+    <title>ModestGreeter (<%= @name %>)</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
-`touch ./web/static/css/app.scss`{{execute}}
+  <body>
+    <header>
+      <h1>ModestGreeter</h1>
+    </header>
+    <main>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+    <footer>
+      © 2016 Oiax Inc.
+    </footer>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/static/css/app.scss" data-target="replace">
-@import "node_modules/bootstrap/dist/css/bootstrap";
-@import "node_modules/font-awesome/scss/font-awesome;
 </pre>
 
-## フォントファイルの配置
-
-`copycat-brunch` を導入します
-
-`npm install --save-dev copycat-brunch`{{execute}}
-
-`brunch-config.js` を書き換えます
-
-ファイル名: `./brunch-config.js`
-
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/brunch-config.js" data-target="replace">
-exports.config = {
-  // See http://brunch.io/#documentation for docs.
-  files: {
-    javascripts: {
-      joinTo: "js/app.js"
-
-      // To use a separate vendor.js bundle, specify two files path
-      // http://brunch.io/docs/config#-files-
-      // joinTo: {
-      //  "js/app.js": /^(web\/static\/js)/,
-      //  "js/vendor.js": /^(web\/static\/vendor)|(deps)/
-      // }
-      //
-      // To change the order of concatenation of files, explicitly mention here
-      // order: {
-      //   before: [
-      //     "web/static/vendor/js/jquery-2.1.1.js",
-      //     "web/static/vendor/js/bootstrap.min.js"
-      //   ]
-      // }
-    },
-    stylesheets: {
-      joinTo: "css/app.css",
-      order: {
-        after: ["web/static/css/app.css"] // concat app.css last
-      }
-    },
-    templates: {
-      joinTo: "js/app.js"
-    }
-  },
-
-  conventions: {
-    // This option sets where we should place non-css and non-js assets in.
-    // By default, we set this to "/web/static/assets". Files in this directory
-    // will be copied to `paths.public`, which is "priv/static" by default.
-    assets: /^(web\/static\/assets)/
-  },
-
-  // Phoenix paths configuration
-  paths: {
-    // Dependencies and current project directories to watch
-    watched: [
-      "web/static",
-      "test/static"
-    ],
-
-    // Where to compile files to
-    public: "priv/static"
-  },
-
-  // Configure your plugins
-  plugins: {
-    babel: {
-      // Do not use ES6 compiler in vendor code
-      ignore: [/web\/static\/vendor/]
-    },
-    copycat: {
-      fonts: ["node_modules/font-awesome/fonts"]
-    }
-  },
-
-  modules: {
-    autoRequire: {
-      "js/app.js": ["web/static/js/app"]
-    }
-  },
-
-  npm: {
-    enabled: true,
-    globals: {
-      $: "jquery",
-      jQuery: "jquery",
-      Popper: "popper.js",
-      Tether: "tether"
-    }
-  },
-
-  watcher: {
-    usePolling: true
-  }
-};
-</pre>
 
 `./web/templates/hello/show.html.eex` を書き換えます
 
