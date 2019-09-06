@@ -18,7 +18,7 @@ defmodule ModestGreeter.Router do
   scope "/", ModestGreeter do
     pipe_through :browser
 
-    get "/hello", HelloControler, :show
+    get "/hello", HelloController, :show
   end
 end
 </pre>

@@ -1,5 +1,7 @@
 ## Hello World!
 
+ターミナルでの環境構築が終わったら, 次のコマンドを実行してください
+
 `mkdir -p ~/oiax/projects; cd $_`{{execute}}
 
 `mix phoenix.new modest_greeter --no-ecto`{{execute}}
