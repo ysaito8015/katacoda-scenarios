@@ -7,7 +7,7 @@ Phoenix サーバが停止していることを確認します
 
 `cd ~/oiax/projects/modest_greeter`{{execute}}
 
-`npm install --save jquery popper.js tether bootstrap`{{execute}}
+`npm install --save jquery popper.js tether bootstrap@4.0.0`{{execute}}
 
 `app.css` を書き換えます
 
@@ -125,7 +125,7 @@ exports.config = {
     globals: {
       $: "jquery",
       jQuery: "jquery",
-      Poper: "popper.js",
+      Popper: "popper.js",
       Tether: "tether"
     }
   },

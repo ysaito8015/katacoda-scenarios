@@ -73,6 +73,10 @@ SCSS 用のパッケージを導入します
 }
 </pre>
 
+インストールします
+
+`npm install`{{execute}}
+
 `brunch-config.js` の変更
 
 ファイル名: `./brunch-config.js`
