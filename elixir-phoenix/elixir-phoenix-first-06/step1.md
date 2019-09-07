@@ -162,7 +162,27 @@ IO.puts Hello3.message
 
 ## 関数のデフォルト値
 
-- `\\` で区切ってデフォルト値指定
+### `\\` で区切ってデフォルト値指定
+
+ファイル名: `./hello3.exs`
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello3.exs" data-target="replace">
+defmodule Hello3 do
+  def message(name \\ "world") do
+    "Hello, #{name}!"
+  end
+end
+
+IO.puts Hello3.message "Alice" 
+IO.puts Hello3.message "Bob" 
+IO.puts Hello3.message
+</pre>
+
+実行します
+
+`elixirc ./hello3.exs`{{execute}}
+
+### アリティ別に関数を用意する
 
 ファイル名: `./hello3.exs`
 
