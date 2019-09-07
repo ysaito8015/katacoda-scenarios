@@ -67,7 +67,7 @@ IO.inspect team[:leader][:age]
 
 実行します
 
-`elixir ./map2.exs`{{execute}}
+`elixir ./map3.exs`{{execute}}
 
 ## マップの値を書き換える
 
