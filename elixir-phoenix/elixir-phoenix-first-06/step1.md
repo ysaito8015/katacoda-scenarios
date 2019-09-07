@@ -116,6 +116,8 @@ Hello2.greet "Bob"
 
 ## 関数の戻り値
 
+- 関数の中で最後に評価された式の値が関数の戻り値となります
+
 ファイル名: `./hello3.exs`
 
 `touch ./hello3.exs`{{execute}}
@@ -131,14 +133,16 @@ IO.puts Hello3.message "Alice"
 IO.puts Hello3.message "Bob" 
 </pre>
 
+実行します
+
+`elixirc ./hello3.exs`{{execute}}
+
 ## アリティ
 
 - アリティ: 引数の個数
 - `関数名/アリティ`
 
 ファイル名: `./hello3.exs`
-
-`touch ./hello3.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello3.exs" data-target="replace">
 defmodule Hello3 do
