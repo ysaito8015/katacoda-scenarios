@@ -326,7 +326,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 - case 文の書き方
 
-<pre>
+<pre class="file">
 n = 1
 case n do
   1 -> IO.puts "A"
@@ -335,7 +335,7 @@ case n do
 end
 </pre>
 
-<pre>
+<pre class="file">
 case チェックする変数 do
   一致した場合 -> 処理
   _ -> 処理 # どれも一致しなかった場合
