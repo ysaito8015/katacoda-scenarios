@@ -59,8 +59,8 @@ IO.inspect member["name"]
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map3.exs" data-target="replace">
 team= %{
-  leader: %{name: "Charlie", age: 48}
-  subleader: %{name: "Alice", age: 23},
+  leader: %{name: "Charlie", age: 48},
+  subleader: %{name: "Alice", age: 23}
 }
 IO.inspect team[:leader][:age]
 </pre>
