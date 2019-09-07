@@ -32,6 +32,11 @@
         "course_id": "elixir-phoenix-first-06",
         "title": "第十二章 モジュールと関数, 第十三章 リストとタプル, 第十四章 マップとキーワードリスト",
         "description": "それぞれの概要説明"
+      },
+      {
+        "course_id": "elixir-phoenix-first-07",
+        "title": "第十五章 ビューモジュール, 第十六章 ページ間のリンク, 第十七章 画像",
+        "description": "それぞれの概要説明"
       }
     ]
 }
