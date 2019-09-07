@@ -36,7 +36,7 @@ end
 
 `elixir ./list1.exs`{{execute}}
 
-- 引数を強調した書き換え
+### 引数を強調した書き換え
 
 <pre class="file" data-filename="" data-target="replace">
 numbers = [2, 3, 5, 7, 11]
@@ -47,6 +47,10 @@ end
 
 Enum.each(numbers, f)
 </pre>
+
+実行します
+
+`elixir ./list1.exs`{{execute}}
 
 ### `for` の利用
 
