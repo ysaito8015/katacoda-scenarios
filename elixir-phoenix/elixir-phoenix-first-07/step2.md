@@ -51,6 +51,8 @@
 
 ### 一旦確認
 
+Phoenix サーバを立ち上げます
+
 `mix phoenix.server`{{execute}}
 
 ブラウザでアクセスして確認します
@@ -289,3 +291,4 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
+`CTRL C` を二回押して, Phoenix サーバを止めておきます

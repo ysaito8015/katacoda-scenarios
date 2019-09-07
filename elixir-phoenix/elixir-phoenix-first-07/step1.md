@@ -79,13 +79,14 @@ end
 
 ### 一旦確認
 
+Phoenix サーバを立ち上げます
+
 `mix phoenix.server`{{execute}}
 
 ブラウザでアクセスして確認します
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
-`CTRL C` を二回押して, Phoenix サーバを止めておきます
 
 ### エラー修正
 
@@ -100,6 +101,10 @@ defmodule ModestGreeter.TopController do
   end
 end
 </pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ## ビューモジュールの活用
 
@@ -195,8 +200,6 @@ end
 </pre>
 
 ### 一旦確認
-
-`mix phoenix.server`{{execute}}
 
 ブラウザでアクセスして確認します
 
@@ -314,13 +317,13 @@ end
 
 ### 一旦確認
 
+Phoenix サーバを立ち上げます
+
 `mix phoenix.server`{{execute}}
 
 ブラウザでアクセスして確認します
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
-
-`CTRL C` を二回押して, Phoenix サーバを止めておきます
 
 ### case による条件分岐
 
@@ -359,8 +362,6 @@ end
 </pre>
 
 ### 一旦確認
-
-`mix phoenix.server`{{execute}}
 
 ブラウザでアクセスして確認します
 
