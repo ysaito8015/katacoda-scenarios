@@ -112,7 +112,7 @@ Hello2.greet "Bob"
 
 実行します
 
-`elixirc ./hello2.exs`{{execute}}
+`elixir ./hello2.exs`{{execute}}
 
 ## 関数の戻り値
 
@@ -135,7 +135,7 @@ IO.puts Hello3.message "Bob"
 
 実行します
 
-`elixirc ./hello3.exs`{{execute}}
+`elixir ./hello3.exs`{{execute}}
 
 ## アリティ
 
@@ -158,7 +158,7 @@ IO.puts Hello3.message
 
 実行します
 
-`elixirc ./hello3.exs`{{execute}}
+`elixir ./hello3.exs`{{execute}}
 
 ## 関数のデフォルト値
 
@@ -180,7 +180,7 @@ IO.puts Hello3.message
 
 実行します
 
-`elixirc ./hello3.exs`{{execute}}
+`elixir ./hello3.exs`{{execute}}
 
 ### アリティ別に関数を用意する
 
@@ -204,7 +204,7 @@ IO.puts Hello3.message
 
 実行します
 
-`elixirc ./hello3.exs`{{execute}}
+`elixir ./hello3.exs`{{execute}}
 
 ## 無名関数
 
@@ -223,7 +223,7 @@ f.("Bob")
 
 実行します
 
-`elixirc ./hello4.exs`{{execute}}
+`elixir ./hello4.exs`{{execute}}
 
 複数行の定義
 
