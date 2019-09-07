@@ -193,3 +193,120 @@ end
 実行します
 
 `elixir ./map6.exs`{{execute}}
+
+## キーワードリストとは
+
+- マップととても良く似た存在
+- 使われる状況が特殊 -> 関数の最後の引数に使用される
+- `[]` で囲む
+  - `[foo: 1, bar: 2]`
+
+ファイル名: `./keyword_lists1.exs`
+
+`touch ./keyword_lists1.exs`{{execute}}
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists1.exs" data-target="replace">
+options = [foo: 1, bar: 2]
+IO.inspect.options[:foo]
+IO.inspect.options[:spam]
+</pre>
+
+実行します
+
+`elixir ./keyword_lists1.exs`{{execute}}
+
+### : コロンなしはアトムは取れない
+
+ファイル名: `./keyword_lists1.exs`
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists1.exs" data-target="replace">
+options = [foo: 1, bar: 2]
+IO.inspect.options.foo
+IO.inspect.options[:spam]
+</pre>
+
+実行します
+
+`elixir ./keyword_lists1.exs`{{execute}}
+
+### カッコの省略条件
+
+- 数の最後の引数にキーワードリストが指定されている場合, 全体を囲むカッコ `[]` を省略できる
+
+ファイル名: `./keyword_lists1.exs`
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists1.exs" data-target="replace">
+IO.inspect [foo: 1, bar: 2]
+IO.inspect foo: 1, bar: 2
+</pre>
+
+実行します
+
+`elixir ./keyword_lists1.exs`{{execute}}
+
+## キーワードリストの用途
+
+ファイル名: `./web/controller/hello_controller.ex`
+
+<pre class="file" data-filename="" data-target="replace">
+defmodule ModestGreeter.HelloController do
+  use ModestGreeter.Web, :controller
+
+  def show(conn, params) do
+    render conn, "show.html", name: params["name"] || "world"
+  end
+end
+</pre>
+
+### `render` 関数部分を強調
+
+ファイル名: `./web/controller/hello_controller.ex`
+
+<pre class="file" data-filename="" data-target="replace">
+defmodule ModestGreeter.HelloController do
+  use ModestGreeter.Web, :controller
+
+  def show(conn, params) do
+    x = params["name"] || "world"
+    render conn, "show.html", [name: x]
+  end
+end
+</pre>
+
+## キーワードリストに対する操作
+
+- 特殊なリスト
+  1. リストの要素はすべてタプル
+  1. それらのタプルの要素数はすべて2
+  1. それらのタプルの第一要素は常にアトム
+- 例: `[{:foo, 1}, {:bar, 2}]` -> `[foo: 1, bar: 2]`
+- キーワードリストの操作にリストと同じ操作が使えます
+
+ファイル名: `./keyword_lists2.exs`
+
+`touch ./keyword_lists2.exs`{{execute}}
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists2.exs" data-target="replace">
+options = [foo: 1, bar: 2]
+options = [{:spam 0} | options]
+IO.inspect options
+</pre>
+
+実行します
+
+`elixir ./keyword_lists2.exs`{{execute}}
+
+### 許されていない書き方
+
+ファイル名: `./keyword_lists2.exs`
+
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists2.exs" data-target="replace">
+options = [foo: 1, bar: 2]
+options = [options | spam: 0] # マップではないので評価できない
+options = [spam: 0 | options]
+IO.inspect options
+</pre>
+
+実行します
+
+`elixir ./keyword_lists2.exs`{{execute}}
