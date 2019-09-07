@@ -91,6 +91,10 @@ defmodule Hello2 do
 end
 </pre>
 
+コンパイルします
+
+`elixirc ./hello2.exs`{{execute}}
+
 ### `Hello2` モジュールを使ってみる
 
 `elixir -e 'Hello2.greet "Alice"'`{{execute}}
