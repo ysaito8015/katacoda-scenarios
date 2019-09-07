@@ -236,7 +236,7 @@ end
 
 ### `top/index.html.eex`
 
-<pre class="file" data-filename="" data-target="">
+<pre class="file">
   &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
 </pre>
 
@@ -246,7 +246,7 @@ end
 
 ### `layout/app.html.eex`
 
-<pre class="file" data-filename="" data-target="">
+<pre class="file">
     &lt;title&gt;&lt;%= @view_module.document_title assigns %&gt;&lt;/title&gt;
 </pre>
 
