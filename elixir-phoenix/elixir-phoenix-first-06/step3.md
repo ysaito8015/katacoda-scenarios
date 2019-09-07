@@ -150,8 +150,6 @@ IO.inspect ages
 
 ファイル名: `./map5.exs`
 
-`touch ./map5.exs`{{execute}}
-
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map5.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
 ages = Map.drop(ages, ["Bob", "Charlie"])
@@ -207,8 +205,8 @@ end
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists1.exs" data-target="replace">
 options = [foo: 1, bar: 2]
-IO.inspect.options[:foo]
-IO.inspect.options[:spam]
+IO.inspect options[:foo]
+IO.inspect options[:spam]
 </pre>
 
 実行します
@@ -221,8 +219,8 @@ IO.inspect.options[:spam]
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists1.exs" data-target="replace">
 options = [foo: 1, bar: 2]
-IO.inspect.options.foo
-IO.inspect.options[:spam]
+IO.inspect options.foo
+IO.inspect options[:spam]
 </pre>
 
 実行します
@@ -288,7 +286,7 @@ end
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/keyword_lists2.exs" data-target="replace">
 options = [foo: 1, bar: 2]
-options = [{:spam 0} | options]
+options = [{:spam, 0} | options]
 IO.inspect options
 </pre>
 
