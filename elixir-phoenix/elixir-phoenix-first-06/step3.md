@@ -57,7 +57,7 @@ IO.inspect member["name"]
 
 `touch ./map3.exs`{{execute}}
 
-<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map2.exs" data-target="replace">
+<pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map3.exs" data-target="replace">
 team= %{
   leader: ${name: "Charlie", age: 48}
   subleader: %{name: "Alice", age: 23},
