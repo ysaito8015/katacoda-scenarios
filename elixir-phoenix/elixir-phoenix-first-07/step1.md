@@ -208,7 +208,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ### document_title 関数の定義
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/hello_view.ex" data-target="">
+<pre class="file" data-filename="" data-target="">
 defmodule ModestGreeter.HelloView do
   use ModestGreeter.Web, :view
 
@@ -220,7 +220,7 @@ end
 
 - `assigns` には `render` 関数の第３引数に与えられたキーワードリストの要素をすべて持つマップがセットされます
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="">
+<pre class="file" data-filename="" data-target="">
 defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 
@@ -236,7 +236,7 @@ end
 
 ### `top/index.html.eex`
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="">
+<pre class="file" data-filename="" data-target="">
   &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
 </pre>
 
@@ -246,7 +246,7 @@ end
 
 ### `layout/app.html.eex`
 
-<pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/layout/app.html.eex" data-target="">
+<pre class="file" data-filename="" data-target="">
     &lt;title&gt;&lt;%= @view_module.document_title assigns %&gt;&lt;/title&gt;
 </pre>
 
