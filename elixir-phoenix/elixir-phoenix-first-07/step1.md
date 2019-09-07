@@ -42,11 +42,10 @@ end
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
 defmodule ModestGreeter.TopController do
-  use ModestGreeter.Web do
+  use ModestGreeter.Web :controller
 
-    def index(conn, _params) do
-      render conn, "index.html"
-    end
+  def index(conn, _params) do
+    render conn, "index.html"
   end
 end
 </pre>
@@ -94,11 +93,10 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
 defmodule ModestGreeter.TopController do
-  use ModestGreeter.Web do
+  use ModestGreeter.Web :controller
 
-    def index(conn, _params) do
-      render conn, "index.html", name: "Top"
-    end
+  def index(conn, _params) do
+    render conn, "index.html", name: "Top"
   end
 end
 </pre>
@@ -111,11 +109,10 @@ end
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
 defmodule ModestGreeter.TopController do
-  use ModestGreeter.Web do
+  use ModestGreeter.Web :controller
 
-    def index(conn, _params) do
-      render conn, "index.html"
-    end
+  def index(conn, _params) do
+    render conn, "index.html"
   end
 end
 </pre>
@@ -290,15 +287,14 @@ end
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
 defmodule ModestGreeter.TopController do
-  use ModestGreeter.Web do
+  use ModestGreeter.Web :controller
 
-    def index(conn, _params) do
-      render conn, "index.html"
-    end
+  def index(conn, _params) do
+    render conn, "index.html"
+  end
 
-    def about(conn, _param) do
-      render conn, "about.html"
-    end
+  def about(conn, _param) do
+    render conn, "about.html"
   end
 end
 </pre>
