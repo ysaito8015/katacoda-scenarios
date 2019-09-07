@@ -346,8 +346,6 @@ end
 
 ファイル名: `./web/views/top_view.ex`
 
-`touch ./web/views/top_view.ex`{{execute}}
-
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="replace">
 defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
