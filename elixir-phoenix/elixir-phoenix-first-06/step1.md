@@ -12,7 +12,7 @@
 
 ファイル名: `./hello1.exs`
 
-`touch ./hello1.exs`{{{execute}}
+`touch ./hello1.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello1.exs" data-target="replace">
 defmodule Hello1 do
@@ -63,7 +63,7 @@ Hello1.greet "Bob"
 
 ファイル名: `./bare_func.exs`
 
-`touch ./bare_func.exs`{{{execute}}
+`touch ./bare_func.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/bare_func.exs" data-target="replace">
 def greet(name) do
@@ -81,7 +81,7 @@ greet "Alice"
 
 ファイル名: `./hello2.ex`
 
-`touch ./hello2.ex`{{{execute}}
+`touch ./hello2.ex`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello2.ex" data-target="replace">
 defmodule Hello2 do
@@ -99,7 +99,7 @@ end
 
 ファイル名: `./hello2.exs`
 
-`touch ./hello2.exs`{{{execute}}
+`touch ./hello2.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello2.exs" data-target="replace">
 Hello1.greet "Alice" 
@@ -114,7 +114,7 @@ Hello1.greet "Bob"
 
 ファイル名: `./hello3.exs`
 
-`touch ./hello3.exs`{{{execute}}
+`touch ./hello3.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello3.exs" data-target="replace">
 defmodule Hello3 do
@@ -134,7 +134,7 @@ IO.puts Hello3.message "Bob"
 
 ファイル名: `./hello3.exs`
 
-`touch ./hello3.exs`{{{execute}}
+`touch ./hello3.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello3.exs" data-target="replace">
 defmodule Hello3 do

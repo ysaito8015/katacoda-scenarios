@@ -22,7 +22,7 @@
 
 ファイル名: `./list1.exs`
 
-`touch ./list1.exs`{{{execute}}
+`touch ./list1.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch13/list1.exs" data-target="replace">
 numbers = [2, 3, 5, 7, 11]
@@ -75,7 +75,7 @@ end
 
 ファイル名: `./list2.exs`
 
-`touch ./list2.exs`{{{execute}}
+`touch ./list2.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch13/list2.exs" data-target="replace">
 a = [1, 2]
@@ -135,7 +135,7 @@ IO.inspect b
 
 ファイル名: `./list3.exs`
 
-`touch ./list3.exs`{{{execute}}
+`touch ./list3.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch13/list3.exs" data-target="replace">
 numbers = [2, 3, 4, 7, 11]
@@ -169,7 +169,7 @@ IO.inspect Enum.join(numbers, ", ")
 
 ファイル名: `./tuples1.exs`
 
-`touch ./tuples1.exs`{{{execute}}
+`touch ./tuples1.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch13/tuples1.exs" data-target="replace">
 numbers = [2, 3, 4, 7, 11]

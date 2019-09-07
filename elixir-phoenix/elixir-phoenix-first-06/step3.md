@@ -11,7 +11,7 @@
 
 ファイル名: `./map1.exs`
 
-`touch ./map1.exs`{{{execute}}
+`touch ./map1.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map1.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
@@ -27,7 +27,7 @@ IO.inspect ages["David"]
 
 ファイル名: `./map2.exs`
 
-`touch ./map2.exs`{{{execute}}
+`touch ./map2.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map2.exs" data-target="replace">
 member = %{name: "Alice", age: 23}
@@ -55,7 +55,7 @@ IO.inspect member["name"]
 
 ファイル名: `./map3.exs`
 
-`touch ./map3.exs`{{{execute}}
+`touch ./map3.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map2.exs" data-target="replace">
 team= %{
@@ -73,7 +73,7 @@ IO.inspect team[:leader][:age]
 
 ファイル名: `./map4.exs`
 
-`touch ./map4.exs`{{{execute}}
+`touch ./map4.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map4.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
@@ -132,7 +132,7 @@ IO.inspect ages
 
 ファイル名: `./map5.exs`
 
-`touch ./map5.exs`{{{execute}}
+`touch ./map5.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map5.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
@@ -150,7 +150,7 @@ IO.inspect ages
 
 ファイル名: `./map5.exs`
 
-`touch ./map5.exs`{{{execute}}
+`touch ./map5.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map5.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
@@ -166,7 +166,7 @@ IO.inspect ages
 
 ファイル名: `./map6.exs`
 
-`touch ./map6.exs`{{{execute}}
+`touch ./map6.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch14/map6.exs" data-target="replace">
 ages = %{"Alice" => 23, "Bob" => 15, "Charlie" => 48}
