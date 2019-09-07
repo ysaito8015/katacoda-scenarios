@@ -25,8 +25,13 @@
       },
       {
         "course_id": "elixir-phoenix-first-05",
-        "title": "第九章 パラメータ",
+        "title": "第九章 パラメータ, 第十章 HTML 文書の区分とスタイルシート, 第十一章 Bootstrap と Font Awesome",
         "description": "それぞれのつながりと概要説明"
+      },
+      {
+        "course_id": "elixir-phoenix-first-06",
+        "title": "第十二章 モジュールと関数, 第十三章 リストとタプル, 第十四章 マップとキーワードリスト",
+        "description": "それぞれの概要説明"
       }
     ]
 }
