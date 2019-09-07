@@ -208,7 +208,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ### document_title 関数の定義
 
-<pre class="file" data-filename="" data-target="">
+<pre class="file">
 defmodule ModestGreeter.HelloView do
   use ModestGreeter.Web, :view
 
@@ -220,7 +220,7 @@ end
 
 - `assigns` には `render` 関数の第３引数に与えられたキーワードリストの要素をすべて持つマップがセットされます
 
-<pre class="file" data-filename="" data-target="">
+<pre class="file">
 defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 
