@@ -41,7 +41,7 @@ end
 `touch ./web/controllers/top_controller.ex`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
-demodule ModestGreeter.TopController do
+defmodule ModestGreeter.TopController do
   use ModestGreeter.Web do
 
     def index(conn, _params) do
@@ -58,7 +58,7 @@ end
 `touch ./web/views/top_view.ex`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="replace">
-demodule ModestGreeter.TopView do
+defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 end
 </pre>
@@ -93,7 +93,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 ファイル名: `./web/controllers/top_controller.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
-demodule ModestGreeter.TopController do
+defmodule ModestGreeter.TopController do
   use ModestGreeter.Web do
 
     def index(conn, _params) do
@@ -110,7 +110,7 @@ end
 ファイル名: `./web/controllers/top_controller.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
-demodule ModestGreeter.TopController do
+defmodule ModestGreeter.TopController do
   use ModestGreeter.Web do
 
     def index(conn, _params) do
@@ -127,7 +127,7 @@ end
 ファイル名: `./web/views/hello_view.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/hello_view.ex" data-target="replace">
-demodule ModestGreeter.HelloView do
+defmodule ModestGreeter.HelloView do
   use ModestGreeter.Web, :view
 
   def document_title(assigns) do
@@ -141,7 +141,7 @@ end
 ファイル名: `./web/views/top_view.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="replace">
-demodule ModestGreeter.TopView do
+defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 
   def document_title(_assigns) do
@@ -212,7 +212,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 ### document_title 関数の定義
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/hello_view.ex" data-target="">
-demodule ModestGreeter.HelloView do
+defmodule ModestGreeter.HelloView do
   use ModestGreeter.Web, :view
 
   def document_title(assigns) do
@@ -224,7 +224,7 @@ end
 - `assigns` には `render` 関数の第３引数に与えられたキーワードリストの要素をすべて持つマップがセットされます
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="">
-demodule ModestGreeter.TopView do
+defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 
   def document_title(_assigns) do
@@ -289,7 +289,7 @@ end
 ファイル名: `./web/controllers/top_controller.ex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/controllers/top_controller.ex" data-target="replace">
-demodule ModestGreeter.TopController do
+defmodule ModestGreeter.TopController do
   use ModestGreeter.Web do
 
     def index(conn, _params) do
@@ -353,7 +353,7 @@ end
 `touch ./web/views/top_view.ex`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/views/top_view.ex" data-target="replace">
-demodule ModestGreeter.TopView do
+defmodule ModestGreeter.TopView do
   use ModestGreeter.Web, :view
 
   def document_title(assigns) do
