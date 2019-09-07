@@ -93,7 +93,7 @@ end
 
 コンパイルします
 
-`elixirc ./hello2.exs`{{execute}}
+`elixirc ./hello2.ex`{{execute}}
 
 ### `Hello2` モジュールを使ってみる
 
