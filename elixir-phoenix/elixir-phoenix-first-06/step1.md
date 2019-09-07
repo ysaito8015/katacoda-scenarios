@@ -106,8 +106,8 @@ end
 `touch ./hello2.exs`{{execute}}
 
 <pre class="file" data-filename="~/oiax/projects/elixir-primer/v01/ch12/hello2.exs" data-target="replace">
-Hello1.greet "Alice" 
-Hello1.greet "Bob" 
+Hello2.greet "Alice" 
+Hello2.greet "Bob" 
 </pre>
 
 実行します
