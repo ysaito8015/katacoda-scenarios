@@ -159,7 +159,7 @@ end
 ファイル名: `./web/templates/top/index.html.eex`
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
-&lt;div class="jumbotrom m-3"&gt;
+&lt;div class="jumbotron m-3"&gt;
   &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
 &lt;/div&gt;
