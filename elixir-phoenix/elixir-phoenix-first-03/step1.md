@@ -18,19 +18,53 @@
 
 gettext をダウングレードする必要があります
 
-katacoda エディタで `./projects/modest_greeter/mix.exs` を開き該当の箇所を修正してください
+katacoda エディタで `./projects/modest_greeter/mix.exs` を開き下記の修正を適用してください
 
 ![](https://i.gyazo.com/2f5cbfe1276b810e91d9f383221d6ca2.png)
 
 ファイル名: `~/oiax/projects/modest_greeter/mix.exs`
 
-修正前
+<pre class="file" data-filename="~/oiax/projects/modest_greeter/mix.exs" data-target="replace">
+defmodule ModestGreeter.Mixfile do
+  use Mix.Project
 
-![](https://i.gyazo.com/3b5497c84ff8c2125b4ab11577f84ee7.png)
+  def project do
+    [app: :modest_greeter,
+     version: "0.0.1",
+     elixir: "~> 1.2",
+     elixirc_paths: elixirc_paths(Mix.env),
+     compilers: [:phoenix, :gettext] ++ Mix.compilers,
+     build_embedded: Mix.env == :prod,
+     start_permanent: Mix.env == :prod,
+     deps: deps()]
+  end
 
-修正後
+  # Configuration for the OTP application.
+  #
+  # Type `mix help compile.app` for more information.
+  def application do
+    [mod: {ModestGreeter, []},
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext]]
+  end
 
-![](https://i.gyazo.com/a44ea812e3dc622e26f39f5a6e4aa27c.png)
+  # Specifies which paths to compile per environment.
+  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+  defp elixirc_paths(_),     do: ["lib", "web"]
+
+  # Specifies your project dependencies.
+  #
+  # Type `mix help deps` for examples and options.
+  defp deps do
+    [{:phoenix, "~> 1.2.5"},
+     {:phoenix_pubsub, "~> 1.0"},
+     {:phoenix_html, "~> 2.6"},
+     {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:gettext, "~> 0.14.1"},
+     {:cowboy, "~> 1.0"}]
+  end
+end
+
+</pre>
 
 一旦, `clean` します
 
