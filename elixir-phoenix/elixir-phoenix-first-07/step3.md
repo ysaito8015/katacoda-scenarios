@@ -3,6 +3,7 @@
 ## tag 関数と static_path 関数
 
 書式: `tag :タグ名, [キーワードリストでオプションを指定]`
+
 書式: `static_path(@conn, "画像ファイルのパス")`
 
 `cd ~/oiax/projects/modest_greeter`{[execute}}
