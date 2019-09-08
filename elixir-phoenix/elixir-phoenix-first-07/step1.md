@@ -357,6 +357,7 @@ defmodule ModestGreeter.TopView do
     case assigns.view_template do
       "about.html" -> "ModestGreeter - このサイトについて"
       _ -> "ModestGreeter"
+    end
   end
 end
 </pre>
