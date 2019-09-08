@@ -6,11 +6,11 @@
 
 書式: `static_path(@conn, "画像ファイルのパス")`
 
-`cd ~/oiax/projects/modest_greeter`{[execute}}
+`cd ~/oiax/projects/modest_greeter`{{execute}}
 
-`wget https://www.oiax.jp/books/files/modest_greeter.svg`{[execute}}
+`wget https://www.oiax.jp/books/files/modest_greeter.svg`{{execute}}
 
-`mv ./modest_greeter.svg ./web/static/assets/images/`{[execute}}
+`mv ./modest_greeter.svg ./web/static/assets/images/`{{execute}}
 
 ### `hello/show.html.eex` の変更
 
@@ -72,13 +72,13 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ## ファビコンと, Web クリップアイコンの指定
 
-`wget https://www.oiax.jp/books/files/modest_greeter.ico`{[execute}}
+`wget https://www.oiax.jp/books/files/modest_greeter.ico`{{execute}}
 
-`wget https://www.oiax.jp/books/files/modest_greeter256.png`{[execute}}
+`wget https://www.oiax.jp/books/files/modest_greeter256.png`{{execute}}
 
-`mv ./modest_greeter.ico ./web/static/assets/images/`{[execute}}
+`mv ./modest_greeter.ico ./web/static/assets/images/`{{execute}}
 
-`mv ./modest_greeter256.png ./web/static/assets/images/`{[execute}}
+`mv ./modest_greeter256.png ./web/static/assets/images/`{{execute}}
 
 ### `layout/app.html.eex` の変更
 
