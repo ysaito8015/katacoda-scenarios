@@ -146,8 +146,8 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
     &lt;title&gt;&lt;%= @view_module.document_title assigns %&gt;&lt;/title&gt;
     &lt;%= tag :link, rel: "stylesheet", href: static_path(@conn, "/css/app.css") %&gt;
-    &lt;%= tag :link, rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
-    &lt;%= tag :link, rel: "shortcut icon," type: "image/x-icon", href: static_path(@conn, "/images/modest_greeter.ico") %&gt;
+    &lt;%= tag :link, rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %&gt;
+    &lt;%= tag :link, rel: "shortcut icon", type: "image/x-icon", href: static_path(@conn, "/images/modest_greeter.ico") %&gt;
     &lt;%= tag :link, rel: "apple-touch-icon", type: "image/x-icon", href: static_path(@conn, "/images/modest_greeter256.png") %&gt;
   &lt;/head&gt;
 
