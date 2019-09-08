@@ -8,7 +8,7 @@
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;a href="/about"&gt;このサイトについて&lt;/a&gt;&lt;/p&gt;
@@ -72,7 +72,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: "/about" %&gt;&lt;/p&gt;
@@ -131,7 +131,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: top_path(@conn, :about, []) %&gt;&lt;/p&gt;
@@ -186,7 +186,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: top_path(@conn, :about, []) %&gt;&lt;/p&gt;
@@ -212,7 +212,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: top_path(@conn, :about, []) %&gt;&lt;/p&gt;
@@ -244,7 +244,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 <pre class="file" data-filename="~/oiax/projects/modest_greeter/web/templates/top/index.html.eex" data-target="replace">
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: top_path(@conn, :about, []) %&gt;&lt;/p&gt;
@@ -273,7 +273,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
   names = ~w(Alice Bob Charlie)
 %&gt;
 &lt;div class="jumbotron m-3"&gt;
-  &lt;h1 class="display-3"&gt;%= document_title(assigns) %&lt;/h1&gt;
+  &lt;h1 class="display-3"&gt;&lt;%= document_title(assigns) %&gt;&lt;/h1&gt;
   &lt;p class="lead"&gt;ModestGreeter へようこそ！&lt;/p&gt;
   &lt;hr&gt;
   &lt;p&gt;&lt;%= link "このサイトについて", to: top_path(@conn, :about, []) %&gt;&lt;/p&gt;
