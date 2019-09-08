@@ -40,7 +40,7 @@ Phoenix サーバを立ち上げます
 
 ブラウザでアクセスして確認します
 
-https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello/Alice
 
 ## 画像表示幅の調整
 
@@ -68,7 +68,9 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ブラウザでアクセスして確認します
 
-https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/hello/Alice
+
+`CTRL C` を２回押して Phoenix サーバを止めておきます
 
 ## ファビコンと, Web クリップアイコンの指定
 
@@ -118,6 +120,10 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ### 一旦確認
 
+Phoenix サーバを立ち上げます
+
+`mix phoenix.server`{{execute}}
+
 ブラウザでアクセスして確認します
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
@@ -139,10 +145,10 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
     &lt;meta name="author" content=""&gt;
 
     &lt;title&gt;&lt;%= @view_module.document_title assigns %&gt;&lt;/title&gt;
-    &lt;%= tag :link, rel: "stylesheet", href: "&lt;%= static_path(@conn, "/css/app.css") %&gt;"&gt;
+    &lt;%= tag :link, rel: "stylesheet", href: static_path(@conn, "/css/app.css") %&gt;
     &lt;%= tag :link, rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
-    &lt;%= tag :link, rel: "shortcut icon," type: "image/x-icon", href: "&lt;%= static_path(@conn, "/images/modest_greeter.ico") %&gt;"&gt;
-    &lt;%= tag :link, rel: "apple-touch-icon", type: "image/x-icon", href: "&lt;%= static_path(@conn, "/images/modest_greeter256.png") %&gt;"&gt;
+    &lt;%= tag :link, rel: "shortcut icon," type: "image/x-icon", href: static_path(@conn, "/images/modest_greeter.ico") %&gt;
+    &lt;%= tag :link, rel: "apple-touch-icon", type: "image/x-icon", href: static_path(@conn, "/images/modest_greeter256.png") %&gt;
   &lt;/head&gt;
 
   &lt;body&gt;
