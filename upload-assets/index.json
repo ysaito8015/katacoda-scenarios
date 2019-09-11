@@ -23,6 +23,6 @@
         "uilayout": "terminal"
     },
     "backend": {
-        "imageid": "ubuntu"
+        "imageid": "ubuntu1904"
     }
 }
