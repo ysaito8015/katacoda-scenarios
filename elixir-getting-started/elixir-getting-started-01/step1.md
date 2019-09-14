@@ -2,7 +2,7 @@
 
 katacoda 環境: `ubuntu1904`
 
-`pwd; whoami`{{execute}}
+`pwd; whoami; cat /etc/lsb-release`{{execute}}
 
 上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
 
@@ -22,12 +22,15 @@ GPG Key を取得します
 
 Erlang をインストールします
 
-`sudo apt update && sudo apt install erlang`{{execute}}
+`sudo apt update && sudo apt install -y erlang`{{execute}}
 
 バージョンを確認します
 
 `cat /usr/lib/erlang/releases/RELEASES`{{execute}}
 
+表示例です
+
+![](https://i.gyazo.com/2549343a962a509b007f951c06daa287.png)
 
 #### 2. ソースからビルドする場合
 
@@ -48,9 +51,9 @@ Erlang をダウンロードしインストールします
 
 ![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
 
-![](ihttps://i.gyazo.com/41bfd2b14e9c867312ab33456d898939.png)
+![](https://i.gyazo.com/41bfd2b14e9c867312ab33456d898939.png)
 
-![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
+![](https://i.gyazo.com/d294409606894d90b3478c1ab211e181.png)
 
 インストールします
 
@@ -89,3 +92,9 @@ Erlang をダウンロードしインストールします
 表示例です
 
 ![](https://i.gyazo.com/72c4fa64c019aeb5c7dbfb8e12423a7e.png)
+
+## Docker を利用したインストール
+
+`docker pull elixir:1.9.1`{{execute}}
+
+`docker run -p 4000:4000 -i -t  elixir:1.9.1 /bin/bash`{{execute}}
