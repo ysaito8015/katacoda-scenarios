@@ -4,9 +4,13 @@ katacoda 環境: `ubuntu1904`
 
 `pwd; whoami`{{execute}}
 
+上記の ![](https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png) をクリックすると, 右下のターミナルでコマンドが実行されます
+
 ## Erlang のインストール
 
-#### apt を使用する場合
+- 1. もしくは, 2. の手順でインストールします
+
+#### 1. apt を使用する場合
 
 GPG Key を取得します
 
@@ -25,10 +29,10 @@ Erlang をインストールします
 `cat /usr/lib/erlang/releases/RELEASES`{{execute}}
 
 
-#### ソースからビルドする場合
+#### 2. ソースからビルドする場合
 
 <!-- `apt install libncurses5-dev autoconf xsltproc fop libxml2-utils libwxgtk3.0-dev` -->
-`sudo apt install build-essential libncurses5-dev autoconf`{{execute}}
+`sudo apt install -y build-essential libncurses5-dev autoconf`{{execute}}
 
 Erlang をダウンロードしインストールします
 
@@ -40,13 +44,25 @@ Erlang をダウンロードしインストールします
 
 `./configure --enable-hipe`{{execute}}
 
+次のような表示がでますが, 問題なく次へ進めます
+
+![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
+
+![](ihttps://i.gyazo.com/41bfd2b14e9c867312ab33456d898939.png)
+
+![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
+
 インストールします
 
 `make && make install`{{execute}}
 
 バージョンを確認します
 
-`cat /usr/lib/erlang/releases/RELEASES`{{execute}}
+`cat /usr/local/lib/erlang/releases/RELEASES`{{execute}}
+
+表示例です
+
+![](https://i.gyazo.com/99954aa3900c933135997c6d8f28093c.png)
 
 ## Elixir のインストール
 
@@ -69,3 +85,7 @@ Erlang をダウンロードしインストールします
 バージョンを確認します
 
 `elixir -v`{{execute}}
+
+表示例です
+
+![](https://i.gyazo.com/72c4fa64c019aeb5c7dbfb8e12423a7e.png)
