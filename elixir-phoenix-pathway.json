@@ -1,6 +1,6 @@
 {
-    "title": "elixir/phoenix 初級シリーズをもとにしたハンズオンサンプル",
-    "description": "表題の書籍を参考にした elixir/phoenix ハンズオン資料",
+    "title": "elixir/phoenix 初級シリーズをもとにしたシナリオ集",
+    "description": "表題の書籍を参考にした elixir/phoenix 資料",
     "icon": "fa-katacoda",
     "courses": [
       {

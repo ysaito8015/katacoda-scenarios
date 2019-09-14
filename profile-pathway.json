@@ -1,9 +1,9 @@
 {
     "courses": [
       {
-        "title": "Katacoda UI Layouts Example",
-        "description": "Example of different Katacoda UI Layouts. Also, an example of creating a Katacoda Course!",
-        "id": "uilayouts"
+        "title": "Excelから関数型言語マスターを元にしたシナリオ集",
+        "description": "piacerex さんの記事から起こしました",
+        "id": "elixir-geting-stared"
       },
       {
         "title": "elixir/phoenix 初級１に基づいたハンズオン",
@@ -12,11 +12,6 @@
       }
     ],
     "scenarios": [
-      {
-        "title": "Hello World Scenario",
-        "description": "My First Scenario",
-        "id": "hello-world"
-      },
       {
         "title": "Upload assets",
         "description": "test upload assets",
@@ -41,11 +36,6 @@
         "title": "elixir-sample Scenarios",
         "description": "Example of Elixir scenarios",
         "id": "elixir-sample"
-      },
-      {
-        "title": "Demo Scenarios",
-        "description": "Example of Demo Scenarios",
-        "id": "demo-scenario"
       }
     ]
 }

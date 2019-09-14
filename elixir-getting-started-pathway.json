@@ -1,0 +1,12 @@
+{
+    "title": "Excelから関数型言語マスター を元にしたシナリオ集",
+    "description": "piacerex さんの記事から起こしました",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "elixir-getting-started-01",
+        "title": "データ行の”並べ替え”と”絞り込み”",
+        "description": "環境構築, 並べ替え"
+      }
+    ]
+}
