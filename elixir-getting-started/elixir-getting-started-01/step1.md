@@ -4,11 +4,11 @@ katacoda 環境: `ubuntu1904`
 
 `pwd; whoami`{{execute}}
 
-上記の ![](https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png) をクリックすると, 右下のターミナルでコマンドが実行されます
+上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
 
 ## Erlang のインストール
 
-- 1. もしくは, 2. の手順でインストールします
+- `1.` もしくは, `2.` の手順でインストールします
 
 #### 1. apt を使用する場合
 
