@@ -96,3 +96,12 @@ Erlang をダウンロードしインストールします
 `docker pull elixir:1.9.1`{{execute}}
 
 `docker run -p 4000:4000 -i -t  elixir:1.9.1 /bin/bash`{{execute}}
+
+バージョンを確認します
+
+`elixir -v`{{execute}}
+
+表示例です
+
+![](https://i.gyazo.com/2bf302ef026f585f6902f43e118c8c2e.png)
+
