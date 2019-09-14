@@ -50,9 +50,7 @@ Erlang をダウンロードしインストールします
 次のような表示がでますが, 問題なく次へ進めます
 
 ![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
-
 ![](https://i.gyazo.com/41bfd2b14e9c867312ab33456d898939.png)
-
 ![](https://i.gyazo.com/d294409606894d90b3478c1ab211e181.png)
 
 インストールします
