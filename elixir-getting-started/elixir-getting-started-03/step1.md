@@ -6,7 +6,7 @@ katacoda 環境: `ubuntu1904`
 
 Elixir 実行環境 docker `elixir:1.9.1'
 
-`pwd; whoami; echo "debian `cat /etc/debian_version``{{execute}}
+`pwd; whoami; echo "debian "$(cat /etc/debian_version)"`{{execute}}
 
 上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
 
