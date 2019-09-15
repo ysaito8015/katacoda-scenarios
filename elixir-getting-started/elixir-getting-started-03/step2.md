@@ -6,8 +6,6 @@ Web で表示するために Phoenix をインストールします
 
 `mix archive.install hex phx_new`{{execute}}
 
-`mix local.rebar --force`{{execute}}
-
 いくつか, 質問が発生します
 
 ![](https://i.gyazo.com/9dd4fafce9c5054485d18cc305350075.png)
@@ -26,9 +24,17 @@ Web で表示するために Phoenix をインストールします
 
 `cd /work/sample`{{execute}}
 
+依存ライブラリをインストールします
+
+`mix deps.get`{{execute}}
+
 Phoenix サーバを立ち上げます
 
 `iex -S mix phx.server`{{execute}}
+
+質問が発生します
+
+![](https://i.gyazo.com/51940e78fbd6b616bdba3613d6ea4298.png)
 
 ブラウザでアクセスして確認します
 

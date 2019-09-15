@@ -1,0 +1,53 @@
+{
+  "title": "elixir-getting-stared-03",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "setting_up.sh",
+          "target": "/work",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      },
+      {
+        "name": "Phoenix",
+        "port": 4000 
+      }
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "elixir",
+    "uieditorpath": "/work/sample_db"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}
