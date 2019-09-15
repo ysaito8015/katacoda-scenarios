@@ -64,5 +64,5 @@ end`{{execute}}
 
 
 >>Q1: 確認 `data` から `age` のみを抽出し, マップリストで返すスクリプトを入力してください<<
-=~= data |> Enum.map( fn( record ) -> %{ "name" => record[ "name" ] } end )
+=~= data |> Enum.map( fn( record ) -> %{ "age" => record[ "age" ] } end )
 
