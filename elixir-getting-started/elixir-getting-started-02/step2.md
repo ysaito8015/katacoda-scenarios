@@ -32,6 +32,9 @@ Phoenix サーバを立ち上げます
 
 `iex -S mix phx.server`{{execute}}
 
+質問が発生します
+
+![](https://i.gyazo.com/51940e78fbd6b616bdba3613d6ea4298.png)
 
 ブラウザでアクセスして確認します
 
