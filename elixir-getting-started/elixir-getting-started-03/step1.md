@@ -58,6 +58,10 @@ DB ユーザの登録を行います
 
 `\q`{{execute}}
 
+postgres ユーザを閉じます
+
+`exit`{{execute}}
+
 ### MySQL のインストール
 
 apt からインストールします
