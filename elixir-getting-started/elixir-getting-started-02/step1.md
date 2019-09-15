@@ -18,6 +18,8 @@ Elixir 実行環境 docker `elixir:1.9.1'
 
 iex を起動します
 
+`iex`{{execute}}
+
 表形式のデータを作成します
 
 `data = [
