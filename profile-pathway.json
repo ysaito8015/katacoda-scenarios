@@ -13,6 +13,11 @@
     ],
     "scenarios": [
       {
+        "title": "Embed sample",
+        "description": "test embed",
+        "id": "embed-sample"
+      },
+      {
         "title": "Upload assets",
         "description": "test upload assets",
         "id": "upload-assets"
