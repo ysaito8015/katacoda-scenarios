@@ -20,6 +20,15 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "setting_up.sh",
+          "target": "/work",
+          "chmod": "+x"
+        }
+      ]
     }
   },
   "environment": {
@@ -36,7 +45,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "elixir",
-    "uieditorpath": "/work"
+    "uieditorpath": "/work/sample"
   },
   "backend": {
     "imageid": "ubuntu1904"

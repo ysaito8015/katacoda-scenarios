@@ -1,70 +1,148 @@
-## Excelの「並べ替え」をElixirで書いてみる
+## Phoenix のインストール
 
-`iex` を起動します
+iex を起動している場合は, `CTRL C` を２回押して iex を終了してください
 
-`iex`{{execute}}
+Web で表示するために Phoenix をインストールします
 
-起動時表示例です
+`mix archive.install hex phx_new`{{execute}}
 
-![](https://i.gyazo.com/b407092bd09d6fdcb74d484e3da7ca5a.png)
+いくつか, 質問が発生します
 
-### Enum.sort()
+![](https://i.gyazo.com/9dd4fafce9c5054485d18cc305350075.png)
 
-`323, 99, 54` という, リストを並べ替えます
+![](https://i.gyazo.com/1eec6421152364fb86a74223a71f334c.png)
 
-`Enum.sort([323, 99, 54])`{{execute}}
+アプリケーションを作成します
 
-パイプ演算子を利用した場合
+`cd /work && mix phx.new sample --no-webpack --no-ecto`{{execute}}
 
-`[323, 99, 54] |> Enum.sort`{{execute}}
+ここでも質問が発生します
 
-## Excelの「フィルタ」をElixirで書いてみる
+![](https://i.gyazo.com/22daa0b4361e27940bd7c8fa1bce4b00.png)
 
-### Enum.filter()
+作成したアプリケーションディレクトリに入ります
 
-渡されたリストの要素が, 一つ一つ `fn(n)` の `n` に代入され `->` 以降の処理が行われます
+`cd /work/sample`{{execute}}
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n != 999 end)`{{execute}}
+依存ライブラリをインストールします
 
-- `fn()` : 関数(function) を意味しています
-- `-> ... end` : 関数の処理を意味しています
+`mix deps.get`{{execute}}
 
-### バリエーション
+Phoenix サーバを立ち上げます
 
-`n` が `999` と一致しない場合
+`iex -S mix phx.server`{{execute}}
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n != 999 end)`{{execute}}
 
-`n` が `999` と一致する場合
+ブラウザでアクセスして確認します
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n == 999 end)`{{execute}}
+下記の URL もしくは, <img src='https://i.gyazo.com/9259b8ce25ee92b5ae817bab8032a7c5.png' width=100px'> をクリックして確認できます
 
-`n` が `999` 以上の場合
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n >= 999 end)`{{execute}}
+## Katacoda Editor
 
-`n` が `999` より大きい場合
+右上半分に エディタ画面が, 立ち上がっています
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n > 999 end)`{{execute}}
+ディレクトリツリーをたどり, ファイル名をクリックすると, エディタ内に内容が表示されます
 
-`n` が `999` 未満の場合
+![](https://i.gyazo.com/f587cc8f79369d0096b14bd1e14921ee.png)
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n < 999 end)`{{execute}}
+画面左柱の説明中にある各コード右上の <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width=120px> をクリックすることで, 対象ファイルへ内容をコピーできます
 
-`n` が `999` 以下の場合
+save は自動的に行われます
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n <= 999 end)`{{execute}}
+## 複数列データのWeb表示
 
-`n` が `323` 以下 かつ `n` が `999` 以上の場合
+ファイル名: `./lib/sample_web/templates/page/index.html.eex`
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n <= 323 && n >= 999 end)`{{execute}}
+<pre class="file" data-filename="/work/sample/lib/sample_web/templates/page/index.html.eex" data-target="replace">
+&lt;%
+data = 
+[
+  %{ "name" =&gt; "enぺだーし", "age" =&gt; 49, "team" =&gt; "有限会社デライトシステムズ", "position" =&gt; "代表取締役、性能探求者" }, 
+  %{ "name" =&gt; "ざっきー", "age" =&gt; 45, "team" =&gt; "公立大学法人 北九州市立大学", "position" =&gt; "准教授、カーネルハッカー" }, 
+  %{ "name" =&gt; "つちろー", "age" =&gt; 34, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、アプリマイスター" }, 
+  %{ "name" =&gt; "ゆじかわ", "age" =&gt; 30, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、グロースハッカー" }, 
+  %{ "name" =&gt; "piacere", "age" =&gt; 43, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問" }
+]
+%&gt;
+&lt;table border="1"&gt;
+&lt;%= for record &lt;- data do %&gt;
+&lt;tr&gt;
+  &lt;td&gt;&lt;%= record[ "name" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "age" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "team" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "position" ] %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;% end %&gt;
+&lt;/table&gt;
+</pre>
 
-`n` が `323` と一致 または `n` が `54` と一致した場合
+ブラウザでアクセスして確認します
 
-`[323, 99, 54] |> Enum.filter(fn(n) -> n == 323 || n == 54 end)`{{execute}}
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
->>Q1: 確認 次の実行結果を入力してください `[323, 99, 54] |> Enum.sort`<<
-=== [54, 99, 323]
+## Web上での複数列データの「フィルタ」
 
->>Q2: 確認 次の実行結果を入力してください `[323, 99, 54] |> Enum.filter(fn(n) -> n >= 55 || n <= 323 end)`<<
-=== [323, 99, 54]
+ファイル名: `./lib/sample_web/templates/page/index.html.eex`
+
+<pre class="file" data-filename="/work/sample/lib/sample_web/templates/page/index.html.eex" data-target="replace">
+&lt;%
+data = 
+[
+  %{ "name" =&gt; "enぺだーし", "age" =&gt; 49, "team" =&gt; "有限会社デライトシステムズ", "position" =&gt; "代表取締役、性能探求者" }, 
+  %{ "name" =&gt; "ざっきー", "age" =&gt; 45, "team" =&gt; "公立大学法人 北九州市立大学", "position" =&gt; "准教授、カーネルハッカー" }, 
+  %{ "name" =&gt; "つちろー", "age" =&gt; 34, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、アプリマイスター" }, 
+  %{ "name" =&gt; "ゆじかわ", "age" =&gt; 30, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、グロースハッカー" }, 
+  %{ "name" =&gt; "piacere", "age" =&gt; 43, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問" }
+]
+|&gt; Enum.filter( fn( record ) -&gt; record[ "age" ] &gt;= 43 end )
+%&gt;
+&lt;table border="1"&gt;
+&lt;%= for record &lt;- data do %&gt;
+&lt;tr&gt;
+  &lt;td&gt;&lt;%= record[ "name" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "age" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "team" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "position" ] %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;% end %&gt;
+&lt;/table&gt;
+</pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
+
+## Web上での複数列データの「並べ替え」
+
+ファイル名: `./lib/sample_web/templates/page/index.html.eex`
+
+<pre class="file" data-filename="/work/sample/lib/sample_web/templates/page/index.html.eex" data-target="replace">
+&lt;%
+data = 
+[
+  %{ "name" =&gt; "enぺだーし", "age" =&gt; 49, "team" =&gt; "有限会社デライトシステムズ", "position" =&gt; "代表取締役、性能探求者" }, 
+  %{ "name" =&gt; "ざっきー", "age" =&gt; 45, "team" =&gt; "公立大学法人 北九州市立大学", "position" =&gt; "准教授、カーネルハッカー" }, 
+  %{ "name" =&gt; "つちろー", "age" =&gt; 34, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、アプリマイスター" }, 
+  %{ "name" =&gt; "ゆじかわ", "age" =&gt; 30, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "リードエンジニア、グロースハッカー" }, 
+  %{ "name" =&gt; "piacere", "age" =&gt; 43, "team" =&gt; "カラビナテクノロジー株式会社", "position" =&gt; "CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問" }
+]
+|&gt; Enum.sort( fn( record_current, record_next ) -&gt; record_current[ "age" ] < record_next[ "age" ] end )
+%&gt;
+&lt;table border="1"&gt;
+&lt;%= for record &lt;- data do %&gt;
+&lt;tr&gt;
+  &lt;td&gt;&lt;%= record[ "name" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "age" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "team" ] %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%= record[ "position" ] %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;% end %&gt;
+&lt;/table&gt;
+</pre>
+
+ブラウザでアクセスして確認します
+
+https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
+

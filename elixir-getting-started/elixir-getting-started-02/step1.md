@@ -1,107 +1,66 @@
 ## 事前準備
 
+このコースが始まると, Elixir 実行環境が構築され始めます
+
 katacoda 環境: `ubuntu1904`
 
-`pwd; whoami; cat /etc/lsb-release`{{execute}}
+Elixir 実行環境 docker `elixir:1.9.1'
+
+`pwd; whoami; cat /etc/debian_version`{{execute}}
 
 上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
 
-## Erlang のインストール
+作業ディレクトリの移動と, Phoenix 実行に必要なライブラリ (inotify-tools) のインストールを行います
 
-- `1.` もしくは, `2.` の手順でインストールします
+`cd /work && ./setting_up.sh`{{execute}}
 
-#### 1. apt を使用する場合
+## 複数列のデータ
 
-GPG Key を取得します
+iex を起動します
 
-`wget -O- https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo apt-key add -`{{execute}}
+表形式のデータを作成します
 
-リポジトリを設定します
+`data = [
+  %{ "name" => "enぺだーし", "age" => 49, "team" => "有限会社デライトシステムズ", "position" => "代表取締役、性能探求者" }, 
+  %{ "name" => "ざっきー", "age" => 45, "team" => "公立大学法人 北九州市立大学", "position" => "准教授、カーネルハッカー" }, 
+  %{ "name" => "つちろー", "age" => 34, "team" => "カラビナテクノロジー株式会社", "position" => "リードエンジニア、アプリマイスター" }, 
+  %{ "name" => "ゆじかわ", "age" => 30, "team" => "カラビナテクノロジー株式会社", "position" => "リードエンジニア、グロースハッカー" }, 
+  %{ "name" => "piacere", "age" => 43, "team" => "カラビナテクノロジー株式会社", "position" => "CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問" }
+]`{{execute}}
 
-`echo "deb https://packages.erlang-solutions.com/ubuntu disco contrib" | sudo tee /etc/apt/sources.list.d/rabbitmq.list`{{execute}}
+- `[..]` : リスト, 行の並び
+- `%{..}` : マップ, キーと値のペア
+- マップリスト : マップをリストで包んでいるので
 
-Erlang をインストールします
+## 複数列データから「列の抽出」
 
-`sudo apt update && sudo apt install -y erlang`{{execute}}
+- `Enum.map()` : 列の抽出
+- `Enum.map(fn(変数) -> 変数を含んだ処理 end)` 結果はリストで返ります
 
-バージョンを確認します
+マップの特定列を指定する[ "～" ]を使って、複数行から、名前だけを抽出します
 
-`cat /usr/lib/erlang/releases/RELEASES`{{execute}}
+`data |> Enum.map( fn( record ) -> record[ "name" ] end )`{{execute}}
 
-表示例です
+結果をマップリストで返るようにしてみます
 
-![](https://i.gyazo.com/2549343a962a509b007f951c06daa287.png)
+`data |> Enum.map( fn( record ) -> %{ "name" => record[ "name" ] } end )`{{execute}}
 
-#### 2. ソースからビルドする場合
+他の列も抽出します
 
-<!-- `apt install libncurses5-dev autoconf xsltproc fop libxml2-utils libwxgtk3.0-dev` -->
-`sudo apt install -y build-essential libncurses5-dev autoconf`{{execute}}
+`data |> Enum.map( fn( record ) -> %{ "name" => record[ "name" ], "age" => record[ "age" ] } end )`{{execute}}
 
-Erlang をダウンロードしインストールします
+`for` を利用した場合の例
 
-`cd /opt && wget http://erlang.org/download/otp_src_22.0.tar.gz`{{execute}}
+`for record <- data do
+   %{ "name" => record[ "name" ], "age" => record[ "age" ] }
+end`{{execute}}
 
-展開します
+注意点
 
-`tar zxvf /opt/otp_src_22.0.tar.gz -C /opt && cd /opt/otp_src_22.0`{{execute}}
+- for中で変数代入しても次のループではその代入は消えてしまう
+- Enum.map()のように、パイプを繋いで使えない
 
-`./configure --enable-hipe`{{execute}}
 
-次のような表示がでますが, 問題なく次へ進めます
-
-![](https://i.gyazo.com/f79661d28777770fe74ab604df91dc9a.png)
-![](https://i.gyazo.com/41bfd2b14e9c867312ab33456d898939.png)
-![](https://i.gyazo.com/d294409606894d90b3478c1ab211e181.png)
-
-インストールします
-
-`make && make install`{{execute}}
-
-バージョンを確認します
-
-`cat /usr/local/lib/erlang/releases/RELEASES`{{execute}}
-
-表示例です
-
-![](https://i.gyazo.com/99954aa3900c933135997c6d8f28093c.png)
-
-## Elixir のインストール
-
-ソースコードをダウンロードします
-
-`cd /opt && wget https://github.com/elixir-lang/elixir/archive/v1.9.1.tar.gz`{{execute}}
-
-展開します
-
-`tar zxvf /opt/v1.9.1.tar.gz -C /opt && cd /opt/elixir-1.9.1`{{execute}}
-
-`PATH` を設定します
-
-`export PATH="${PATH}:/usr/local/bin"`{{execute}}
-
-インストールします
-
-`make && make install`{{execute}}
-
-バージョンを確認します
-
-`elixir -v`{{execute}}
-
-表示例です
-
-![](https://i.gyazo.com/72c4fa64c019aeb5c7dbfb8e12423a7e.png)
-
-## Docker を利用したインストール
-
-`docker pull elixir:1.9.1`{{execute}}
-
-`docker run -p 4000:4000 -i -t  elixir:1.9.1 /bin/bash`{{execute}}
-
-バージョンを確認します
-
-`elixir -v`{{execute}}
-
-表示例です
-
-![](https://i.gyazo.com/2bf302ef026f585f6902f43e118c8c2e.png)
+>>Q1: 確認 `data` から `age` のみを抽出し, マップリストで返すスクリプトを入力してください<<
+=~= data |> Enum.map( fn( record ) -> %{ "name" => record[ "name" ] } end )
 
