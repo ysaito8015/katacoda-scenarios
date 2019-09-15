@@ -24,7 +24,7 @@ GPG Key を取得します
 
 PostgreSQL の apt リポジトリを追加します
 
-`echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" >> /etc/apt/sources.list.d/pgdg.list`{{execute}]
+`echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" >> /etc/apt/sources.list.d/pgdg.list`{{execute}}
 
 apt でインストールします
 
