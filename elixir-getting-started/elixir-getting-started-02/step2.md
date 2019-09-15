@@ -38,7 +38,7 @@ Phoenix サーバを立ち上げます
 
 ブラウザでアクセスして確認します
 
-下記の URL もしくは, <img src='https://i.gyazo.com/9259b8ce25ee92b5ae817bab8032a7c5.png' width=100px> をクリックして確認できます
+下記の URL もしくは, <img src='https://i.gyazo.com/9259b8ce25ee92b5ae817bab8032a7c5.png' width=200px> をクリックして確認できます
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
