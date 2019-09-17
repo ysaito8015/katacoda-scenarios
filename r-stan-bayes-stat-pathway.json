@@ -4,7 +4,7 @@
     "icon": "fa-katacoda",
     "courses": [
       {
-        "course_id": "R-Stan-Bayes-stat-01",
+        "course_id": "r-stan-bayes-stat-01",
         "title": "Rの基本",
         "description": "Rの基本を学びます"
       }

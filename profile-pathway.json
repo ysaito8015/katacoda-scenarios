@@ -13,7 +13,7 @@
       {
         "title": "R と Stan ではじめる ベイズ統計モデリングによるデータ分析入門",
         "description": "表題書籍に基づいたシナリオ集",
-        "id": "R-Stan-Bayes-stat"
+        "id": "r-stan-bayes-stat"
       }
     ],
     "scenarios": [
