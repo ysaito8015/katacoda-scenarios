@@ -26,10 +26,6 @@
     "showdashboard": true,
     "dashboards": [
       {
-        "name": "VScode",
-        "port": 23000
-      },
-      {
         "name": "R Server",
         "port": 8787 
       }
