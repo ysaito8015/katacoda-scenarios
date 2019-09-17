@@ -1,0 +1,44 @@
+{
+  "title": "R-Stan-Bayes-stat-01",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      },
+      {
+        "name": "R Server",
+        "port": 8787 
+      }
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "R",
+    "uieditorpath": "/work/sample"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}

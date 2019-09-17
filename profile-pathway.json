@@ -7,8 +7,13 @@
       },
       {
         "title": "elixir/phoenix 初級１に基づいたハンズオン",
-        "description": "表題書籍に基づいたハンズオン資料",
+        "description": "表題書籍に基づいた資料",
         "id": "elixir-phoenix"
+      },
+      {
+        "title": "R と Stan ではじめる ベイズ統計モデリングによるデータ分析入門",
+        "description": "表題書籍に基づいたシナリオ集",
+        "id": "R-Stan-Bayes-stat"
       }
     ],
     "scenarios": [

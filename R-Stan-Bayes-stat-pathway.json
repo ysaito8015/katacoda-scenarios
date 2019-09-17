@@ -1,0 +1,12 @@
+{
+    "title": "R と Stan ではじめる ベイズ統計モデリングによるデータ分析入門",
+    "description": "表題書籍に基づいたシナリオ集",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "R-Stan-Bayes-stat-01",
+        "title": "Rの基本",
+        "description": "Rの基本を学びます"
+      }
+    ]
+}
