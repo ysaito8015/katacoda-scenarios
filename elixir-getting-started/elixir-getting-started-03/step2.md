@@ -102,9 +102,13 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ## テーブル作成, データ投入
 
+DB ユーザに切り替えます
+
+`sudo su - postgres`{{execute}}
+
 `psql` を起動します
 
-`sudo su - postgres && psql -U postgres`{{execute}}
+`psql -U postgres`{{execute}}
 
 使用データベースを切り替えます
 

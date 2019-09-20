@@ -16,8 +16,8 @@ use Mix.Config
 # Configure your database
 config :sample_db, SampleDb.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
+  username: "phx",
+  password: "password",
   database: "sample_db_dev",
   hostname: "localhost",
   pool_size: 10

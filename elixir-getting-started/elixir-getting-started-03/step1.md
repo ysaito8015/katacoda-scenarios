@@ -58,7 +58,7 @@ DB ユーザの登録を行います
 
 `\q`{{execute}}
 
-postgres ユーザを閉じます
+postgres ユーザのシェルを終了します
 
 `exit`{{execute}}
 
@@ -75,6 +75,18 @@ apt からインストールします
 デーモンを起動します
 
 `service mysql start`{{execute}}
+
+`mysql` を起動します
+
+`mysql -u root`{{execute}}
+
+ユーザを作ります
+
+`GRANT ALL PRIVILEGES ON *.* TO 'phx'@'localhost' IDENTIFIED BY 'password';`{{execute}}
+
+`mysql` を終了します
+
+`exit`{{execute}}
 
 Step2 は PostgreSQL, Step3 は MySQL を選んで設定を行います
 
