@@ -98,11 +98,13 @@ Phoenix を立ち上げます
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
+`CTRL C` を二回押し, 一旦停止します
+
 ## テーブル作成, データ投入
 
 `psql` を起動します
 
-`psql -U postgres`{{execute}}
+`sudo su - postgres && psql -U postgres`{{execute}}
 
 使用データベースを切り替えます
 
@@ -128,6 +130,14 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
                           ,( 4, 'ゆじかわ', 30, 'カラビナテクノロジー株式会社', 'リードエンジニア、グロースハッカー' )
                           ,( 5, 'piacere', 43, 'カラビナテクノロジー株式会社', 'CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問' );`{{execute}}
 
+確認します
+
+`select * from members;`{{execute}}
+
 `psql` を終了します
 
 `\q`{{execute}}
+
+postgres ユーザのシェルを終了します
+
+`exit`{{execute}}

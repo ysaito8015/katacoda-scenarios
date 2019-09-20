@@ -98,3 +98,43 @@ Phoenix を立ち上げます
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com/
 
+`CTRL C` を二回押し, 一旦停止します
+
+## テーブル作成, データ投入
+
+`mysql` クライアントを起動します
+
+`mysql -u root -h localhost`{{execute}}
+
+使用データベースを切り替えます
+
+`use sample_db_dev`{{execute}}
+
+テーブルを作成します
+
+`create table members
+(
+  id integer, 
+  name varchar( 255 ), 
+  age integer, 
+  team varchar( 255 ), 
+  position varchar( 255 ) 
+);
+`{{execute}}
+
+データを投入します
+
+`insert into members values( 1, 'enぺだーし', 49, '有限会社デライトシステムズ', '代表取締役、性能探求者' )
+                          ,( 2, 'ざっきー', 45, '公立大学法人 北九州市立大学', '准教授、カーネルハッカー' )
+                          ,( 3, 'つちろー', 34, 'カラビナテクノロジー株式会社', 'リードエンジニア、アプリマイスター' )
+                          ,( 4, 'ゆじかわ', 30, 'カラビナテクノロジー株式会社', 'リードエンジニア、グロースハッカー' )
+                          ,( 5, 'piacere', 43, 'カラビナテクノロジー株式会社', 'CTO、福岡Elixirプログラマ、重力プログラマ、技術顧問' );`{{execute}}
+
+確認します
+
+`select * from members;`{{execute}}
+
+`mysql` を終了します
+
+`exit`{{execute}}
+
