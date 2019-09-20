@@ -4,7 +4,7 @@
 
 次の質問は `Y` を入力します
 
-![](https://i.gyazo.com/be5db77662ad74e2c807a1963e5f5fff.png)
+![](https://i.gyazo.com/0db4a0ffc5751f7c0d8781b3bcdd6aa4.png)
 
 データベースの接続を設定します
 
