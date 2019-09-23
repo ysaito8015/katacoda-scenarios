@@ -1,0 +1,12 @@
+{
+    "title": "webpack チュートリアル",
+    "description": "webpack チュートリアルを元にしたシナリオ集",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "webpack-tutorial-01",
+        "title": "第二章 各種ソフトウェアのインストール",
+        "description": "環境構築"
+      }
+    ]
+}
