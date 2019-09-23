@@ -5,36 +5,27 @@
 ファイル名: `/work/webpack-demo/package.json`
 
 <pre class="file" data-filename="/work/webpack-demo/package.json" data-target="replace">
-  {
-    "name": "webpack-demo",
-    "version": "1.0.0",
-    "description": "",
-    "private": true,
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "webpack": "^4.20.2",
-      "webpack-cli": "^3.1.2"
-    },
-    "dependencies": {}
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
   }
+}
 </pre>
 
 ## Bundle を作る
 
 Bundle バンドル: 機能ごとに別れた `.js` ファイル (モジュール) をまとめること
-
-## ディレクトリ構成の変更
-
-distribution コードを専用のディレクトリに移動する
-
-`mkdir ./dist`{{execute}}
-
-`mv ./index.html ./dist`{{execute}}
 
 ## loadsh をバンドルする
 
@@ -90,37 +81,6 @@ loadsh をインストールします
 
 `npx webpack`{{execute}}
 
-## Node.js でサーバを立てる
-
-`touch ./server.js`{{execute}}
-
-ファイル名: `/work/webpack-demo/server.js`
-
-<pre class="file" data-filename="/work/webpack-demo/server.js" data-target="replace">
-var http = require('http'),
-    port = 8080,//ポート番号
-    ipadress = 'localhost',//IPアドレス
-    fs = require('fs');
-
-
-var server = http.createServer();
-
-server.on('request', function (req, res) {
-    fs.readFile(__dirname + '/dist/index.html', 'utf-8', function (err, data) {
-        if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/plain' });
-            res.write("not found!");
-            return res.end();
-        }
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-    });
-});
-
-server.listen(port, ipadress);
-console.log("server listening ...");
-</pre>
 
 サーバを起動します
 
