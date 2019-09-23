@@ -1,5 +1,11 @@
 ## webpack を使えるようにする
 
+katacoda 環境: `ubuntu1904`
+
+`pwd; whoami; cat /etc/lsb-release`{{execute}}
+
+上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
+
 ## nvm をインストール
 
 Node.js自体を管理するnvm(Node Version Manager)
