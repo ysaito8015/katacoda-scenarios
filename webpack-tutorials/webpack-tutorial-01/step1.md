@@ -97,7 +97,6 @@ document.body.appendChild(component());
     &lt;script src="https://unpkg.com/lodash@4.16.6"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p&gt;Hello, webpack!&lt;/p&gt;
     &lt;script src="./src/index.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;

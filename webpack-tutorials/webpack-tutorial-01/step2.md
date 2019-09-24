@@ -1,3 +1,5 @@
+`CTRL C` を押してサーバを停止します
+
 ## package.json を編集
 
 `private` 設定にして, `main` セクションも削除します
@@ -17,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.40.2",
+    "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   }
 }
@@ -40,20 +42,20 @@ loadsh をインストールします
 ファイル名: `/work/webpack-demo/src/index.js`
 
 <pre class="file" data-filename="/work/webpack-demo/src/index.js" data-target="replace">
-  import _ from 'lodash';
+import _ from 'lodash';
 
-  function component() {
-    const element = document.createElement('div');
+function component() {
+  const element = document.createElement('div');
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-    return element;
-  }
+  return element;
+}
 
-  document.body.appendChild(component());
+document.body.appendChild(component());
 </pre>
 
-`./dist/indes.html` を編集し, `loadsh` の呼び出し部分を削除します
+`./dist/index.html` を編集し, `loadsh` の呼び出し部分を削除します
 
 また, Bundle 後に生成される `main.js` へのリンクに変更します
 
@@ -84,8 +86,8 @@ loadsh をインストールします
 
 サーバを起動します
 
-`node server`{{execute}}
+`node ./server.js`{{execute}}
 
 ブラウザを開いて確認します
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/
