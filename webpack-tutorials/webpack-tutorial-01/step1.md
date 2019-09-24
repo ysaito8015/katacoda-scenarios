@@ -99,6 +99,7 @@ document.body.appendChild(component());
     &lt;script src="https://unpkg.com/lodash@4.16.6"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
+    &lt;p&gt;Hello, webpack!&lt;/p&gt;
     &lt;script src="./src/index.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -111,31 +112,34 @@ document.body.appendChild(component());
 ファイル名: `/work/webpack-demo/server.js`
 
 <pre class="file" data-filename="/work/webpack-demo/server.js" data-target="replace">
-var https = require('https'),
+var http = require('http'),
     port = 8000,
     fs = require('fs');
 
-var server = https.createServer(function (req, res) {
-  var url = "dist" + (req.url.endsWith("/") ? req.url + "index.html" : req.url);
-  if (fs.existsSync(url)) {
-    fs.readFile(url, (err, data) => {
-      if (!err) {
-        res.writeHead(200, {"Content-Type": "text/html"});
-        res.end(data);
-      }
+
+var server = http.createServer();
+
+server.on('request', function (req, res) {
+    fs.readFile(__dirname + '/dist' + '/index.html', 'utf-8', function (err, data) {
+        if (err) {
+            res.writeHead(404, { 'Content-Type': 'text/plain' });
+            res.write("not found!");
+            return res.end();
+        }
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write(data);
+        res.end();
     });
-  }
 });
 
 server.listen(port);
 console.log("server listening ...");
-
 </pre>
 
 サーバを起動します
 
-`node server`{{execute}}
+`node ./server.js`{{execute}}
 
 ブラウザを開いて確認します
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/
