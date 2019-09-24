@@ -58,9 +58,7 @@ Node.js のバージョンを確認します
 
 webpack パッケージをインストールします
 
-`npm install webpack --save-dev`{{execute}}
-
-`npm install webpack-cli --save-dev`{{execute}}
+`npm install webpack webpack-cli --save-dev`{{execute}}
 
 `./src/index.js` ファイル, `index.html` を作成します
 
