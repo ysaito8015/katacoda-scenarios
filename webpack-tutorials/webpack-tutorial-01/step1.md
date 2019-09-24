@@ -24,7 +24,7 @@ nvm のバージョンを確認します
 
 インストール可能な Node.js のバージョン確認
 
-`nvm ls-remote | less`{{execute}}
+`nvm ls-remote`{{execute}}
 
 lts (Long Term Support) をインストールします
 
@@ -54,7 +54,7 @@ Node.js のバージョンを確認します
 
 現状のディレクトリ構造を確認します
 
-`tree -L 2 -I 'node_modeules'`{{execute}}
+`tree -L 2 -I 'node_modules'`{{execute}}
 
 webpack パッケージをインストールします
 
@@ -66,11 +66,11 @@ webpack パッケージをインストールします
 
 `mkdir ./src && touch ./src/index.js`{{execute}}
 
-`mkdir ./dist && touch index.html`{{execute}}
+`mkdir ./dist && touch ./dist/index.html`{{execute}}
 
 現状のディレクトリ構造を確認します
 
-`tree -L 2 -I 'node_modeules'`{{execute}}
+`tree -L 2 -I 'node_modules'`{{execute}}
 
 `./src/index.js`, `./dist/index.html` の内容を書き込みます
 
@@ -111,29 +111,25 @@ document.body.appendChild(component());
 ファイル名: `/work/webpack-demo/server.js`
 
 <pre class="file" data-filename="/work/webpack-demo/server.js" data-target="replace">
-var http = require('http'),
-    port = 8080,//ポート番号
-    ipadress = 'localhost',//IPアドレス
+var https = require('https'),
+    port = 8000,
     fs = require('fs');
 
-
-var server = http.createServer();
-
-server.on('request', function (req, res) {
-    fs.readFile(__dirname + '/dist/index.html', 'utf-8', function (err, data) {
-        if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/plain' });
-            res.write("not found!");
-            return res.end();
-        }
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
+var server = https.createServer(function (req, res) {
+  var url = "dist" + (req.url.endsWith("/") ? req.url + "index.html" : req.url);
+  if (fs.existsSync(url)) {
+    fs.readFile(url, (err, data) => {
+      if (!err) {
+        res.writeHead(200, {"Content-Type": "text/html"});
+        res.end(data);
+      }
     });
+  }
 });
 
-server.listen(port, ipadress);
+server.listen(port);
 console.log("server listening ...");
+
 </pre>
 
 サーバを起動します
