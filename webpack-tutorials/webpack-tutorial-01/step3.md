@@ -51,6 +51,7 @@ webpack コマンドを実行しなくても良いように, `./package.json` �
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
      "test": "echo \"Error: no test specified\" && exit 1",
      "build": "webpack"
