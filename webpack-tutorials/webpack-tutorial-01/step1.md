@@ -62,7 +62,7 @@ webpack パッケージをインストールします
 
 `./dist/index.js` ファイル, `./dist/index.html` を作成します
 
-`mkdir ./dist && touch ./dist/js/index.js`{{execute}}
+`mkdir ./dist && touch ./dist/index.js`{{execute}}
 
 `touch ./dist/index.html`{{execute}}
 
