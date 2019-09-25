@@ -112,7 +112,7 @@ document.body.appendChild(component());
 
 Apache2 に設定します
 
-`sed -i.bak -e 's/\/var\/www/>/\/work\/webpack-demo>/g' /etc/apache2/apache2.conf`{{execute}}
+`sed -i.bak -e 's/\/var\/www\/>/\/work\/webpack-demo>/g' /etc/apache2/apache2.conf`{{execute}}
 
 `sed -i.bak -e 's/\/var\/www\/html/\/work\/webpack-demo\/dist/g' /etc/apache2/sites-available/000-default.conf`{{execute}}
 
