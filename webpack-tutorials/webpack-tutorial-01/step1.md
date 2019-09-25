@@ -110,14 +110,7 @@ document.body.appendChild(component());
 
 Apache2 に設定します
 
-`cat - << EOS >> /etc/apache2/apache2.conf
-&lt;Directory /work/webpack-demo/&gt;
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
-&lt;/Directory&gt;
-EOS
-`{{execute}}
+`sed -i.bak -e 's/\/var\/www>/\/work\/webpack-demo>/g' /etc/apache2/sites-available/000-default.conf`{{execute}}
 
 `sed -i.bak -e 's/\/var\/www\/html/\/work\/webpack-demo\/dist/g' /etc/apache2/sites-available/000-default.conf`{{execute}}
 
