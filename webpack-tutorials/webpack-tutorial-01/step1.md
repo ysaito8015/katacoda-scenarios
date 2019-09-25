@@ -60,7 +60,42 @@ webpack パッケージをインストールします
 
 `npm install webpack webpack-cli --save-dev`{{execute}}
 
-`./src/index.js` ファイル, `index.html` を作成します
+## package.json を編集
+
+`private` 設定にして, `main` セクションも削除します
+
+ファイル名: `/work/webpack-demo/package.json`
+
+<pre class="file" data-filename="/work/webpack-demo/package.json" data-target="replace">
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
+</pre>
+
+## Bundle を作る
+
+Bundle バンドル: 機能ごとに別れた `.js` ファイル (モジュール) をまとめること
+
+## loadsh をバンドルする
+
+loadsh をインストールします
+
+`npm install --save lodash`{{execute}}
+
+`./src/index.js` ファイル, `./dist/index.html` を作成します
 
 `mkdir ./src && touch ./src/index.js`{{execute}}
 
@@ -75,10 +110,11 @@ webpack パッケージをインストールします
 ファイル名: `/work/webpack-demo/src/index.js`
 
 <pre class="file" data-filename="/work/webpack-demo/src/index.js" data-target="replace">
+import _ from 'lodash';
+
 function component() {
   const element = document.createElement('div');
 
-  // Lodash, currently included via a script, is required for this line to work
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
   return element;
@@ -92,15 +128,25 @@ document.body.appendChild(component());
 <pre class="file" data-filename="/work/webpack-demo/dist/index.html" data-target="replace">
 &lt;!doctype html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Getting Started&lt;/title&gt;
-    &lt;script src="https://unpkg.com/lodash@4.16.6"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script src="./src/index.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+ &lt;head&gt;
+   &lt;title&gt;Getting Started&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;script src="main.js"&gt;&lt;/script&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+
+## main.js の生成
+
+`./src/index.js` をエントリーポイントとして, `./dist/main.js` を生成します
+
+`npx` コマンドは `npm install` でインストールしたパッケージを実行します
+
+( npm コマンドで実行する場合は, `$(npm bin)/パッケージ名` のようになります )
+
+`npx webpack`{{execute}}
+
 
 ## Node.js でサーバを立てる
 
