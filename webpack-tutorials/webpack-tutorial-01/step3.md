@@ -18,7 +18,7 @@ webpack4 から, コンフィグレーションは必要ありません
 
 新たに, `webpack.config.js` ファイルをつくります
 
-`touch ./webpack-config.js`{{execute}}
+`touch ./webpack.config.js`{{execute}}
 
 ファイル名: `/work/webpack-demo/webpack.config.js`
 
@@ -47,25 +47,25 @@ webpack コマンドを実行しなくても良いように, `./package.json` �
 ファイル名: `/work/webpack-demo/package.json`
 
 <pre class="file" data-filename="/work/webpack-demo/package.json" data-target="replace">
- {
-   "name": "webpack-demo",
-   "version": "1.0.0",
-   "description": "",
-   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "webpack"
-   },
-   "keywords": [],
-   "author": "",
-   "license": "ISC",
-   "devDependencies": {
-      "webpack": "^4.41.0",
-      "webpack-cli": "^3.3.9"
-   },
-   "dependencies": {
-     "lodash": "^4.17.5"
-   }
- }
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+     "webpack": "^4.41.0",
+     "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
 </pre>
 
 これにより `npm run build` コマンドの実行で同じ出力が得られます
