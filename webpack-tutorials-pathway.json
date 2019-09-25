@@ -5,8 +5,8 @@
     "courses": [
       {
         "course_id": "webpack-tutorial-01",
-        "title": "第二章 各種ソフトウェアのインストール",
-        "description": "環境構築"
+        "title": "Getting started",
+        "description": "webpack をはじめてみる"
       }
     ]
 }
