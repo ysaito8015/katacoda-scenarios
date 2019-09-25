@@ -35,7 +35,11 @@ loadsh をインストールします
 
 `npm install --save lodash`{{execute}}
 
-`./src/index.js` を編集し, `loadsh` をインポートします
+`./dist/index.js` を `./src` 下に移動します
+
+`mkdir ./src && mv ./dist/index.js ./src`{{execute}}
+
+同ファイルを編集し, `loadsh` をインポートする行を加えます
 
 ファイル名: `/work/webpack-demo/src/index.js`
 

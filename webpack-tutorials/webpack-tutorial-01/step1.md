@@ -60,21 +60,25 @@ webpack パッケージをインストールします
 
 `npm install webpack webpack-cli --save-dev`{{execute}}
 
-`./src/index.js` ファイル, `./dist/index.html` を作成します
+`./dist/index.js` ファイル, `./dist/index.html` を作成します
 
-`mkdir ./src && touch ./src/index.js`{{execute}}
+`mkdir ./dist && touch ./dist/js/index.js`{{execute}}
 
-`mkdir ./dist && touch ./dist/index.html`{{execute}}
+`touch ./dist/index.html`{{execute}}
 
 現状のディレクトリ構造を確認します
 
 `tree -L 2 -I 'node_modules'`{{execute}}
 
-`./src/index.js`, `./dist/index.html` の内容を書き込みます
+`./dist/index.js`, `./dist/index.html` の内容を書き込みます
 
-ファイル名: `/work/webpack-demo/src/index.js`
+構成としては, `index.html` から `&lt;script&gt;` タグにより, `./dist/index.js` を読み込み実行しています
 
-<pre class="file" data-filename="/work/webpack-demo/src/index.js" data-target="replace">
+また, `./dist/index.js` 内の関数の実行に必要なモジュールを, `./dist/index.html` 内で読み込んでいます
+
+ファイル名: `/work/webpack-demo/dist/index.js`
+
+<pre class="file" data-filename="/work/webpack-demo/dist/index.js" data-target="replace">
 function component() {
   const element = document.createElement('div');
 
@@ -97,7 +101,7 @@ document.body.appendChild(component());
     &lt;script src="https://unpkg.com/lodash@4.16.6"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;script src="./src/index.js"&gt;&lt;/script&gt;
+    &lt;script src="index.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -107,11 +111,11 @@ document.body.appendChild(component());
 Apache2 に設定します
 
 `cat - << EOS >> /etc/apache2/apache2.conf
-<Directory "自分のコンテンツのdir">
+&lt;Directory /work/webpack-demo/&gt;
         Options Indexes FollowSymLinks
         AllowOverride None
         Require all granted
-</Directory>
+&lt;/Directory&gt;
 EOS
 `{{execute}}
 
@@ -124,3 +128,8 @@ EOS
 ブラウザで下記 URL を開いて確認します
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+ページのソースを表示して確認します
+
+![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+
