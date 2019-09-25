@@ -38,7 +38,7 @@ webpack を実行します
 
 `npx webpack --config webpack.config.js`{{execute}}
 
-デフォルトで, `webpack.config.js` があれば自動的に読み込みます
+実際にはオプションを指定しなくても, デフォルトで, `webpack.config.js` があれば自動的に読み込みます
 
 ## NPM スクリプト
 
@@ -59,8 +59,8 @@ webpack コマンドを実行しなくても良いように, `./package.json` �
    "author": "",
    "license": "ISC",
    "devDependencies": {
-     "webpack": "^4.20.2",
-     "webpack-cli": "^3.1.2"
+      "webpack": "^4.41.0",
+      "webpack-cli": "^3.3.9"
    },
    "dependencies": {
      "lodash": "^4.17.5"

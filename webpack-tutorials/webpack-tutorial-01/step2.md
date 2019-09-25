@@ -29,7 +29,7 @@ Bundle バンドル: 機能ごとに別れた `.js` ファイル (モジュー�
 
 ## loadsh をバンドルする
 
-`./dist/index.html` 内で, `&lt;script&gt;` タグによって直接読み込まれている `loadsh` をバンドルしてみます
+`./dist/index.html` 内で, `script` タグによって直接読み込まれている `loadsh` をバンドルしてみます
 
 loadsh をインストールします
 
@@ -64,15 +64,15 @@ document.body.appendChild(component());
 ファイル名: `/work/webpack-demo/dist/index.html`
 
 <pre class="file" data-filename="/work/webpack-demo/dist/index.html" data-target="replace">
-  &lt;!doctype html&gt;
-  &lt;html&gt;
-   &lt;head&gt;
-     &lt;title&gt;Getting Started&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-     &lt;script src="main.js"&gt;&lt;/script&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;Getting Started&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;script src="main.js"&gt;&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
 ## main.js の生成
@@ -89,3 +89,7 @@ document.body.appendChild(component());
 ブラウザで下記 URL を開いて確認します
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+ページのソースを確認します
+
+![](https://i.gyazo.com/acf4fdd9975229e300f85d41b6e6c476.png)
