@@ -18,7 +18,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ページのソースを表示して確認します
 
-![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+![](https://i.gyazo.com/832c6642e6e2fdcc56259f3cf208adf4.png)
 
 ## ページタイトルの変更
 
@@ -56,7 +56,7 @@ module.exports = {
 
 必要なモジュールをインストールします
 
-- `style-loader` : `bundle.js` 内に style タグを生成し, その中に指定した CSS コードを導入する
+- `style-loader` : `./dist/index.html` 内に style タグを生成し, その中に指定した CSS コードを導入する
 - `css-loader` : CSS ファイルの読み込み ( `url` , `@import` などの解決 )
 
 `npm install --save-dev style-loader css-loader`{{execute}}
@@ -137,7 +137,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ページのソースを表示して確認します
 
-![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+![](https://i.gyazo.com/e643e3bb5c196cb47fd345858468ea37.png)
 
 ## CSS ファイルの個別化
 
@@ -213,4 +213,6 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ページのソースを表示して確認します
 
-![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+![](https://i.gyazo.com/924d5a1e964eed3b94077f0c3ce4b5e8.png)
+
+![](https://i.gyazo.com/1abd531bde254fd3ea0fa07ba4a0ee42.png)

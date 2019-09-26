@@ -80,7 +80,9 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ページのソースを表示して確認します
 
-![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+![](https://i.gyazo.com/924d5a1e964eed3b94077f0c3ce4b5e8.png)
+
+![](https://i.gyazo.com/1abd531bde254fd3ea0fa07ba4a0ee42.png)
 
 ## 指定ディレクトリ以下の SCSS ファイルの一括読み込み
 
@@ -172,4 +174,6 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ページのソースを表示して確認します
 
-![](https://i.gyazo.com/f7b33664971e5dcc125f304ba2d1d0e7.png)
+![](https://i.gyazo.com/924d5a1e964eed3b94077f0c3ce4b5e8.png)
+
+![](https://i.gyazo.com/1abd531bde254fd3ea0fa07ba4a0ee42.png)
