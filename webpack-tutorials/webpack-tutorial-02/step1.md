@@ -4,6 +4,8 @@ katacoda 環境: `ubuntu1904`
 
 このコースが始まると環境構築が同時に始まります
 
+`cd /work && ./get_source.sh`{{execute}}
+
 `cd /work/webpack-demo && pwd; whoami; cat /etc/lsb-release`{{execute}}
 
 上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
