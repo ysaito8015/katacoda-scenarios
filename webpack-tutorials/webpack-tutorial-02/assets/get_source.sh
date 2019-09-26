@@ -3,7 +3,7 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash \
   && source ~/.bashrc \
   && export NVM_DIR="$HOME/.nvm" \
-  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/mvn.sh" \
+  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
   && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" \
   && nvm install --lts && nvm alias default lts/* \
   && mkdir /work && cd /work \
