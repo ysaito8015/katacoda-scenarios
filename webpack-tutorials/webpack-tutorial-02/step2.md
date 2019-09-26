@@ -127,7 +127,7 @@ module.exports = {
 
 scss ディレクトリを作り, `style.scss` を移動します
 
-`mkdir ./src/scss && mv ./src/style.scss ./src/scss/`{{execute}]
+`mkdir ./src/scss && mv ./src/style.scss ./src/scss/`{{execute}}
 
 エントリポイントとなる `app.scss` を生成します
 
