@@ -35,7 +35,7 @@ module.exports = {
       },
     ],
   },
-  plugin: [
+  plugins: [
     new MiniCssExtractPlugin({filename: 'style/[name].css'})
   ],
 };
@@ -72,7 +72,7 @@ document.body.appendChild(component());
 
 `webpack` を実行します
 
-`npm run build`{[execute}}
+`npm run build`{{execute}}
 
 ブラウザで下記 URL を開いて確認します
 
@@ -117,7 +117,7 @@ module.exports = {
       },
     ],
   },
-  plugin: [
+  plugins: [
     new MiniCssExtractPlugin({filename: 'style/[name].css'})
   ],
 };
@@ -164,7 +164,7 @@ document.body.appendChild(component());
 
 `webpack` を実行します
 
-`npm run build`{[execute}}
+`npm run build`{{execute}}
 
 ブラウザで下記 URL を開いて確認します
 

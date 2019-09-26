@@ -178,8 +178,8 @@ module.exports = {
       },
     ],
   },
-  plugin: [
-    new MiniCssExtractPlugin({filename: 'style/[name].css'})
+  plugins: [
+    new MiniCssExtractPlugin({filename: 'style/[name].css'}),
   ],
 };
 </pre>
