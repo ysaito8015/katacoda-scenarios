@@ -6,7 +6,7 @@ katacoda 環境: `ubuntu1904`
 
 `cd /work && ./get_source.sh`{{execute}}
 
-`cd /work/webpack-demo && pwd; whoami; cat /etc/lsb-release`{{execute}}
+`cd /work/webpack-demo && pwd; whoami; cat /etc/lsb-release && source ~/.bashrc`{{execute}}
 
 上記の <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px> をクリックすると, 右下のターミナルでコマンドが実行されます
 
@@ -129,7 +129,7 @@ document.body.appendChild(component());
 
 `webpack` を実行します
 
-`npm run build`{[execute}}
+`npm run build`{{execute}}
 
 ブラウザで下記 URL を開いて確認します
 
