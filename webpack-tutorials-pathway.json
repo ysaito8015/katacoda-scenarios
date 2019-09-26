@@ -7,6 +7,11 @@
         "course_id": "webpack-tutorial-01",
         "title": "Getting started",
         "description": "webpack をはじめてみる"
+      },
+      {
+        "course_id": "webpack-tutorial-02",
+        "title": "Asset Management",
+        "description": "CSS ファイルなど"
       }
     ]
 }

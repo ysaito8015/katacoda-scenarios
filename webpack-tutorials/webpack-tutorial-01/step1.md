@@ -110,7 +110,7 @@ document.body.appendChild(component());
 
 ## dist 以下の構成を公開して確認する
 
-Apache2 に設定します
+Apache2 に上記のための設定を行います
 
 `sed -i.bak -e 's/\/var\/www\/>/\/work\/webpack-demo>/g' /etc/apache2/apache2.conf`{{execute}}
 
