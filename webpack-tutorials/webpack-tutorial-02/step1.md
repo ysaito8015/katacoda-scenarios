@@ -205,7 +205,7 @@ module.exports = {
 
 `webpack` を実行します
 
-`npm run build`{[execute}}
+`npm run build`{{execute}}
 
 ブラウザで下記 URL を開いて確認します
 
