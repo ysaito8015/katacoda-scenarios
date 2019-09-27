@@ -88,7 +88,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 複数の SCSS を一括で読み込む `./src/scss/*.scss` という書き方 (glob) は, `sass-loader` が対応していないため, 新たにモジュールを導入する必要があります
 
-- `import-glob-loader` : ファイルの一括読み込み
+- `import-glob-loader` : import セクションでのファイルの一括読み込み, 内部で `node-glob` を利用
 
 `npm install --save-dev import-glob-loader`{{execute}}
 
