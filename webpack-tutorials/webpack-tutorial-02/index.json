@@ -21,15 +21,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "get_source.sh",
-          "target": "/work",
-          "chmod": "+x"
-        }
-      ]
     }
   },
   "environment": {
