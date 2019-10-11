@@ -1,6 +1,11 @@
 {
     "courses": [
       {
+        "title": "packgo walkthrough",
+        "description": "It based on danicat's tutorial",
+        "id": "packgo-walkthrough"
+      },
+      {
         "title": "Excelから関数型言語マスターを元にしたシナリオ集",
         "description": "piacerex さんの記事から起こしました",
         "id": "elixir-getting-started"
