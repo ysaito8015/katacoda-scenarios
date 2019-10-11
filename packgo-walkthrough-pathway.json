@@ -5,18 +5,8 @@
     "courses": [
       {
         "course_id": "packgo-walkthrough-01",
-        "title": "データ行の”並べ替え”と”絞り込み”",
-        "description": "環境構築, 並べ替え"
-      },
-      {
-        "course_id": "elixir-getting-started-02",
-        "title": "データ列の”抽出”、”Web表示”",
-        "description": "列の抽出, Phoenix での表示"
-      },
-      {
-        "course_id": "elixir-getting-started-03",
-        "title": "WebにDBデータ表示",
-        "description": "DB のインストール, DB データを Web 表示"
+        "title": "Step 1",
+        "description": "Step 1"
       }
     ]
 }
