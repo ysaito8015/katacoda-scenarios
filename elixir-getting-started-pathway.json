@@ -1,37 +1,22 @@
 {
-    "title": "toybox",
-    "description": "for experiments",
+    "title": "Excelから関数型言語マスター を元にしたシナリオ集",
+    "description": "piacerex さんの記事から起こしました",
     "icon": "fa-katacoda",
     "courses": [
       {
-        "title": "Embed sample",
-        "description": "test embed",
-        "id": "embed-sample"
+        "course_id": "elixir-getting-started-01",
+        "title": "データ行の”並べ替え”と”絞り込み”",
+        "description": "環境構築, 並べ替え"
       },
       {
-        "title": "Upload assets",
-        "description": "test upload assets",
-        "id": "upload-assets"
+        "course_id": "elixir-getting-started-02",
+        "title": "データ列の”抽出”、”Web表示”",
+        "description": "列の抽出, Phoenix での表示"
       },
       {
-        "title": "Jupyter Notebook",
-        "description": "sample scenario using Docker image",
-        "id": "jupyter-notebook"
-      },
-      {
-        "title": "Visualise Environment Tab",
-        "description": "Learn how to add the Visualise Tab",
-        "id": "visualise-docker"
-      },
-      {
-        "title": "Jenkins Scenarios",
-        "description": "Example of Jenkins scenarios",
-        "id": "jenkins-scenarios"
-      },
-      {
-        "title": "elixir-sample Scenarios",
-        "description": "Example of Elixir scenarios",
-        "id": "elixir-sample"
+        "course_id": "elixir-getting-started-03",
+        "title": "WebにDBデータ表示",
+        "description": "DB のインストール, DB データを Web 表示"
       }
     ]
 }
