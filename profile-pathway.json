@@ -19,39 +19,14 @@
         "title": "webpack4 チュートリアル",
         "description": "webpack4 チュートリアル基づいたシナリオ集",
         "id": "webpack-tutorials"
+      },
+      {
+        "title": "toybox",
+        "description": "to experiments",
+        "id": "toybox"
       }
     ],
     "scenarios": [
-      {
-        "title": "Embed sample",
-        "description": "test embed",
-        "id": "embed-sample"
-      },
-      {
-        "title": "Upload assets",
-        "description": "test upload assets",
-        "id": "upload-assets"
-      },
-      {
-        "title": "Jupyter Notebook",
-        "description": "sample scenario using Docker image",
-        "id": "jupyter-notebook"
-      },
-      {
-        "title": "Visualise Environment Tab",
-        "description": "Learn how to add the Visualise Tab",
-        "id": "visualise-docker"
-      },
-      {
-        "title": "Jenkins Scenarios",
-        "description": "Example of Jenkins scenarios",
-        "id": "jenkins-scenarios"
-      },
-      {
-        "title": "elixir-sample Scenarios",
-        "description": "Example of Elixir scenarios",
-        "id": "elixir-sample"
-      }
     ]
 }
 
