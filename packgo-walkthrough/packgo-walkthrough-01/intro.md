@@ -1,5 +1,11 @@
-## 概要
+## Introduction
 
-piacerex さんの Qiita 記事 
-[Excelから関数型言語マスター2回目：データ列の”抽出”、”Web表示”](https://qiita.com/piacerex/items/b7787580fce5f148242f)
-を元にして, elixir を体験するシナリオです
+In this lesson you will learn how to:
+
+- Read from a file
+- Print to the standard output
+- Handle multiple return values
+- Handle errors
+- Create and add an element to a slice
+- Iterate over a collection
+- Defer a function call
