@@ -10,7 +10,7 @@ These scenarios are running on ...
 
 `pwd; whoami; cat /etc/lsb-release`{{execute}}
 
-When you click this <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px>, `commands` execute on the terminal
+When you click this <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px>, `commands` are executed on the terminal on the lower half of right
 
 ## Katacoda Editor
 
@@ -20,17 +20,17 @@ You can check directory tree and open files.
 
 ![](https://i.gyazo.com/f587cc8f79369d0096b14bd1e14921ee.png)
 
-When you click <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width=120px>, you can copy code to editor.
+When you click <img src='https://i.gyazo.com/6110e1d09bf91b2f61335108afeec99b.png' width=120px>, you can copy code to editor.
 
 Automaticary saving.
 
 Let's take a look
 
-`mkdir -p /work/sample && cd $_ && touch ./sample.txt`{{execute}}
+`mkdir -p /work/packgo && cd $_ && touch ./sample.txt`{{execute}}
 
 file name: `sample.txt`
 
-<pre class="file" data-filename="/work/sample.txt" data-target="replace">
+<pre class="file" data-filename="/work/packgo/sample.txt" data-target="replace">
 sample text
 </pre>
 
