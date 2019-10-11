@@ -18,11 +18,11 @@ There is an editor on the uppder half of right.
 
 You can check directory tree and open files.
 
-![](https://i.gyazo.com/f587cc8f79369d0096b14bd1e14921ee.png)
+![](https://i.gyazo.com/6110e1d09bf91b2f61335108afeec99b.png)
 
-When you click <img src='https://i.gyazo.com/6110e1d09bf91b2f61335108afeec99b.png' width=120px>, you can copy code to editor.
+When you click <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width=120px>, you can copy code to editor.
 
-Automaticary saving.
+It has automaticary saving.
 
 Let's take a look
 
