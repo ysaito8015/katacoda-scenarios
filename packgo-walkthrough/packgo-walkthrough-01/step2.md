@@ -55,3 +55,90 @@ var maze []string
 
 ```
 
+
+Now let's break it down and see what's going on.
+
+Please note that you need to import both the `os` and `bufio` packages as shown below:
+
+```go
+import "os"
+import "bufio"
+```
+
+Alternatively, since you already have one import (`fmt`), you can add it as a list:
+
+```go
+import (
+    "bufio"
+    "fmt"
+    "os"
+)
+```
+
+The `os.Open()` function return a pair of values: a file and an error. Returning multiple values from a function is a common pattern in Go, specially for returning errors.
+
+```go
+f, err := os.Open("maze01.txt")
+```
+
+The `:=` operator is an assignment operator, but with special property that it automatically infers the type of the variable(s) based on the value(s) on the right side. 
+
+Keep in mind that Go is a strongly typed language, but that nice feature saves us the trouble of specifying the type when it's possible to infer it.
+
+In the case above, Go automatically infers the type for both `f` and `err` variables.
+
+When a function returns an error it is a common pattern to check the error immediately afterwards:
+
+```go
+    f, err := os.Open("maze01.txt")
+    if err != nil {
+        // do something with err
+        log.Printf("...")
+        return
+    }
+```
+
+Note: It is a good practice to keep the "happy path" aligned to the left, and the sad path to the right (ie: terminating the function early).
+
+`nil` in Go means no value is assigned to a variable. 
+
+The `if` statement executes a statement if the condition is true. It can optionally have an initialization clause just like the `for` statement, and an `else` clause that runs if the condition is false. Please keep in mind that the scope of the variable created will just be the if statement body. For example:
+
+```go
+// optional initialization clause
+if foo := rand.Intn(2); foo == 0 {
+    fmt.Print(foo) // foo is valid here
+} else {
+    fmt.Print(foo) // and here
+}
+// but you can't use foo here!
+```
+
+Another interesting aspect of the `loadMaze` code is the use of the `defer` keyword. It basically says to call the function after `defer` at the end of the current function. It is very useful for cleanup purposes and in this case we are using it to close the file we've just opened:
+
+```go
+func loadMaze() error {
+    f, err := os.Open("maze01.txt")
+    // omited error handling
+    defer f.Close() // puts f.Close() in the call stack
+
+    // rest of the code
+    
+    return nil
+    // f.Close is called implicitly
+}
+```
+
+The next part of the code just reads the file line by line and appends it to the maze slice:
+
+```go
+    scanner := bufio.NewScanner(f)
+    for scanner.Scan() {
+        line := scanner.Text()
+        maze = append(maze, line)
+    }
+```
+
+A scanner is a very convenient way to read a file. `scanner.Scan()` will return true while there is something to be read from the file, and `scanner.Text()` will return the next line of input.
+
+The `append` built in function is responsible for adding a new element to the `maze` slice.
