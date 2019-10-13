@@ -146,7 +146,6 @@ A scanner is a very convenient way to read a file. `scanner.Scan()` will return 
 
 The `append` built in function is responsible for adding a new element to the `maze` slice.
 
-`touch /work/packgo/main.go`{{execute}}
 
 <pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
 package main
