@@ -1,0 +1,53 @@
+{
+  "title": "packgo-walkthrough-02",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Task 01",
+        "text": "step1.md",
+        "courseData": "background.sh"
+      },
+      {
+        "title": "Task 02",
+        "text": "step2.md"
+      },
+      {
+        "title": "Task 03",
+        "text": "step3.md"
+      },
+      {
+        "title": "Task 04",
+        "text": "step4.md"
+      },
+      {
+        "title": "Task 05",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      }
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "go",
+    "uieditorpath": "/work/packgo"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}

@@ -7,6 +7,11 @@
         "course_id": "packgo-walkthrough-01",
         "title": "Step 00-01 Input and Output",
         "description": "Step 00-01"
+      },
+      {
+        "course_id": "packgo-walkthrough-02",
+        "title": "Step 02 Handling Player Input",
+        "description": "Step 02"
       }
     ]
 }
