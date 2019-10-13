@@ -5,8 +5,8 @@
     "courses": [
       {
         "course_id": "packgo-walkthrough-01",
-        "title": "Step 1",
-        "description": "Step 1"
+        "title": "Step 00-01 Input and Output",
+        "description": "Step 00-01"
       }
     ]
 }

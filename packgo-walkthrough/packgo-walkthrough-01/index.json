@@ -6,20 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 00",
         "text": "step1.md",
 		"courseData": "background.sh"
       },
       {
-        "title": "Step 2",
+        "title": "Task 01",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Task 02",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Task 03",
         "text": "step4.md"
       }
     ],
