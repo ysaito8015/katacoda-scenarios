@@ -28,6 +28,7 @@ The cbreak mode is the middle ground. Some characters are preprocessed and some 
 
 We will use the cbreak mode to allow us to handle the escape sequences corresponding to the escape and arrow keys.
 
+`cd /work/packgo`{{execute}}
 
 ## Task 01: Enabling Cbreak Mod
 
