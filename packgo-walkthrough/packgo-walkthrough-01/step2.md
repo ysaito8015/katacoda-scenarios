@@ -26,6 +26,8 @@ First, we are going to read the maze data. We have a file called maze01.txt that
 
 Our first task consists in loading this ASCII representation of the maze to a slice of strings and then printing it to the screen. Looks simple, right? It is indeed!
 
+`wget -O https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt /work/packgo/maze01.txt`{{execute}}
+
 ## Task 01: Load the Maze
 
 Let's start by reading the `maze01.txt` file.
@@ -142,3 +144,70 @@ The next part of the code just reads the file line by line and appends it to the
 A scanner is a very convenient way to read a file. `scanner.Scan()` will return true while there is something to be read from the file, and `scanner.Text()` will return the next line of input.
 
 The `append` built in function is responsible for adding a new element to the `maze` slice.
+
+`touch /work/packgo/main.go`{{execute}}
+
+<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+)
+
+func loadMaze() error {
+	f, err := os.Open("maze01.txt")
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		line := scanner.Text()
+		maze = append(maze, line)
+	}
+
+	return nil
+}
+
+var maze []string
+
+func printScreen() {
+	for _, line := range maze {
+		fmt.Println(line)
+	}
+}
+
+func main() {
+	// initialize game
+
+	// load resources
+	err := loadMaze()
+	if err != nil {
+		log.Printf("Error loading maze: %v\n", err)
+		return
+	}
+
+	// game loop
+	for {
+		// update screen
+		printScreen()
+
+		// process input
+
+		// process movement
+
+		// process collisions
+
+		// check game over
+
+		// Temp: break infinite loop
+		break
+
+		// repeat
+	}
+}
+</pre>
