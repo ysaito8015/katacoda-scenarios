@@ -1,6 +1,5 @@
-## Overview
+## Step01: Input and Output
 
-## Input and Output
 In this lesson you will learn how to:
 
 - Read from a file
@@ -11,6 +10,8 @@ In this lesson you will learn how to:
 - Iterate over a collection
 - Defer a function call
 
+
+## Overview
 
 We've got the basics covered, now it's time to get this game started!
 
@@ -153,7 +154,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -175,26 +175,14 @@ func loadMaze() error {
 
 var maze []string
 
-func printScreen() {
-	for _, line := range maze {
-		fmt.Println(line)
-	}
-}
-
 func main() {
 	// initialize game
 
 	// load resources
-	err := loadMaze()
-	if err != nil {
-		log.Printf("Error loading maze: %v\n", err)
-		return
-	}
 
 	// game loop
 	for {
 		// update screen
-		printScreen()
 
 		// process input
 
@@ -205,6 +193,7 @@ func main() {
 		// check game over
 
 		// Temp: break infinite loop
+    fmt.Println("Hello, Pac Go!")
 		break
 
 		// repeat
