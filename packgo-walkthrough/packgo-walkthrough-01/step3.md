@@ -78,7 +78,7 @@ func main() {
 		// check game over
 
 		// Temp: break infinite loop
-    fmt.Println("Hello, Pac Go!")
+		fmt.Println("Hello, Pac Go!")
 		break
 
 		// repeat
