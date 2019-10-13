@@ -33,6 +33,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -64,10 +65,16 @@ func main() {
 	// initialize game
 
 	// load resources
+	err := loadMaze()
+	if err != nil {
+		log.Printf("Error loading maze: %v\n", err)
+		return
+	}
 
 	// game loop
 	for {
 		// update screen
+		printScreen()
 
 		// process input
 
@@ -78,7 +85,6 @@ func main() {
 		// check game over
 
 		// Temp: break infinite loop
-		fmt.Println("Hello, Pac Go!")
 		break
 
 		// repeat
