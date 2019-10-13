@@ -26,7 +26,7 @@ First, we are going to read the maze data. We have a file called maze01.txt that
 
 Our first task consists in loading this ASCII representation of the maze to a slice of strings and then printing it to the screen. Looks simple, right? It is indeed!
 
-`wget -O https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt /work/packgo/maze01.txt`{{execute}}
+`wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt > /work/packgo/maze01.txt`{{execute}}
 
 ## Task 01: Load the Maze
 
