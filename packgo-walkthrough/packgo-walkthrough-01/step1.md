@@ -24,7 +24,9 @@ When you click <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.pn
 
 It has automaticary saving.
 
-Let's take a look
+## Step 00: Hello (Game) World
+
+We are going to start by laying the ground a skeleton of what a game program looks like. 
 
 `mkdir -p /work/packgo && cd $_ && touch ./main.go`{{execute}}
 
@@ -64,6 +66,7 @@ func main() {
     }
 }
 </pre>
+
 
 ## Running your first Go program
 
