@@ -1,79 +1,47 @@
-## Task 02: Handling arrow key presses
+## Task 03: Let's add some movement!
 
-Next, we need to modify `readInput` to handle the arrow keys:
-
-```go
-if cnt == 1 && buffer[0] == 0x1b {
-    return "ESC", nil
-} else if cnt >= 3 {
-    if buffer[0] == 0x1b && buffer[1] == '[' {
-        switch buffer[2] {
-        case 'A':
-            return "UP", nil
-        case 'B':
-            return "DOWN", nil
-        case 'C':
-            return "RIGHT", nil
-        case 'D':
-            return "LEFT", nil
-        }
-    }
-}
-```
-
-The escape sequence for the arrow keys are 3 bytes long, starting with `ESC+[` and then a letter from A to D.
-
-We now need a function to handle the movement:
+Finally, we need a function to process the ghost movement. The `moveGhosts` function is presented below:
 
 ```go
-func makeMove(oldRow, oldCol int, dir string) (newRow, newCol int) {
-    newRow, newCol = oldRow, oldCol
-
-    switch dir {
-    case "UP":
-        newRow = newRow - 1
-        if newRow < 0 {
-            newRow = len(maze) - 1
-        }
-    case "DOWN":
-        newRow = newRow + 1
-        if newRow == len(maze) - 1 {
-            newRow = 0
-        }
-    case "RIGHT":
-        newCol = newCol + 1
-        if newCol == len(maze[0]) {
-            newCol = 0
-        }
-    case "LEFT":
-        newCol = newCol - 1
-        if newCol < 0 {
-            newCol = len(maze[0]) - 1
-        }
+func moveGhosts() {
+    for _, g := range ghosts {
+        dir := drawDirection()
+        g.row, g.col = makeMove(g.row, g.col, dir)
     }
-
-    if maze[newRow][newCol] == '#' {
-        newRow = oldRow
-        newCol = oldCol
-    }
-
-    return
 }
 ```
 
-Note: if you are used to the switch statement in other languages, please beware that in Go there is an implicit `break` after each `case` condition. So we don't need to explicitly break after each block. If we want to fall through the next `case` block we can use the `fallthrough` keyword. 
+Now update the game loop to call `moveGhosts`:
 
-The function above takes advantage of `named return values` to return the new position (`newRow` and `newCol`) after the move. Basically the function "tries"  the move first, and if by any chance the new position hits a wall (`#`) the move is cancelled. 
+```go
+// game loop
+for {
+    // update screen
+    printScreen()
 
-It also handles the property that if the character moves outside the range of the maze it appears on the opposite side. 
+    // process input
+    input, err := readInput()
+    if err != nil {
+        log.Printf("Error reading input: %v", err)
+        break
+    }
 
-The last piece in the movement puzzle is to define a function to move the player:
+    // process movement
+    movePlayer(input)
+    moveGhosts()
 
-```
-func movePlayer(dir string) {
-    player.row, player.col = makeMove(player.row, player.col, dir)
+    // process collisions
+
+    // check game over
+    if input == "ESC" {
+        break
+    }
+
+    // repeat
 }
 ```
+
+We are done! Now we have ghosts that move! How scary -_-'''
 
 <pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
@@ -82,6 +50,7 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"os/exec"
 )
@@ -93,6 +62,14 @@ type Player struct {
 }
 
 var player Player
+
+// Ghost is the enemy that chases the player :O
+type Ghost struct {
+	row int
+	col int
+}
+
+var ghosts []*Ghost
 
 func loadMaze() error {
 	f, err := os.Open("maze01.txt")
@@ -112,6 +89,8 @@ func loadMaze() error {
 			switch char {
 			case 'P':
 				player = Player{row, col}
+			case 'G':
+				ghosts = append(ghosts, &Ghost{row, col})
 			}
 		}
 	}
@@ -133,8 +112,22 @@ func moveCursor(row, col int) {
 func printScreen() {
 	clearScreen()
 	for _, line := range maze {
-		fmt.Println(line)
+		for _, chr := range line {
+			switch chr {
+			case '#':
+				fmt.Printf("%c", chr)
+			default:
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Printf("\n")
 	}
+
+	moveCursor(player.row, player.col)
+	fmt.Printf("P")
+
+	moveCursor(len(maze)+1, 0)
+	fmt.Printf("Row %v Col %v", player.row, player.col)
 }
 
 func readInput() (string, error) {
@@ -203,6 +196,24 @@ func movePlayer(dir string) {
 	player.row, player.col = makeMove(player.row, player.col, dir)
 }
 
+func drawDirection() string {
+	dir := rand.Intn(4)
+	move := map[int]string{
+		0: "UP",
+		1: "DOWN",
+		2: "RIGHT",
+		3: "LEFT",
+	}
+	return move[dir]
+}
+
+func moveGhosts() {
+	for _, g := range ghosts {
+		dir := drawDirection()
+		g.row, g.col = makeMove(g.row, g.col, dir)
+	}
+}
+
 func init() {
 	cbTerm := exec.Command("/bin/stty", "cbreak", "-echo")
 	cbTerm.Stdin = os.Stdin
@@ -247,6 +258,8 @@ func main() {
 		}
 
 		// process movement
+		movePlayer(input)
+		moveGhosts()
 
 		// process collisions
 

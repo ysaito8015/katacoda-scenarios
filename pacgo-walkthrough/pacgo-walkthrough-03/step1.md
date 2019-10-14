@@ -78,7 +78,7 @@ That's why every library function name we've used so far begins with a capital l
 In this particular case, we are using capital letters just to differentiate the type `Player` from the variable `player`, since it doesn't make any sense to export a symbol from the package `main`.
 
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

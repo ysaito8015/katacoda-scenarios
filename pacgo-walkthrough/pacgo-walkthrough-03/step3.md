@@ -26,7 +26,7 @@ func printScreen() {
 
 For the time being, we are ignoring anything that is not a wall or the player.
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (
