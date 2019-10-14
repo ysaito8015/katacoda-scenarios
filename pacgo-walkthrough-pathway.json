@@ -17,6 +17,11 @@
         "course_id": "pacgo-walkthrough-03",
         "title": "Step 03 Adding Movement",
         "description": "Step 03"
+      },
+      {
+        "course_id": "pacgo-walkthrough-04",
+        "title": "Step 04 Ghosts!",
+        "description": "Step 04"
       }
     ]
 }
