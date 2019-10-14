@@ -10,4 +10,5 @@ ln -s /opt/go/bin/gofmt /usr/local/bin/gofmt
 
 wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step07/maze01.txt > /work/pacgo/maze01.txt
 wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step06/main.go > /work/pacgo/main.go
+wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step07/config_noemoji.json > /work/pacgo/config_noemoji.json
 
