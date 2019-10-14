@@ -104,6 +104,9 @@ func main() {
 
 		// check game over
 
+		// Temp: break infinite loop
+		break
+
 		// repeat
 	}
 }

@@ -64,13 +64,7 @@ func loadMaze() error {
 
 var maze []string
 
-func clearScreen() {
-	fmt.Printf("\x1b[2J")
-	moveCursor(0, 0)
-}
-
 func printScreen() {
-	clearScreen()
 	for _, line := range maze {
 		fmt.Println(line)
 	}
@@ -128,17 +122,15 @@ func main() {
 		printScreen()
 
 		// process input
-		input, err := readInput()
-		if err != nil {
-			log.Printf("Error reading input: %v", err)
-			break
-		}
 
 		// process movement
 
 		// process collisions
 
 		// check game over
+
+		// Temp: break infinite loop
+		break
 
 		// repeat
 	}
