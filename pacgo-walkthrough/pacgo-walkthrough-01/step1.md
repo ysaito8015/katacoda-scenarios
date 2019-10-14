@@ -28,7 +28,7 @@ It has automaticary saving.
 
 We are going to start by laying the ground a skeleton of what a game program looks like. 
 
-`mkdir -p /work/packgo && cd $_ && touch ./main.go`{{execute}}
+`mkdir -p /work/pacgo && cd $_ && touch ./main.go`{{execute}}
 
 and then click to open this file.
 
