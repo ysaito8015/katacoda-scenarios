@@ -32,6 +32,11 @@
         "course_id": "pacgo-walkthrough-06",
         "title": "Step 06 Making things real(time)",
         "description": "Step 06"
+      },
+      {
+        "course_id": "pacgo-walkthrough-07",
+        "title": "Step 07 Finally, emojis!",
+        "description": "Step 07"
       }
     ]
 }
