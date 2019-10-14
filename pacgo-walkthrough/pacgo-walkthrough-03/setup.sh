@@ -9,5 +9,5 @@ ln -s /opt/go/bin/gofmt /usr/local/bin/gofmt
 
 
 wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step02/maze01.txt > /work/pacgo/maze01.txt
-wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step02/main.go > /work/pacgo/main.go
+wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step03/main.go > /work/pacgo/main.go
 
