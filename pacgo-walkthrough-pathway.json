@@ -37,6 +37,11 @@
         "course_id": "pacgo-walkthrough-07",
         "title": "Step 07 Finally, emojis!",
         "description": "Step 07"
+      },
+      {
+        "course_id": "pacgo-walkthrough-08",
+        "title": "Step 08 Command line parameters",
+        "description": "Step 08"
       }
     ]
 }
