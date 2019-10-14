@@ -136,6 +136,11 @@ func printScreen() {
 	moveCursor(player.row, player.col)
 	fmt.Printf("P")
 
+	for _, g := range ghosts {
+		moveCursor(g.row, g.col)
+		fmt.Printf("G")
+	}
+
 	moveCursor(len(maze)+1, 0)
 	fmt.Printf("Row %v Col %v", player.row, player.col)
 }
