@@ -74,7 +74,6 @@ func main() {
 	// game loop
 	for {
 		// update screen
-		printScreen()
 
 		// process input
 
@@ -85,6 +84,7 @@ func main() {
 		// check game over
 
 		// Temp: break infinite loop
+		fmt.Println("Hello, Pac Go!")
 		break
 
 		// repeat
