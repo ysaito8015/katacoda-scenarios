@@ -1,9 +1,9 @@
 {
     "courses": [
       {
-        "title": "packgo walkthrough",
+        "title": "pacgo walkthrough",
         "description": "It based on danicat's tutorial",
-        "id": "packgo-walkthrough"
+        "id": "pacgo-walkthrough"
       },
       {
         "title": "Excelから関数型言語マスターを元にしたシナリオ集",
