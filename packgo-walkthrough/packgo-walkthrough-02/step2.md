@@ -33,6 +33,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 )
 
 func loadMaze() error {
@@ -53,13 +54,7 @@ func loadMaze() error {
 
 var maze []string
 
-func clearScreen() {
-	fmt.Printf("\x1b[2J")
-	moveCursor(0, 0)
-}
-
 func printScreen() {
-	clearScreen()
 	for _, line := range maze {
 		fmt.Println(line)
 	}

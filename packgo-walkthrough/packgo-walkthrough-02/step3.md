@@ -43,6 +43,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 )
 
 func loadMaze() error {
