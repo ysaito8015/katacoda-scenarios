@@ -1,16 +1,4 @@
 ## Step01: Input and Output
-
-In this lesson you will learn how to:
-
-- Read from a file
-- Print to the standard output
-- Handle multiple return values
-- Handle errors
-- Create and add an element to a slice
-- Iterate over a collection
-- Defer a function call
-
-
 ## Overview
 
 We've got the basics covered, now it's time to get this game started!
