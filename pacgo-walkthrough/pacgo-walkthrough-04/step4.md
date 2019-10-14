@@ -38,6 +38,7 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"os/exec"
 )
@@ -49,6 +50,14 @@ type Player struct {
 }
 
 var player Player
+
+// Ghost is the enemy that chases the player :O
+type Ghost struct {
+	row int
+	col int
+}
+
+var ghosts []*Ghost
 
 func loadMaze() error {
 	f, err := os.Open("maze01.txt")
@@ -68,6 +77,8 @@ func loadMaze() error {
 			switch char {
 			case 'P':
 				player = Player{row, col}
+			case 'G':
+				ghosts = append(ghosts, &Ghost{row, col})
 			}
 		}
 	}
@@ -103,8 +114,10 @@ func printScreen() {
 	moveCursor(player.row, player.col)
 	fmt.Printf("P")
 
-	moveCursor(len(maze)+1, 0)
-	fmt.Printf("Row %v Col %v", player.row, player.col)
+	for _, g := range ghosts {
+		moveCursor(g.row, g.col)
+		fmt.Printf("G")
+	}
 }
 
 func readInput() (string, error) {
@@ -173,6 +186,24 @@ func movePlayer(dir string) {
 	player.row, player.col = makeMove(player.row, player.col, dir)
 }
 
+func drawDirection() string {
+	dir := rand.Intn(4)
+	move := map[int]string{
+		0: "UP",
+		1: "DOWN",
+		2: "RIGHT",
+		3: "LEFT",
+	}
+	return move[dir]
+}
+
+func moveGhosts() {
+	for _, g := range ghosts {
+		dir := drawDirection()
+		g.row, g.col = makeMove(g.row, g.col, dir)
+	}
+}
+
 func init() {
 	cbTerm := exec.Command("/bin/stty", "cbreak", "-echo")
 	cbTerm.Stdin = os.Stdin
@@ -218,6 +249,7 @@ func main() {
 
 		// process movement
 		movePlayer(input)
+		moveGhosts()
 
 		// process collisions
 
