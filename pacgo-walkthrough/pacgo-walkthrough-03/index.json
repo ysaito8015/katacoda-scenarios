@@ -1,26 +1,30 @@
 {
-  "title": "packgo-walkthrough-01",
+  "title": "pacgo-walkthrough-02",
   "description": "",
   "difficulty": "Beginner",
   "time": "30minites",
   "details": {
     "steps": [
       {
-        "title": "Step 00",
-        "text": "step1.md",
-		"courseData": "background.sh"
-      },
-      {
         "title": "Task 01",
-        "text": "step2.md"
+        "text": "step1.md",
+        "courseData": "background.sh"
       },
       {
         "title": "Task 02",
-        "text": "step3.md"
+        "text": "step2.md"
       },
       {
         "title": "Task 03",
+        "text": "step3.md"
+      },
+      {
+        "title": "Task 04",
         "text": "step4.md"
+      },
+      {
+        "title": "Task 05",
+        "text": "step5.md"
       }
     ],
     "intro": {
