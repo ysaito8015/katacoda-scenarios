@@ -22,6 +22,11 @@
         "course_id": "pacgo-walkthrough-04",
         "title": "Step 04 Ghosts!",
         "description": "Step 04"
+      },
+      {
+        "course_id": "pacgo-walkthrough-05",
+        "title": "Step 05 Game over man, game over!",
+        "description": "Step 05"
       }
     ]
 }
