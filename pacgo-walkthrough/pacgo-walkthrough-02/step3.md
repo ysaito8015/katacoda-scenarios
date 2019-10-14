@@ -35,7 +35,7 @@ The short answer is we shouldn't care. Please keep in mind that this is a game. 
 
 Since we are reading the input on a loop, there is no damage in dropping all the key presses in a queue and just focusing on the last one. That will make the game response work better than if we were concerned about every key press.
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

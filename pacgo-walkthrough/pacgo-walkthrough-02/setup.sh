@@ -8,6 +8,6 @@ ln -s /opt/go/bin/go /usr/local/bin/go
 ln -s /opt/go/bin/gofmt /usr/local/bin/gofmt
 
 
-wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt > /work/packgo/maze01.txt
-wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/main.go > /work/packgo/main.go
+wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt > /work/pacgo/maze01.txt
+wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/main.go > /work/pacgo/main.go
 

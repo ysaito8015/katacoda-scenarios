@@ -34,7 +34,7 @@ Please note that if you hit Ctrl+C by any chance the program will terminate with
 
 If you get into that situation either close the terminal and reopen it or just run the game again and exit gracefully using the `ESC` key.
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

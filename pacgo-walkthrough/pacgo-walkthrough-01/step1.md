@@ -36,7 +36,7 @@ file name: `main.go`
 
 You can copy codes below to `main.go`
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import "fmt"

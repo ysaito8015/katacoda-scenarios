@@ -28,7 +28,7 @@ The cbreak mode is the middle ground. Some characters are preprocessed and some 
 
 We will use the cbreak mode to allow us to handle the escape sequences corresponding to the escape and arrow keys.
 
-`cd /work/packgo`{{execute}}
+`cd /work/pacgo`{{execute}}
 
 ## Task 01: Enabling Cbreak Mod
 
@@ -56,7 +56,7 @@ In the function above we are actually invoking another program that modifies the
 
 The `log.Fatalf` function will terminate the program after printing the log, in case of error. This is important here because without the cbreak mode the game is unplayable.`
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

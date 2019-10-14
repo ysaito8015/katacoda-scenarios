@@ -27,7 +27,7 @@ First, we are going to read the maze data. We have a file called maze01.txt that
 
 Our first task consists in loading this ASCII representation of the maze to a slice of strings and then printing it to the screen. Looks simple, right? It is indeed!
 
-`wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt > /work/packgo/maze01.txt`{{execute}}
+`wget -O- https://raw.githubusercontent.com/danicat/pacgo/master/step01/maze01.txt > /work/pacgo/maze01.txt`{{execute}}
 
 ## Task 01: Load the Maze
 
@@ -147,7 +147,7 @@ A scanner is a very convenient way to read a file. `scanner.Scan()` will return 
 The `append` built in function is responsible for adding a new element to the `maze` slice.
 
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

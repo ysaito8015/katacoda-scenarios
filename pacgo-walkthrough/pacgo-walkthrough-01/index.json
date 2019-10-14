@@ -41,7 +41,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "go",
-    "uieditorpath": "/work/packgo"
+    "uieditorpath": "/work/pacgo"
   },
   "backend": {
     "imageid": "ubuntu1904"

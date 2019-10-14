@@ -1,5 +1,5 @@
 {
-  "title": "pacgo-walkthrough-02",
+  "title": "pacgo-walkthrough-03",
   "description": "",
   "difficulty": "Beginner",
   "time": "30minites",
@@ -45,7 +45,7 @@
     ],
     "uilayout": "editor-terminal",
     "uisettings": "go",
-    "uieditorpath": "/work/packgo"
+    "uieditorpath": "/work/pacgo"
   },
   "backend": {
     "imageid": "ubuntu1904"

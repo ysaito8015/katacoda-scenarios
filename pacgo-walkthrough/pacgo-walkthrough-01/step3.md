@@ -27,7 +27,7 @@ for idx := range maze {
 
 Since in this case we only care about the content and not the index, we can safely ignore the index by assigning it to the underscore.
 
-<pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
+<pre class="file" data-filename="/work/pacgo/main.go" data-target="replace">
 package main
 
 import (

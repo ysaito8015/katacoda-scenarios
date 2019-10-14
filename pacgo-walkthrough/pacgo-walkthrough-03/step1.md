@@ -1,32 +1,8 @@
 ## Overview
 
-In the last step we've learned how to print something to the standard output. Now it's time to learn how to read from standard input. 
+We have a maze, we can quit the game gracefully... but nothing very exciting is happening, right? So let's spice this thing up a bit and add some movement! 
 
-In this game we will be processing a restricted set of movements: up, down, left and right. Besides those, the only other key we will be needing is the game end key, in order to enable the player to quit the game gracefully.
-
-We will map the escape key (Esc) on the keyboard to do this graceful termination. The movements will be mapped to the arrow keys.
-
-This step will handle the Esc key and we will see how to process the arrow keys in step 03.
-
-But before getting into the implementation we need to know a bit about terminal modes.
-
-## Intro to terminal modes
-
-Terminals can run in three possible [modes](https://en.wikipedia.org/wiki/Terminal_mode): 
-
-1. Cooked Mode
-2. Cbreak Mode
-3. Raw Mode
-
-The cooked mode is the one that we are used to use. In this mode every input that the terminal receives is preprocessed, meaning that the system intercepts special characters to give them special meaning.
-
-Note: Special characters include backspace, delete, Ctrl+D, Ctrl+C, arrow keys and so on...
-
-The raw mode is the opposite: data is passed as is, without any kind of preprocessing.
-
-The cbreak mode is the middle ground. Some characters are preprocessed and some are not. For instance, Ctrl+C still results in program abortion, but the arrow keys are passed to the program as is.
-
-We will use the cbreak mode to allow us to handle the escape sequences corresponding to the escape and arrow keys.
+In this step we are adding the player character and enabling its movement with the arrow keys.
 
 `cd /work/packgo`{{execute}}
 

@@ -1,10 +1,10 @@
-## Step 02: Handling Player Input
+## Step 03: Adding Movement
 
 In this lesson you will learn how to:
 
-- Work with different terminal modes
-- Send escape sequences to the terminal
-- Read from standard input
-- Create a function that return multiple values
+- Create a struct
+- Use the switch statement
+- Handle the arrow keys
+- Use named return values
 
 This tutorial based on [danicat/packgo](https://github.com/danicat/pacgo)
