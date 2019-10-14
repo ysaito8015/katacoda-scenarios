@@ -1,23 +1,35 @@
-## ## Task 04: Updating the Game Loop
+##  Animation!
 
-Now it's time to update the game loop to have the `readInput` function called every iteration. Please note that on the advent of an error we need to break the loop as well.
+Finally, we need to call `movePlayer` from the game loop:
 
 ```go
-// process input
-input, err := readInput()
-if err != nil {
-    log.Printf("Error reading input: %v", err)
-    break
+// game loop
+for {
+    // update screen
+    printScreen()
+
+    // process input
+    input, err := readInput()
+    if err != nil {
+        log.Printf("Error reading input: %v", err)
+        break
+    }
+
+    // process movement
+    movePlayer(input)
+
+    // process collisions
+
+    // check game over
+    if input == "ESC" {
+        break
+    }
+
+    // repeat
 }
 ```
 
-Finally, we can get rid of that permanent `break` statement and start testing for the "ESC" key press.
-
-```go
-if input == "ESC" {
-    break
-}
-```
+We are good to Go!
 
 <pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
 package main
@@ -29,6 +41,14 @@ import (
 	"os"
 	"os/exec"
 )
+
+// Player is the player character \o/
+type Player struct {
+	row int
+	col int
+}
+
+var player Player
 
 func loadMaze() error {
 	f, err := os.Open("maze01.txt")
@@ -43,15 +63,48 @@ func loadMaze() error {
 		maze = append(maze, line)
 	}
 
+	for row, line := range maze {
+		for col, char := range line {
+			switch char {
+			case 'P':
+				player = Player{row, col}
+			}
+		}
+	}
+
 	return nil
 }
 
 var maze []string
 
+func clearScreen() {
+	fmt.Printf("\x1b[2J")
+	moveCursor(0, 0)
+}
+
+func moveCursor(row, col int) {
+	fmt.Printf("\x1b[%d;%df", row+1, col+1)
+}
+
 func printScreen() {
+	clearScreen()
 	for _, line := range maze {
-		fmt.Println(line)
+		for _, chr := range line {
+			switch chr {
+			case '#':
+				fmt.Printf("%c", chr)
+			default:
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Printf("\n")
 	}
+
+	moveCursor(player.row, player.col)
+	fmt.Printf("P")
+
+	moveCursor(len(maze)+1, 0)
+	fmt.Printf("Row %v Col %v", player.row, player.col)
 }
 
 func readInput() (string, error) {
@@ -64,9 +117,60 @@ func readInput() (string, error) {
 
 	if cnt == 1 && buffer[0] == 0x1b {
 		return "ESC", nil
+	} else if cnt >= 3 {
+		if buffer[0] == 0x1b && buffer[1] == '[' {
+			switch buffer[2] {
+			case 'A':
+				return "UP", nil
+			case 'B':
+				return "DOWN", nil
+			case 'C':
+				return "RIGHT", nil
+			case 'D':
+				return "LEFT", nil
+			}
+		}
 	}
 
 	return "", nil
+}
+
+func makeMove(oldRow, oldCol int, dir string) (newRow, newCol int) {
+	newRow, newCol = oldRow, oldCol
+
+	switch dir {
+	case "UP":
+		newRow = newRow - 1
+		if newRow < 0 {
+			newRow = len(maze) - 1
+		}
+	case "DOWN":
+		newRow = newRow + 1
+		if newRow == len(maze)-1 {
+			newRow = 0
+		}
+	case "RIGHT":
+		newCol = newCol + 1
+		if newCol == len(maze[0]) {
+			newCol = 0
+		}
+	case "LEFT":
+		newCol = newCol - 1
+		if newCol < 0 {
+			newCol = len(maze[0]) - 1
+		}
+	}
+
+	if maze[newRow][newCol] == '#' {
+		newRow = oldRow
+		newCol = oldCol
+	}
+
+	return
+}
+
+func movePlayer(dir string) {
+	player.row, player.col = makeMove(player.row, player.col, dir)
 }
 
 func init() {
@@ -113,6 +217,7 @@ func main() {
 		}
 
 		// process movement
+		movePlayer(input)
 
 		// process collisions
 

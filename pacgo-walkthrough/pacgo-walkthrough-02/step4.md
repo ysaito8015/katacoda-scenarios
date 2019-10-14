@@ -1,4 +1,4 @@
-## ## Task 04: Updating the Game Loop
+## Task 04: Updating the Game Loop
 
 Now it's time to update the game loop to have the `readInput` function called every iteration. Please note that on the advent of an error we need to break the loop as well.
 

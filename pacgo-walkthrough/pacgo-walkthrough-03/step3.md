@@ -1,39 +1,30 @@
-## Task 03: Reading from Stdin
+## Task 03: Updating the maze
 
-The process of reading from the standard input involves calling the function `os.Stdin.Read` with a given read buffer.
+We have all the movement logic in place, but we need to make the screen reflect that. We will refactor the `printScreen` function to print only the things that we want to print, instead of the whole map.
 
-The `os.Stdin.Read` returns two values: the number of bytes read and an error value. Have a look at the code for the `readInput` function below:
+That will give us more control, enabling us to print the player at an arbitrary position with the `moveCursor` function. See the code below:
 
 ```go
-func readInput() (string, error) {
-    buffer := make([]byte, 100)
-
-    cnt, err := os.Stdin.Read(buffer)
-    if err != nil {
-        return "", err
+func printScreen() {
+    clearScreen()
+    for _, line := range maze {
+        for _, chr := range line {
+            switch chr {
+            case '#':
+                fmt.Printf("%c", chr)
+            default:
+                fmt.Printf(" ")
+            }
+        }
+        fmt.Printf("\n")
     }
 
-    if cnt == 1 && buffer[0] == 0x1b {
-        return "ESC", nil
-    }
-
-    return "", nil
+    moveCursor(player.row, player.col)
+    fmt.Printf("P")
 }
 ```
 
-The `make` function is a [built-in function](https://golang.org/pkg/builtin/#make) that allocates and initializes objects. It is only used for slices, maps and channels. In this case we are creating an array of bytes with size 100 and returning a slice that pointers to it.
-
-After the usual error handling (we are just passing the error up on the call stack), we are testing if we read just one byte and if that byte is the escape key. (0x1b is the hexadecimal code that represents Esc).
-
-We return "ESC" if the Esc key was pressed or an empty string otherwise.
-
-Now you may wonder why allocating a buffer of 100 bytes, or why testing the count of exact one byte... 
-
-What if the buffer suddenly has 5 elements and one of them is the Esc key? Shouldn't we care to process that? Will that key press be lost?
-
-The short answer is we shouldn't care. Please keep in mind that this is a game. Depending on the processing speed and the length of your keyboard buffer, if we processed events sequentially we could introduce movement lag, ie, by having a queue of arrow key presses that were not processed yet.
-
-Since we are reading the input on a loop, there is no damage in dropping all the key presses in a queue and just focusing on the last one. That will make the game response work better than if we were concerned about every key press.
+For the time being, we are ignoring anything that is not a wall or the player.
 
 <pre class="file" data-filename="/work/packgo/main.go" data-target="replace">
 package main
@@ -45,6 +36,14 @@ import (
 	"os"
 	"os/exec"
 )
+
+// Player is the player character \o/
+type Player struct {
+	row int
+	col int
+}
+
+var player Player
 
 func loadMaze() error {
 	f, err := os.Open("maze01.txt")
@@ -59,15 +58,48 @@ func loadMaze() error {
 		maze = append(maze, line)
 	}
 
+	for row, line := range maze {
+		for col, char := range line {
+			switch char {
+			case 'P':
+				player = Player{row, col}
+			}
+		}
+	}
+
 	return nil
 }
 
 var maze []string
 
+func clearScreen() {
+	fmt.Printf("\x1b[2J")
+	moveCursor(0, 0)
+}
+
+func moveCursor(row, col int) {
+	fmt.Printf("\x1b[%d;%df", row+1, col+1)
+}
+
 func printScreen() {
+	clearScreen()
 	for _, line := range maze {
-		fmt.Println(line)
+		for _, chr := range line {
+			switch chr {
+			case '#':
+				fmt.Printf("%c", chr)
+			default:
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Printf("\n")
 	}
+
+	moveCursor(player.row, player.col)
+	fmt.Printf("P")
+
+	moveCursor(len(maze)+1, 0)
+	fmt.Printf("Row %v Col %v", player.row, player.col)
 }
 
 func readInput() (string, error) {
@@ -80,9 +112,60 @@ func readInput() (string, error) {
 
 	if cnt == 1 && buffer[0] == 0x1b {
 		return "ESC", nil
+	} else if cnt >= 3 {
+		if buffer[0] == 0x1b && buffer[1] == '[' {
+			switch buffer[2] {
+			case 'A':
+				return "UP", nil
+			case 'B':
+				return "DOWN", nil
+			case 'C':
+				return "RIGHT", nil
+			case 'D':
+				return "LEFT", nil
+			}
+		}
 	}
 
 	return "", nil
+}
+
+func makeMove(oldRow, oldCol int, dir string) (newRow, newCol int) {
+	newRow, newCol = oldRow, oldCol
+
+	switch dir {
+	case "UP":
+		newRow = newRow - 1
+		if newRow < 0 {
+			newRow = len(maze) - 1
+		}
+	case "DOWN":
+		newRow = newRow + 1
+		if newRow == len(maze)-1 {
+			newRow = 0
+		}
+	case "RIGHT":
+		newCol = newCol + 1
+		if newCol == len(maze[0]) {
+			newCol = 0
+		}
+	case "LEFT":
+		newCol = newCol - 1
+		if newCol < 0 {
+			newCol = len(maze[0]) - 1
+		}
+	}
+
+	if maze[newRow][newCol] == '#' {
+		newRow = oldRow
+		newCol = oldCol
+	}
+
+	return
+}
+
+func movePlayer(dir string) {
+	player.row, player.col = makeMove(player.row, player.col, dir)
 }
 
 func init() {
@@ -122,15 +205,20 @@ func main() {
 		printScreen()
 
 		// process input
+		input, err := readInput()
+		if err != nil {
+			log.Printf("Error reading input: %v", err)
+			break
+		}
 
 		// process movement
 
 		// process collisions
 
 		// check game over
-
-		// Temp: break infinite loop
-		break
+		if input == "ESC" {
+			break
+		}
 
 		// repeat
 	}
