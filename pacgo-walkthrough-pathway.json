@@ -27,6 +27,11 @@
         "course_id": "pacgo-walkthrough-05",
         "title": "Step 05 Game over man, game over!",
         "description": "Step 05"
+      },
+      {
+        "course_id": "pacgo-walkthrough-06",
+        "title": "Step 06 Making things real(time)",
+        "description": "Step 06"
       }
     ]
 }

@@ -1,0 +1,41 @@
+{
+  "title": "pacgo-walkthrough-06",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Overview",
+        "text": "step1.md",
+        "courseData": "background.sh"
+      },
+      {
+        "title": "Task 02",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      }
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "go",
+    "uieditorpath": "/work/pacgo"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}
