@@ -27,7 +27,8 @@
         "port": 23000
       }
     ],
-    "uilayout": "iframe"
+    "showdashboards": true,
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "ubuntu1910"
