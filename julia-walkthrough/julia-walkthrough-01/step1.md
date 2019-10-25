@@ -2,7 +2,7 @@
 
 These scenarios are running on ...
 
-`Ubuntu 19.10`
+`Ubuntu 19.04`
 
 `julia 1.2.0`
 
