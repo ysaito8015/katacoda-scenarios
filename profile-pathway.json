@@ -21,6 +21,11 @@
         "id": "r-stan-bayes-stat"
       },
       {
+        "title": "Juli walkthrough",
+        "description": "表題書籍に基づいたシナリオ集",
+        "id": "julia-walkthrough"
+      },
+      {
         "title": "webpack4 チュートリアル",
         "description": "webpack4 チュートリアル基づいたシナリオ集",
         "id": "webpack-tutorials"

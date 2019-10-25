@@ -1,0 +1,35 @@
+{
+  "title": "julia-walkthrough-01",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 01",
+        "text": "step1.md",
+        "courseData": "background.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      }
+    ],
+    "uilayout": "iframe"
+  },
+  "backend": {
+    "imageid": "ubuntu1910"
+  }
+}

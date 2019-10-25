@@ -1,0 +1,12 @@
+{
+    "title": "Julia walkthrough",
+    "description": "bisicle1885 さんの記事から起こしました",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "julia-walkthrough-01",
+        "title": "julia のインストール",
+        "description": "環境構築"
+      }
+    ]
+}
