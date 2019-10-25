@@ -31,6 +31,6 @@
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "ubuntu1910"
+    "imageid": "ubuntu1904"
   }
 }
