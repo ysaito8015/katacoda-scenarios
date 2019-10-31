@@ -30,8 +30,7 @@
         "port": 8787 
       }
     ],
-    "uilayout": "editor-terminal",
-    "uisettings": "R",
+    "uilayout": "terminal-iframe",
     "uieditorpath": "/work/sample"
   },
   "backend": {
