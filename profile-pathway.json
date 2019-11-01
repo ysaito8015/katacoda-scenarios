@@ -22,13 +22,23 @@
       },
       {
         "title": "Julia walkthrough",
-        "description": "表題書籍に基づいたシナリオ集",
+        "description": "'Julia高速チュートリアル'に基づいたシナリオ集",
+        "id": "julia-walkthrough"
+      },
+      {
+        "title": "mdtopdf のチュートリアル",
+        "description": "表題docker imageに基づいたシナリオ集",
         "id": "julia-walkthrough"
       },
       {
         "title": "webpack4 チュートリアル",
         "description": "webpack4 チュートリアル基づいたシナリオ集",
         "id": "webpack-tutorials"
+      },
+      {
+        "title": "Gorgonia tutorial",
+        "description": "",
+        "id": "gorgonia-tutorials"
       },
       {
         "title": "toybox",

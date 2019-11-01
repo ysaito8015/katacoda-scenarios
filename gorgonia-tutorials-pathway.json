@@ -1,0 +1,12 @@
+{
+    "title": "Gorgonia tutorial",
+    "description": "Gorgonia is a library that helps facilitate machine learning in Go. Write and evaluate mathematical equations involving multidimensional arrays easily.",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "gorgonia-tutorial-01",
+        "title": "Gorgonia Getting started",
+        "description": "install and run first code"
+      }
+    ]
+}
