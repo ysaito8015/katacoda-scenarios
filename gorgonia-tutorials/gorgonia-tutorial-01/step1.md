@@ -24,6 +24,8 @@ Gorgonia is go-gettable and supports go modules. To get the library and its depe
 
 `go get gorgonia.org/gorgonia`{{execute}}
 
+It takes a while
+
 ## First script
 
 make directory
@@ -69,3 +71,9 @@ func main() {
         fmt.Printf("%v", z.Value())
 }
 </pre>
+
+then run script
+
+`go run ./main.go`{{execute}}
+
+We will get `4.5`
