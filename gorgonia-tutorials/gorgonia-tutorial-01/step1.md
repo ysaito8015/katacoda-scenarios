@@ -16,7 +16,7 @@ When you click this <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad
 
 You can use VS Code (code-server).
 
-Click here <img src='https://i.gyazo.com/2490101f4dd25247eba6549c9698b5f3.png'>
+Click this tab <img src='https://i.gyazo.com/2490101f4dd25247eba6549c9698b5f3.png'>
 
 ## Getting gorgonia
 
@@ -26,6 +26,11 @@ Gorgonia is go-gettable and supports go modules. To get the library and its depe
 
 ## First script
 
+make directory
+
+`mkdir /work/gorgonia-getting-started && cd $_`{{execute}}
+
+then create `main.go` as the code below
 
 <pre class="file" data-target="clipboard">
 package main
