@@ -1,0 +1,17 @@
+{
+    "title": "Go入門ハンズオン [01:基礎編] を元にしたシナリオ集",
+    "description": "表題の資料を参考にしました",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "go-hands-ons-01-01",
+        "title": "katacoda 環境の説明",
+        "description": "環境構築, プログラムの実行方法"
+      },
+      {
+        "course_id": "go-hands-ons-01-02",
+        "title": "成果物の確認",
+        "description": "プログラム実行方法"
+      }
+    ]
+}

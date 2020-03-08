@@ -1,11 +1,6 @@
 {
     "courses": [
       {
-        "title": "toy-01",
-        "description": "toy-01",
-        "id": "toy-01"
-      },
-      {
         "title": "Go入門ハンズオン [01:基礎編]",
         "description": "It based on qt-luigi's tutorial",
         "id": "go-hands-ons-01"
