@@ -1,0 +1,46 @@
+{
+  "title": "go-hands-ons-01-01",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "30minites",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md",
+        "courseData": "background.sh"
+      },
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "typing.go",
+          "target": "/work"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      }
+    ],
+    "uilayout": "editor-terminal",
+    "uisettings": "go",
+    "uieditorpath": "/work/"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}
