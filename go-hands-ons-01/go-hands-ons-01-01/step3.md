@@ -12,7 +12,7 @@
 
 `touch hello2.go`{{execute}}
 
-## Hello, World
+## 入力
 
 <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width='255px'> ボタンをクリックすることでエディタ内にペーストされます
 
