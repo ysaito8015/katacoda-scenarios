@@ -10,30 +10,30 @@
 
 あるいは, 次のコマンドでもファイル画からのファイルが作成されます
 
-`touch hello.go`{{execute}}
+`touch hello2.go`{{execute}}
 
 ## Hello, World
 
-<img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' height='15px'> ボタンをクリックすることでエディタ内にペーストされます
+<img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width='255px'> ボタンをクリックすることでエディタ内にペーストされます
 
-<pre class="file" data-filename="hello.go" data-target="replace">
+<pre class="file" data-filename="hello2.go" data-target="replace">
 package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("hello, world")
+    fmt.Println("hello, go")
 }
 </pre>
 
-## Hello, World
+## Hello, Go
 
 コマンドをターミナルへ入力し実行します
 
 あるいは <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width='15px'> をクリックすると, 右下のターミナルでコマンドが実行されます
 
-`go run ./hello.go`{{execute}}
+`go run ./hello2.go`{{execute}}
 
-`go build ./hello.go`{{execute}}
+`go build ./hello2.go`{{execute}}
 
-`./hello`{{execute}}
+`./hello2`{{execute}}

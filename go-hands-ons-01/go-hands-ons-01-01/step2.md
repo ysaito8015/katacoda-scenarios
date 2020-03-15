@@ -11,7 +11,7 @@ VScode タブ <img src='https://i.gyazo.com/350be089607151e46301c852229dbd85.png
 
 `go` を検索し, 表示される Extension をインストールします
 
-`reload required' をクリックすることでインストールが完了します
+`reload required` をクリックすることでインストールが完了します
 
 ## ファイル作成, 入力
 
@@ -33,7 +33,7 @@ VScode タブ <img src='https://i.gyazo.com/350be089607151e46301c852229dbd85.png
 
 入力直後の状態です
 
-<img src='https://i.gyazo.com/4100f993c5465899406f66fc76532919.png'>
+<img src='https://i.gyazo.com/3b17f8b9ccd000de3b518184d0b514c5.png'>
 
 次のコードを入力します. `copy` ボタンを押すことでクリップボードにコピーされます
 
