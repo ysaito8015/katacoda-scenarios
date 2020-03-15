@@ -14,6 +14,8 @@
 
 ## 入力
 
+該当ファイルを, クリックで開いた後に
+
 <img src='https://i.gyazo.com/36732319491cd2b4ebeeb1a9ef0e0356.png' width='255px'> ボタンをクリックすることでエディタ内にペーストされます
 
 <pre class="file" data-filename="hello2.go" data-target="replace">
