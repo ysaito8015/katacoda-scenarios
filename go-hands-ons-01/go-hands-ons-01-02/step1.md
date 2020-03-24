@@ -2,7 +2,7 @@
 
 このコースが始まると同時に `go` のインストールが行われます
 
-katacoda 環境: `ubuntu1904`
+katacoda 環境: `ubuntu1804`
 
 `pwd; whoami; cat /etc/lsb-release`{{execute}}
 

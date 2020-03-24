@@ -9,6 +9,10 @@
         "title": "Step 1",
         "text": "step1.md",
         "courseData": "background.sh"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
       }
     ],
     "intro": {
@@ -40,6 +44,6 @@
     "uieditorpath": "/work/"
   },
   "backend": {
-    "imageid": "ubuntu1904"
+    "imageid": "ubuntu1804"
   }
 }

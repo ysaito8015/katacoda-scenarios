@@ -1,12 +1,12 @@
 ## 書き方を学ぼう！
 
-file 名:  hello3.go
+file 名:  hello.go
 
 次のコマンドで空のファイルが作成されます
 
-`touch /work/hello3.go`{{execute}}
+`touch /work/hello.go`{{execute}}
 
-<pre class="file" data-filename="hello3.go" data-target="replace">
+<pre class="file" data-filename="hello.go" data-target="replace">
 // 実行させるならmainを指定
 package main
 
@@ -49,4 +49,4 @@ fmt.Println(msg1, msg2)
 
 `go run ファイル名`
 
-`go run ./hello3.go`{{execute}}
+`go run ./hello.go`{{execute}}
