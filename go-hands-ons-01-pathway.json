@@ -12,6 +12,11 @@
         "course_id": "go-hands-ons-01-02",
         "title": "成果物の確認",
         "description": "成果物の確認"
+      },
+      {
+        "course_id": "go-hands-ons-01-03",
+        "title": "書き方から完成まで",
+        "description": "書き方から完成まで"
       }
     ]
 }
