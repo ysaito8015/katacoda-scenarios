@@ -1,5 +1,11 @@
 {
   "title": "julia-getting-started",
-  "description": "Learning Julia Programming Language",
-  "courses": []
+  "description": "1から始めるJulia を参考にシナリオを起こしました",
+  "courses": [
+    {
+      "course_id": "01-julia-getting-started",
+      "title": "Julia のインストール",
+      "description": "環境設定"
+    }
+  ]
 }
