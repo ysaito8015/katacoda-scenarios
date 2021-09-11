@@ -31,6 +31,11 @@
         "id": "julia-walkthrough"
       },
       {
+        "title": "Julia Getting Started",
+        "description": "'1から始めるJulia'に基づいたシナリオ集",
+        "id": "julia-getting-started"
+      },
+      {
         "title": "mdtopdf のチュートリアル",
         "description": "表題docker imageに基づいたシナリオ集",
         "id": "julia-walkthrough"
