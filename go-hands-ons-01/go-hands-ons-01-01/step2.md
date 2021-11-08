@@ -82,3 +82,7 @@ go build ./hello.go
 出力例です
 
 <img src='https://i.gyazo.com/690c8bab00745592fe69294949dcdb95.png'>
+
+こういったレイアウトでブラウザを配置すると便利です
+
+<img src='https://i.gyazo.com/690c8bab00745592fe69294949dcdb95.png'>

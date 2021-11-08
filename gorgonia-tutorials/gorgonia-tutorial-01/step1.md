@@ -2,9 +2,9 @@
 
 This scenario is running on ...
 
-`Ubuntu 19.04`
+`Ubuntu 20.04`
 
-`go 1.13.4`
+`go 1.17.3`
 
 ## Instraction
 
