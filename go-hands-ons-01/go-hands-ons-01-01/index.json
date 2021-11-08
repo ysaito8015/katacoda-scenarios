@@ -40,6 +40,6 @@
     "uieditorpath": "/work/"
   },
   "backend": {
-    "imageid": "ubuntu1804"
+    "imageid": "ubuntu2004"
   }
 }
