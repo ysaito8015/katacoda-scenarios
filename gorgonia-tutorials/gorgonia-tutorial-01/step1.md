@@ -8,13 +8,13 @@ This scenario is running on ...
 
 ## Instraction
 
-After installing the Go files, you can execute commands at the terminal on the left window.
+After installing the Go files, you can execute commands at the terminal on the right.
 
 for example,
 
 `pwd; whoami; cat /etc/lsb-release; go version`{{execute}}
 
-When you click this mark at the end of `code line` &#x23CE;, `commands` are executed on the terminal on the right
+When you click this mark at the end of `code line` &#x23CE;, `commands` are executed on the terminal.
 
 ## VS Code
 
@@ -28,25 +28,25 @@ If you can only blank page after clicking VS Code tab, click the circle icon aft
 
 ## Before starting
 
-make a directory and `cd` to it
+make a directory and `cd` to it.
 
 `mkdir /work/gorgonia-getting-started && cd $_`{{execute}}
 
-then make a `go.mod` file
+then make a `go.mod` file.
 
 `go mod init gorgonia`{{execute}}
 
 ## Getting gorgonia
 
-Gorgonia is go-gettable and supports go modules. To get the library and its dependencies, simply run
+Gorgonia is go-gettable and supports go modules. To get the library and its dependencies, simply run.
 
 `go get gorgonia.org/gorgonia`{{execute}}
 
-It takes a while
+It takes a while.
 
 ## First script
 
-`main.go` as the code below
+`main.go` as the code below.
 
 <pre class="file" data-target="clipboard">
 package main
@@ -88,12 +88,12 @@ func main() {
 
 ## Run the code
 
-First, you have to run below
+First, you have to run below,
 
 `go mod tidy`{{execute}}
 
-then run script
+then run script.
 
 `go run ./main.go`{{execute}}
 
-We will get `4.5`
+We will get `4.5`.
