@@ -8,9 +8,13 @@ This scenario is running on ...
 
 ## Instraction
 
-`pwd; whoami; cat /etc/lsb-release`{{execute}}
+After installing the Go files, you can execute commands at the terminal on the left window.
 
-When you click this <img src='https://i.gyazo.com/b1360ae66c0324fa407acb121d67ad48.png' width=15px>, `commands` are executed on the terminal on the right
+for example,
+
+`pwd; whoami; cat /etc/lsb-release; go version`{{execute}}
+
+When you click this mark at the end of `code line` &#x23CE;, `commands` are executed on the terminal on the right
 
 ## VS Code
 
@@ -24,9 +28,13 @@ If you can only blank page after clicking VS Code tab, click the circle icon aft
 
 ## Before starting
 
-make a directory and change to the directory
+make a directory and `cd` to it
 
 `mkdir /work/gorgonia-getting-started && cd $_`{{execute}}
+
+then make a `go.mod` file
+
+`go mod init gorgonia`{{execute}}
 
 ## Getting gorgonia
 
