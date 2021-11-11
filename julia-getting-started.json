@@ -4,7 +4,7 @@
   "icon": "fa-katacoda",
   "courses": [
     {
-      "course_id": "01-julia-getting-started",
+      "course_id": "julia-getting-started-01",
       "title": "Julia のインストール",
       "description": "環境設定"
     }
