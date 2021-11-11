@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
-mkdir -p /work && cd /work
+export UID=1000
+export GID=1000
 
-docker pull datarefine/paper-r-dev:latest
+groupadd -g $GID devel
+useradd -u $UID -g devel -m devel
+echo "devel  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-docker run -it -e PASSWORD=password -p 8787:8787 -v ~:/home/rstudio -d --name name_of_container datarefine/paper-r-dev:latest
+mkdir -p /work && chown -R devel:devel /work
+
+su - devel && cd /work
+
+sudo docker pull datarefine/paper-r-dev:latest
+
+sudo docker run -it -e PASSWORD=password -p 8787:8787 -v /work:/work -d --name rstudio datarefine/paper-r-dev:latest
