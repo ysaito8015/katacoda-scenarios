@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir -p /work && chown -R packer:packer /work
 
-groupadd devel
-useradd -g devel -m devel
-echo "devel  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-
-mkdir -p /work && chown -R devel:devel /work
-
-su - devel && cd /work
+su - packer && cd /work
 
 sudo docker pull datarefine/paper-r-dev:latest
 
