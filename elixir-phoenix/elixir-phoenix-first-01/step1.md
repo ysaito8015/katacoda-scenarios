@@ -20,7 +20,7 @@ apt によるアップデートを行います
 
 `NVMURL=https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh`{{execute}}
 
-`wget --no-check-certificate $NVMURL | bash`{{execute}}
+`wget -qO- $NVMURL | bash`{{execute}}
 
 `source ~/.bashrc`{{execute}}
 
