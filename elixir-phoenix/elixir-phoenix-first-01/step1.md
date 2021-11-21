@@ -1,6 +1,6 @@
 ## 環境
 
-`cat /etc/lsb-release`{{execute}}
+`cat /etc/lsb-release; whoami; free -h`{{execute}}
 
 
 ## 構築
@@ -8,9 +8,7 @@
 ### アップデート
 apt によるアップデートを行います
 
-`apt update`{{execute}}
-
-`apt upgrade -y`{{execute}}
+`apt update && apt upgrade -y`{{execute}}
 
 ### Node.js インストール
 
