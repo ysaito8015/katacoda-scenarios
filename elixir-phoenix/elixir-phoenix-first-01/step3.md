@@ -16,13 +16,19 @@
 
 ### Elixir のインストール
 
-`kiex install 1.3.4`{{execute}}
+インストール可能な Elixir のバージョンを表示
+
+`kiex list known`{{execute}}
+
+インストール実行
+
+`kiex install 1.12.3`{{execute}}
 
 インストール後の表示
 
-![](https://i.gyazo.com/be87c3646d103dacccbf228981c1cdc7.png)
+![](https://i.gyazo.com/22da561779bd0db8383f67bdf3631286.png)
 
-`kiex use 1.3.4 --default`{{execute}}
+`kiex use 1.12.3 --default`{{execute}}
 
 ### Hex と rebar のインストール
 
@@ -36,17 +42,12 @@
 
 `mix hex.info`{{execute}}
 
-![](https://i.gyazo.com/01d6ab6c0f2a01df9bfe9a6b6d92aed3.png)
+![](https://i.gyazo.com/beee7e21d885447013cd4b16015270d7.png)
 
 ### Phoenix のインストール
 
-`TEMP=https://github.com/phoenixframework/archives/raw/master`{{execute}}
+`mix archive.install --force hex phx_new 1.4.11`{{execute}}
 
-`mix archive.install $TEMP/phoenix_new-1.2.5.ez --force`{{execute}}
+`mix phx.new -v`{{execute}}
 
-![](https://i.gyazo.com/444f880be6577aeba455008d3debe2fa.png)
-
-`mix phoenix.new -v`{{execute}}
-
-![](https://i.gyazo.com/02bfb9f9c69d5c26606d50897827e217.png)
 

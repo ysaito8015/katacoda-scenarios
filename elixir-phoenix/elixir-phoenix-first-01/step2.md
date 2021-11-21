@@ -12,35 +12,37 @@
 
 ###  Erlang/OTP のインストール
 
+Erlang/OTP のバージョンリストをアップデートします
+
+`kerl update releases`{{execute}}
+
 Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 `kerl list releases`{{execute}}
 
-バージョン 19.3 では, elixir のインストール時に, `uncaught error in rebar_core` が起こるので、書籍とは別のバージョンを指定しています
-
 バージョンを指定してインストールします
 
-`kerl build 20.3 20.3`{{execute}}
+`kerl build 24.1.6 24.1.6`{{execute}}
 
-書式 `kerl build [Erlang/OTP バージョン] [ラベル]`
+書式 `kerl build [Erlang/OTP バージョン] [任意の名前（ラベル）]`
 
 次のような表示が出れば Erlang/OTP のビルドに成功しています
 
-![](https://i.gyazo.com/b1d482e594b20d063e050babfbca073b.png)
+![](https://i.gyazo.com/acb79fd5888ae857b3b77b9da239284f.png)
 
 `kerl install 20.3 ~/erlang/20.3`{{execute}}
 
-書式 `kerl install [Erlang/OTP バージョン] [ラベル]`
+書式 `kerl install [ラベル] [インストール先ディレクトリ]`
 
 次のような表示が出れば Erlang/OTP のインストールに成功しています
 
-![](https://i.gyazo.com/eb82b091c90c53119e458b442022e7fd.png)
+![](https://i.gyazo.com/4388fa5f5bf698c42d592755aabfa85b.png)
 
 ### Erlang/OTP の有効化
 
 インストールしたバージョンを指定してアクティベート
 
-`source ~/erlang/20.3/activate`{{execute}}
+`source ~/erlang/24.1.6/activate`{{execute}}
 
 * デアクティベートの方法
 
@@ -48,4 +50,4 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 環境変数 `PATH` に追加します
 
-`echo 'export PATH="$HOME/erlang/21.3/bin:$PATH"' >> ~/.bashrc`{{execute}}
+`echo 'export PATH="$HOME/erlang/24.1.6/bin:$PATH"' >> ~/.bashrc`{{execute}}

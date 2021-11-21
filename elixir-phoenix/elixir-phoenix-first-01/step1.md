@@ -20,13 +20,9 @@ apt によるアップデートを行います
 
 `cd /tmp`{{execute}}
 
-`NVMURL=https://rawgit.com/creationix/nvm/v0.33.6/install.sh`{{execute}}
+`NVMURL=https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh`{{execute}}
 
-`wget --no-check-certificate $NVMURL`{{execute}}
-
-`bash ./install.sh`{{execute}}
-
-`rm -f ./install.sh`{{execute}}
+`wget --no-check-certificate $NVMURL | bash`{{execute}}
 
 `source ~/.bashrc`{{execute}}
 
@@ -36,7 +32,9 @@ nvm のバージョンを確認します
 
 Node.js をインストールします
 
-`nvm install 8.9`{{execute}}
+`nvm install --lts`{{execute}}
+
+`nvm use --lts`{{execute}}
 
 Node.js のバージョンを確認します
 
@@ -46,9 +44,7 @@ Erlang のインストールに必要なパッケージをインストールし�
 
 `apt install -y build-essential libncurses5-dev openssl libssl-dev`{{execute}}
 
-`apt install -y curl git-core`{{execute}}
-
-`apt install -y autoconf automake`{{execute}}
+`apt install -y curl git-core autoconf automake`{{execute}}
 
 ファイルイベント監視ツールをインストールしてください
 
