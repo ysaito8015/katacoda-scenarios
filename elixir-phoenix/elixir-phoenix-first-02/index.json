@@ -35,6 +35,6 @@
     "uieditorpath": "/root/oiax/elixir-primer/v01/ch03"
   },
   "backend": {
-    "imageid": "ubuntu1904"
+    "imageid": "ubuntu:2004"
   }
 }
