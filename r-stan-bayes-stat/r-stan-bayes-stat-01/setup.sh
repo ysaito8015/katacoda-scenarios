@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-mkdir -p /work && cd /work
+mkdir -p /work && chown -R packer:packer /work
 
-docker pull datarefine/paper-r-dev:latest
+su - packer && cd /work
 
-docker run -it -e PASSWORD=password -p 8787:8787 -v ~:/home/rstudio -d --name name_of_container datarefine/paper-r-dev:latest
+sudo docker pull datarefine/paper-r-dev:latest
+
+sudo docker run -it -e DISABLE_AUTH=true -p 8787:8787 -v /work:/home/rstudio/work -d --name rstudio datarefine/paper-r-dev:latest

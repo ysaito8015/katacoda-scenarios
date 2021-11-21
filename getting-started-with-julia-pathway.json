@@ -1,10 +1,10 @@
 {
-  "title": "Julia Getting Started",
+  "title": "Getting Started with Julia",
   "description": "1から始めるJulia を参考にシナリオを起こしました",
   "icon": "fa-katacoda",
   "courses": [
     {
-      "course_id": "01-julia-getting-started",
+      "course_id": "getting-started-with-julia-01",
       "title": "Julia のインストール",
       "description": "環境設定"
     }
