@@ -32,7 +32,7 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 次に、インストールを実行します
 
-`kerl install 20.3 ~/erlang/20.3`{{execute}}
+`kerl install 24.1.6 ~/erlang/24.1.6`{{execute}}
 
 書式 `kerl install [ラベル] [インストール先ディレクトリ]`
 
