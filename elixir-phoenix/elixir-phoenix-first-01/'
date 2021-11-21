@@ -50,13 +50,9 @@ Erlang/OTP のインストール可能なバージョン一覧を表示します
 
 `source ~/erlang/24.1.6/activate`{{execute}}
 
-環境変数 `PATH` に追加します
-
-`echo 'export PATH="$HOME/erlang/24.1.6/bin:$PATH"' >> ~/.bashrc`{{execute}}
-
 ### その他、有用なコマンド
 
-デアクティベートします
+デアクティベートの方法
 
 `kerl_deactivate`
 
@@ -68,8 +64,7 @@ kerl の状態を表示します
 
 `kerl status`{{execute}}
 
-使わないビルドを削除します
 
-`kerl delete build 24.1.6`
+環境変数 `PATH` に追加します
 
-`kerl delete installation ~/erlang/24.1.6`
+`echo 'export PATH="$HOME/erlang/24.1.6/bin:$PATH"' >> ~/.bashrc`{{execute}}

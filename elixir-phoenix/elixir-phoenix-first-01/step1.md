@@ -1,6 +1,6 @@
 ## 環境
 
-`ubuntu20.04` 
+`cat /etc/lsb-release`{{execute}}
 
 
 ## 構築
