@@ -21,7 +21,17 @@
       "text": "finish.md"
     }
   },
-  "environment": {},
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "VScode",
+        "port": 23000
+      }
+    ],
+    "showdashboards": true,
+    "uilayout": "terminal-iframe"
+  },
   "backend": {
     "imageid": "ubuntu:2004"
   }
