@@ -6,7 +6,7 @@ This scenario is running on ...
 
 `go 1.17.3`
 
-## Instraction
+## Instruction
 
 After installing the Go files, you can execute commands at the terminal on the right.
 
