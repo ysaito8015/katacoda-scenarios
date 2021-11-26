@@ -14,7 +14,7 @@ for example,
 
 `pwd; whoami; cat /etc/lsb-release; go version`{{execute}}
 
-When you click this mark at the end of `code line` &#x23CE;, `commands` are executed on the terminal.
+When you click this mark &#x23CE; at the end of code line, then  `commands` are executed on the terminal.
 
 ## VS Code
 
@@ -30,13 +30,13 @@ If you can only blank page after clicking VS Code tab, click the circle icon aft
 
 make a directory and `cd` to it.
 
-`mkdir /work/gorgonia-getting-started && cd $_`{{execute}}
+`mkdir /work/getting-started && cd $_`{{execute}}
 
 then make a `go.mod` file.
 
 `go mod init gorgonia`{{execute}}
 
-## Getting gorgonia
+## go get gorgonia
 
 Gorgonia is go-gettable and supports go modules. To get the library and its dependencies, simply run.
 
