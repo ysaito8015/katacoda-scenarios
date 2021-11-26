@@ -7,6 +7,11 @@
         "course_id": "gorgonia-tutorial-01",
         "title": "Getting started With Gorgonia",
         "description": "install and run first code"
+      },
+      {
+        "course_id": "gorgonia-tutorial-02",
+        "title": "Simple Comvolution Neural Net (MNIST)",
+        "description": "build and train a convolution neural network"
       }
     ]
 }
