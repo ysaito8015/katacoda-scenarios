@@ -19,8 +19,10 @@ GitHub 上では, Commit のリンクをクリックすることで, 過去の�
 
 <img src='https://i.gyazo.com/9fccfe72a8156d13ed81070fbe90ce03.png'>
 
+
 `git status`{{execute}}
 
+上記のコマンドで `master` ブランチにいることを確認します
 
 ### master のコミットログからまとめるコミットを検討する
 
@@ -34,6 +36,8 @@ GitHub 上では, Commit のリンクをクリックすることで, 過去の�
 
 <img src='https://i.gyazo.com/545f5897ce1d45279fad252509cf0891.png'>
 
+<img src='https://i.gyazo.com/bf7f06026e4604a577249055aac8e001.png'>
+
 `d989443`
 
 ### git rebase -i を実行する
@@ -42,7 +46,7 @@ GitHub 上では, Commit のリンクをクリックすることで, 過去の�
 
 ### どのコミットにまとめるのかを編集する
 
-<img src='https://i.gyazo.com/3bf787fe6e5e38e5f06bc3d992d7da02.png'>
+<img src='https://i.gyazo.com/5ddf9ffed41ccd9fff78924e1057a7fc.png'>
 
 - `pick` まとめるもととなるコミット指定
 - `s`, or `squash` コミットを pick コミットにまとめる指定
@@ -62,19 +66,21 @@ GitHub 上では, Commit のリンクをクリックすることで, 過去の�
 
 ### コミットメッセージを編集する
 
-<img src=''>
+<img src='https://i.gyazo.com/715bb54f8110b81b22647e9b6efa940d.png'>
 
 まとめたコミットのコミットメッセージがすべて表示されます
 
 ブランチ上にはそれぞれ残るので, 最後の 'finish translate' 以外は削除します
 
-`#` で始まる行は, コメントであり, コミットメッセージには影響しません
+`#` で始まる行は, コメントであり, コミットメッセージには影響しませんので, 編集の必要はありません
 
 ### git log で master のコミット状況を確認する
 
 <img src='https://i.gyazo.com/611b91e263cb772e1cb1f341a46cff8d.png'>
 
 まとめたコミットが一つになっていることを確認する
+
+`git log --oneline -n 3`{{execute}}
 
 `d989443` の ID のコミットの直後に 'finish translate' がメッセージとなるコミットが存在しています
 
