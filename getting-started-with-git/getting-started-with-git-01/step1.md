@@ -4,6 +4,9 @@
 
 `pwd; whoami; cat /etc/lsb-release`{{execute}}
 
+画面右にあるターミナルで, RStudio のインストール準備が進行しています.
+それが終わると
+
 コード片の最後にある &#x23CE; マークをクリックするとターミナルでコマンドが実行されます
 
 ## VSCode と RStudio
@@ -44,5 +47,7 @@ epiRhandbook_jp のリポジトリの自分の GitHub アカウントへ fork �
 (下記のコード片は, 末尾のアイコンをクリックするとクリップボードにコピーされます)
 
 `git clone git://github.com/{YOUR_ACCOUNT}/epiRhandbook_jp`{{copy}}
+
+`cd /work/epiRhandbook_jp`{{execute}}
 
 
