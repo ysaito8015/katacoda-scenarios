@@ -1,10 +1,12 @@
 {
-  "title": "git: getting started",
+  "title": "getting-started-with-git",
   "description": "",
   "icon": "fa-katacoda",
   "courses": [
+    {
       "course_id": "getting-started-with-git-01",
       "title": "git rebase -i によるコミットのまとめ",
       "description": "squash"
+    }
   ]
 }
