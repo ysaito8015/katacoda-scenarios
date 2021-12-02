@@ -46,6 +46,11 @@
         "id": "webpack-tutorials"
       },
       {
+        "title": "git 入門",
+        "description": "git の操作をまとめたチュートリアル",
+        "id": "getting-started-with-git"
+      },
+      {
         "title": "Gorgonia tutorial",
         "description": "",
         "id": "gorgonia-tutorials"
