@@ -4,7 +4,7 @@ This scenario is running on ...
 
 `Ubuntu 20.04`
 
-`go 1.17.3`
+`go 1.17.5`
 
 ## Instruction
 
