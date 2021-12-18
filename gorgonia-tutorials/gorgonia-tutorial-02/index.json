@@ -12,12 +12,12 @@
       },
       {
         "title": "Step 2",
-        "text": "step2.md",
-        "code": "setup.sh"
+        "text": "step2.md"
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
