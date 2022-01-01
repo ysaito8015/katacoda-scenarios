@@ -21,15 +21,16 @@ library(ggplot2)
 library(tidyverse)
 </pre>
 
+関数を実行する場合は, 実行する範囲を選択して Ctrl + &#9166; もしくは, 画像のアイコンをクリックします
+
+<img src='https://i.gyazo.com/02e650725f1abc075314016b5d20220c.png' width='400'>
+
+
 ## CSV ファイルからデータの読み込み
 
 <pre class="file" data-target="clipboard">
 data <- read_csv("./sample.csv")
 </pre>
-
-関数を実行する場合は, 実行する範囲を選択して Ctrl + &#9166; もしくは, 画像のアイコンをクリックします
-
-<img src='https://i.gyazo.com/02e650725f1abc075314016b5d20220c.png' width='400'>
 
 ## サンプルデータの Sex 列の描画
 
