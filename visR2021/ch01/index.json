@@ -4,6 +4,14 @@
   "difficulty": "Beginner",
   "time": "30 minutes",
   "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "sample.csv",
+          "target": "/work"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Step 1",
@@ -31,7 +39,7 @@
       }
     ],
     "uilayout": "terminal-iframe",
-    "uieditorpath": "/work/sample"
+    "uieditorpath": "/work"
   },
   "backend": {
     "imageid": "ubuntu:2004"
