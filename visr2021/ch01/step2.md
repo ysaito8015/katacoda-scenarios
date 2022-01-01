@@ -1,18 +1,28 @@
+## Source ペインと R Script
+
+File > New File > R Script をクリックし, 新規にスクリプトファイルを作成します
+
+同時に Scource ペインが表示されます
+
+ここに R の関数を記入し, 実行していきます
+
+<img src='https://i.gyazo.com/d2ad27119c6d7ad8c75b71821666901c.png' width='400'>
+
+## ライブラリの読み込み
+
+<pre class="file" data-target="clipboard">
+library(c(ggplot2, tidyverse))
+</pre>
+
 ## CSV ファイルからデータの読み込み
 
 <pre class="file" data-target="clipboard">
 data <- read_csv("./sample.csv")
 </pre>
 
-入力カーソルのある行の関数を実行する場合は, Ctrl + &#9166; もしくは, 画像のアイコンをクリックします
+関数を実行する場合は, 実行する範囲を選択して Ctrl + &#9166; もしくは, 画像のアイコンをクリックします
 
-<img src='' width=''>
-
-## グラフ描画ライブラリの読み込み
-
-<pre class="file" data-target="clipboard">
-library(ggplot2)
-</pre>
+<img src='https://i.gyazo.com/02e650725f1abc075314016b5d20220c.png' width='400'>
 
 ## サンプルデータの Sex 列の描画
 
