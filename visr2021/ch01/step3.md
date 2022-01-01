@@ -21,7 +21,7 @@ ggplot(table_pi_sex) +
   geom_bar(stat = "identity", width = 1, color = "black") +
   coord_polar("y") +
   theme_void() +
-  scale_fill_manual_values = c("#d3d3d3", "#000000")) +
+  scale_fill_manual(values = c("#d3d3d3", "#000000")) +
   guides(fill = guide_legend(reverse = TRUE)) +
   labs(fill = "Sex")
 </pre>
