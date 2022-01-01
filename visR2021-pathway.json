@@ -1,5 +1,11 @@
 {
   "title": "visR2021",
   "description": "R でできるビジュアル統計学のコードをもとにしたコースです",
-  "courses": []
+  "courses": [
+    {
+      "course_id": "ch01",
+      "title": "質的な変量・一変量",
+      "description": "独立した質的変数の描画を扱います"
+    }
+  ]
 }
