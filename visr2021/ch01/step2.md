@@ -10,6 +10,12 @@ File > New File > R Script をクリックし, 新規にスクリプトファイ
 
 ## ライブラリの読み込み
 
+各コードには, クリップボードにコピーするボタンがあります
+
+このボタンをクリックすることで, Source ペインへの貼付けが楽になります
+
+<img src='https://i.gyazo.com/a6de1ef76d72463259719790522b91c2.png' width='400'>
+
 <pre class="file" data-target="clipboard">
 library(c(ggplot2, tidyverse))
 </pre>
