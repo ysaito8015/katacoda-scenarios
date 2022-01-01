@@ -1,0 +1,39 @@
+{
+  "title": "質的な変量・一変量",
+  "description": "独立した質的変数の描画を扱います",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "R Server",
+        "port": 8787 
+      }
+    ],
+    "uilayout": "terminal-iframe",
+    "uieditorpath": "/work/sample"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

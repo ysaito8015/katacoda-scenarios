@@ -26,6 +26,11 @@
         "id": "r-stan-bayes-stat"
       },
       {
+        "title": "R でできるビジュアル統計学",
+        "description": "表題書籍に基づいたシナリオ集",
+        "id": "visR2021"
+      },
+      {
         "title": "Julia walkthrough",
         "description": "'Julia高速チュートリアル'に基づいたシナリオ集",
         "id": "julia-walkthrough"
