@@ -17,7 +17,8 @@ File > New File > R Script をクリックし, 新規にスクリプトファイ
 <img src='https://i.gyazo.com/a6de1ef76d72463259719790522b91c2.png' width='400'>
 
 <pre class="file" data-target="clipboard">
-library(c(ggplot2, tidyverse))
+library(ggplot2)
+library(tidyverse)
 </pre>
 
 ## CSV ファイルからデータの読み込み
