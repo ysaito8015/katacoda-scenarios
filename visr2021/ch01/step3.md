@@ -12,6 +12,8 @@ data %>%
 table_pi_sex
 </pre>
 
+<img src='https://i.gyazo.com/359ad004d820ad65b8541c97238266a2.png' width='400'>
+
 
 ## 円グラフの描画
 
