@@ -57,5 +57,5 @@ ggplot(table_sb_age10_sleep) +
   scale_fill_brewer(palette = "Greys") +
   theme_classic() +
   labs(y = "count") +
-  guides(fill = guilde_legent(reverse = TRUE))
+  guides(fill = guide_legend(reverse = TRUE))
 </pre>
