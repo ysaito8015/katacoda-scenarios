@@ -37,7 +37,7 @@ data <- read_csv("./sample.csv")
 ## 描画用のデータセットの作成
 
 <pre class="file" data-target="clipboard">
-Obese <- which(data#Obese == 1)
+Obese <- which(data$Obese == 1)
 Hyperglycemia <- which(data$Hyperglycemia == 1)
 Hypertension <- which(data$Hypertension == 1)
 
@@ -45,18 +45,19 @@ list <- list(
   Obese = Obese,
   Hypertension = Hypertension,
   Hyperglycemia = Hyperglycemia
+)
 </pre>
 
 ## データセットの確認
 
 <pre class="file" data-target="clipboard">
-print(table_sb_age10_sleep)
+print(list)
 </pre>
 
 ## データセットの描画
 <pre class="file" data-target="clipboard">
 venn.diagram(
   list, cex = 1.5, fill = c(1, 1, 1), alpha = 0.3,
-  filename = "venn.jpg", main = "TOtal n = 200, None: 47.5%",
+  filename = "venn.jpg", main = "Total n = 200, None: 47.5%",
   fontfamily = "sans", main.fontfamily = "sans", cat.fontfamily = "sans")
 </pre>
