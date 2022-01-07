@@ -6,22 +6,20 @@ data %>%
   count(Drug_2010, Drug_2015) %>%
   rename(source = Drug_2010,
          target = Drug_2015) %>%
-  mutate(ID_source = c(rep(c(0, 1, 2, 3,), each = 2), 4),
-         ID_target = c(5, 6, 6, 7, 7, 8, 8, 9, 9))
-  -> table_sankey1
+  mutate(ID_source = c(rep(c(0, 1, 2, 3), each = 2), 4),
+         ID_target = c(5, 6, 6, 7, 7, 8, 8, 9, 9)) -> table_sankey1
 
 
 data %>%
   count(Drug_2015, Drug_2020) %>%
   rename(source = Drug_2015,
-         target = Drug_20210) %>%
+         target = Drug_2020) %>%
   mutate(ID_source = c(rep(c(5, 6, 7, 8), each = 2), 9),
-         ID_target = c(10, 11, 11, 12, 12, 13, 13, 14, 14))
-  -> table_sankey2
+         ID_target = c(10, 11, 11, 12, 12, 13, 13, 14, 14)) -> table_sankey2
 
 
 table_sankey <- data.frame(rbind(table_sankey1, table_sankey2))
-table_sankey$n <- as.nummeric(table_sankey$n)
+table_sankey$n <- as.numeric(table_sankey$n)
 </pre>
 
 ### データの表示
@@ -40,6 +38,6 @@ sankeyNetwork(
   Source = "ID_source", Target = "ID_target",
   Value = "n", NodeID = "name",
   colourScale = my_color, fontSize = 20,
-  sinksRight = False
+  sinksRight = FALSE
 )
 </pre>
