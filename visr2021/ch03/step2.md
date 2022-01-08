@@ -56,6 +56,7 @@ print(list)
 
 ## データセットの描画
 <pre class="file" data-target="clipboard">
+grid.newpage() # プロットペインのクリア
 tmp <- venn.diagram(
   list, cex = 1.5, fill = c(1, 1, 1), alpha = 0.3,
   filename = NULL, main = "Total n = 200, None: 47.5%",
