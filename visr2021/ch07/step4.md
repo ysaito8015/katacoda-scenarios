@@ -55,7 +55,7 @@ radarchart(
 
 legend(
   x = 0.7,
-  y = 1,25,
+  y = 1.25,
   legend = rownames(table_radar1[-c(1, 2), ]),
   bty = "n",
   pch = 20,
