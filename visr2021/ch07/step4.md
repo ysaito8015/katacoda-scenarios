@@ -2,7 +2,7 @@
 
 <pre class="file" data-target="clipboard">
 data %>%
-  mutate_at(vars(Gene_A:Gene_E), funs(scale(.))) %>%
+  mutate_at(vars(Gene_A:Gene_E), list(~scale(.))) %>%
   group_by(Smoking) %>%
   summarise_at(vars(Gene_A:Gene_E), list(~median(., na.rm = TRUE))) %>%
   column_to_rownames("Smoking") -> table_radar1
