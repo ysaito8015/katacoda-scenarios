@@ -48,7 +48,7 @@ ggplot(data) +
   aes(x = "", y = Age) +
   stat_boxplot(geom = "errorbar", width = 0.3) +
   geom_boxplot(fill = "grey") +
-  geom_boxplot(color = "black", size = 1.5, width = 0.2) +
+  geom_boxjitter(color = "black", size = 1.5, width = 0.2) +
   theme_classic() +
   labs(x = "", y = "SBP (mmHg)") +
   scale_y_continuous(limits = c(50, 200))

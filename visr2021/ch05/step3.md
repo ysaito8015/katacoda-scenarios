@@ -13,8 +13,8 @@ ggplot(data) +
 <pre class="file" data-target="clipboard">
 ggplot(data) +
   aes(x = TG) +
-  geom_density(fill = "grey", colot = "black") +
-  labs(x = "TG (mg/dl)", y = "densityr')
+  geom_density(fill = "grey", color = "black") +
+  labs(x = "TG (mg/dl)", y = "densityr")
 </pre>
 
 ## リッジラインプロットの描画
@@ -24,7 +24,7 @@ library(ggridges)
 
 ggplot(data) +
   aes(x = SBP, y = Smoking, fill = Smoking) +
-  geom_densityr_ridges(color = "black") +
+  geom_density_ridges(color = "black") +
   scale_fill_brewer(palette = "Greys", direction = -1) +
   labs(x = "SBP (mmHg)", y = "Smoking") +
   guides(fill = guide_legend(reverse =TRUE))

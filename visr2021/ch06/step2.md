@@ -43,8 +43,8 @@ ggplot(data) +
 
 ggplot(data) +
   aes(x = HDLC, y = Cre, fill = Sex) +
-  geom_pont(size = 3, shape - 21) +
+  geom_point(size = 3, shape = 21) +
   theme_classic() +
-  labs( x = HDL-C (mg/dl)", y = "Cre (mg/dl)") +
-  scale_fil_manual(values = c("grey", "black"))
+  labs( x = "HDL-C (mg/dl)", y = "Cre (mg/dl)") +
+  scale_fill_manual(values = c("grey", "black"))
 </pre>

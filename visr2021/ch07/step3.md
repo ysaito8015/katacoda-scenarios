@@ -40,16 +40,3 @@ heatmap.2(
   col - WB20
 )
 </pre>
-
-## 面グラフの描画
-
-<pre class="file" data-target="clipboard">
-ggplot(table) +
-  aes(x = Month, y = SBP_m, group = 1) +
-  geom_area(fill = "black", alpha = 0.3) +
-  geom_line(size = 1.2) +
-  geom_point(seize = 4) +
-  theme_classic() +
-  labs(y = "mean_SBP")
-</pre>
-

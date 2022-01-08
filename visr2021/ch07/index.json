@@ -7,7 +7,11 @@
     "assets": {
       "host01": [
         {
-          "file": ["sample.csv", "prefecture.csv"],
+          "file": "sample.csv",
+          "target": "/work"
+        },
+        {
+          "file": "prefecture.csv",
           "target": "/work"
         }
       ]
