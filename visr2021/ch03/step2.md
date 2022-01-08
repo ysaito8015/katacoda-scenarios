@@ -56,8 +56,9 @@ print(list)
 
 ## データセットの描画
 <pre class="file" data-target="clipboard">
-venn.diagram(
+tmp <- venn.diagram(
   list, cex = 1.5, fill = c(1, 1, 1), alpha = 0.3,
-  filename = "venn.jpg", main = "Total n = 200, None: 47.5%",
+  filename = NULL, main = "Total n = 200, None: 47.5%",
   fontfamily = "sans", main.fontfamily = "sans", cat.fontfamily = "sans")
+grid.draw(tmp)
 </pre>
