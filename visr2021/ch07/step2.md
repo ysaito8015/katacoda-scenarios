@@ -30,6 +30,7 @@ library(tidyverse)
 
 <pre class="file" data-target="clipboard">
 pref <- read_csv("./prefecture.csv")
+data <- read_csv("./sample.csv")
 </pre>
 
 
@@ -38,7 +39,7 @@ pref <- read_csv("./prefecture.csv")
 ggplot(pref) +
   aes(x = income_pop, y = mortality_ncds_pop, size = density) +
   geom_point(alpha = 0.5) +
-  scale_sieze_continuous(range = c(0.1, 10), name = "density (/km2)") +
+  scale_size_continuous(range = c(0.1, 10), name = "density (/km2)") +
   theme_classic() +
   labs(x = "Income per capita (yen)", y = "Mortality rate of NCDs (/1M)")
 </pre>

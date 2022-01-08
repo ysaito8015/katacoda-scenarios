@@ -37,7 +37,7 @@ Create New Project の画面で, 下記のように入力し, Create Project を
 ## 使用するデータの準備
 `sample.csv` を準備します
 
-`mv /work/sample.csv /work/visR2021/`{{execute}}
+`mv /work/prefecture.csv /work/visR2021/ && mv /work/sample.csv /work/visR2021/`{{execute}}
 
 上記のコマンドの最後に表示されている &#x23CE; アイコンをクリックすると自動的にコマンドが実行されます
 

@@ -6,7 +6,7 @@ set.seed(20210306)
 data %>%
   select(ID, Gene_A:Gene_E) %>%
   sample_n(50) %>%
-  mutate_at(vars(Gene_A:Gene_E), func(scale(.))) %>%
+  mutate_at(vars(Gene_A:Gene_E), list(~scale(.))) %>%
   column_to_rownames("ID") %>%
   as.matrix() -> data_heatmap_base
 </pre>
@@ -36,7 +36,7 @@ heatmap.2(
   rowsep = c(1:50),
   sepcolor = "Grey",
   sepwidth = c(0.001, 0.05),
-  trace = "nane",
-  col - WB20
+  trace = "none",
+  col = WB20
 )
 </pre>

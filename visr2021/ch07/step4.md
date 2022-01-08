@@ -4,7 +4,7 @@
 data %>%
   mutate_at(vars(Gene_A:Gene_E), funs(scale(.))) %>%
   group_by(Smoking) %>%
-  summarise_at(vars(Gene_A:Gene_E), func(median(., na.rm = TRUE))) %>%
+  summarise_at(vars(Gene_A:Gene_E), list(~median(., na.rm = TRUE))) %>%
   column_to_rownames("Smoking") -> table_radar1
 
 table_radar1 <- rbind(rep(4, 5), rep(-4, 5), table_radar1)
@@ -16,7 +16,7 @@ table_radar1 <- rbind(rep(4, 5), rep(-4, 5), table_radar1)
 head(table_radar1)
 </pre>
 
-## レーダーチャートの描画
+## レーダーチャートの描画の準備
 
 <pre class="file" data-target="clipboard">
 colors_border = c(
@@ -30,13 +30,17 @@ colors_in = c(
   rgb(0.5, 0.5, 0.5, 0.6),
   rgb(0.9, 0.9, 0.9, 0.6)
 )
+</pre>
 
+## レーダーチャートの描画
+
+<pre class="file" data-target="clipboard">
 library(fmsb)
 
 radarchart(
   table_radar1,
   axistype = 1,
-  centerzeto = TRUE,
+  centerzero = TRUE,
   pcol = colors_border,
   pfcol = colors_in,
   plwd = 2.5,
