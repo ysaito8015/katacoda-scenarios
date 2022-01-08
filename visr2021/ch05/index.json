@@ -1,0 +1,51 @@
+{
+  "title": "量的な変数・一変量",
+  "description": "一つの量的なデータを扱う場合の基本的なグラフを扱います。",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "sample.csv",
+          "target": "/work"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "R Server",
+        "port": 8787 
+      }
+    ],
+    "uilayout": "terminal-iframe",
+    "uieditorpath": "/work"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
