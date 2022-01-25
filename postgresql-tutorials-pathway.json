@@ -1,0 +1,11 @@
+{
+  "title": "postgresql-tututorials",
+  "description": "postgreSQL tutorials",
+  "courses": [
+    {
+      "course_id": "01_basics",
+      "title": "postgreSQL Basics",
+      "description": "postgreSQL Basics"
+    }
+  ]
+}
