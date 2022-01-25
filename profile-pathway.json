@@ -21,6 +21,11 @@
         "id": "elixir-phoenix"
       },
       {
+        "title": "PostgreSQL Tutorials",
+        "description": "PostgreSQL Tutorials",
+        "id": "postgresql-tutorials"
+      },
+      {
         "title": "R と Stan ではじめる ベイズ統計モデリングによるデータ分析入門",
         "description": "表題書籍に基づいたシナリオ集",
         "id": "r-stan-bayes-stat"
