@@ -18,4 +18,15 @@
 
 ### Get Tutorial Source
 
-`wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{ececute}}
+`mkdir /work && ch $_`{{execute}}
+
+`wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{execute}}
+
+`tar axvg ./postgresql-14.1.tar.gz`{{execute}}
+
+`apt install postgresql-server-dev-14`{{execute}}
+
+`cd ./postgresql-14.1/src/tutorial`{{execute}}
+
+`make`{{execute}}
+
