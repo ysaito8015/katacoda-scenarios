@@ -15,3 +15,7 @@
 `apt install porstgresql-common`
 
 `sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh`
+
+### Get Tutorial Source
+
+`wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{ececute}}
