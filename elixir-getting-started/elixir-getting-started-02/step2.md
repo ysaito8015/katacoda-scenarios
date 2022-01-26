@@ -4,7 +4,7 @@ iex を起動している場合は, `CTRL C` を２回押して iex を終了し
 
 Web で表示するために Phoenix をインストールします
 
-`mix archive.install hex phx_new`{{execute}}
+`mix archive.install hex phx_new 1.5`{{execute}}
 
 `mix local.rebar --force`{{execute}}
 
