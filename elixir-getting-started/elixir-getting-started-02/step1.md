@@ -2,9 +2,9 @@
 
 このコースが始まると, Elixir 実行環境が構築され始めます
 
-katacoda 環境: `ubuntu1904`
+katacoda 環境: `ubuntu:2004`
 
-Elixir 実行環境 docker `elixir:1.9.1'
+Elixir 実行環境 docker `elixir:1.13.2'
 
 `pwd; whoami; cat /etc/debian_version`{{execute}}
 
