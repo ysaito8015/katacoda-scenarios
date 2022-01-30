@@ -1,4 +1,8 @@
-## install PostgreSQL to Ubuntu
+## 実行環境
+
+`pwd; whoami; cat /etc/lsb-release `{{execute}}
+
+## PostgreSQL サーバを Ubuntu にインストールする
 
 `apt install curl ca-certificates gnupg`{{execute}}
 
@@ -10,13 +14,13 @@
 
 `apt install postgresql-14`{{execute}}
 
-### Alternately Install
+### その他のインストール方法
 
 `apt install porstgresql-common`
 
 `sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh`
 
-### Get Tutorial Source
+### PostgreSQL に付属するチュートリアルの取得
 
 `mkdir /work && ch $_`{{execute}}
 
