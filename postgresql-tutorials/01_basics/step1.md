@@ -22,7 +22,7 @@
 
 ### PostgreSQL に付属するチュートリアルの取得
 
-`mkdir /work && cd $_`{{execute}}
+`cd /work`{{execute}}
 
 `wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{execute}}
 
