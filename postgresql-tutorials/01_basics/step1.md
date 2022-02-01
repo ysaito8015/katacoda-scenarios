@@ -28,7 +28,7 @@
 
 `tar axvg ./postgresql-14.1.tar.gz`{{execute}}
 
-`apt install postgresql-server-dev-14`{{execute}}
+`apt install -y postgresql-server-dev-14`{{execute}}
 
 `cd ./postgresql-14.1/src/tutorial`{{execute}}
 
