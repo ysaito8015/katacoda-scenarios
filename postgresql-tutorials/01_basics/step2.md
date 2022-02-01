@@ -15,3 +15,15 @@
 ## データベースデータの取り込み
 
 `pg_restore -U postgres -d dvdrental /work/dvdrental.tar`{{execute}}
+
+## 一般ユーザの作成
+
+`su - postgres`{{execute}}
+
+`psql -d dvdrental`{{execute}}
+
+`CREATE USER pi WITH PASSWORD 'raspberry';`{{execute}}
+
+`GRANT ALL PRIVILEGES ON DATABASE dvdrental TO packer;`{{execute}}
+
+`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA 'public' TO packer;`{{execute}}
