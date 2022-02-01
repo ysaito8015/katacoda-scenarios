@@ -26,7 +26,7 @@
 
 `wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{execute}}
 
-`tar axvg ./postgresql-14.1.tar.gz`{{execute}}
+`tar axvf ./postgresql-14.1.tar.gz`{{execute}}
 
 `apt install -y postgresql-server-dev-14`{{execute}}
 
