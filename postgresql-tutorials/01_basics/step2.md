@@ -26,3 +26,9 @@
 `GRANT ALL PRIVILEGES ON DATABASE dvdrental TO packer;`{{execute}}
 
 `GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO packer;`{{execute}}
+
+- postgres ユーザから exit する
+
+`\q`{{execute}}
+
+`exit`{{execute}}
