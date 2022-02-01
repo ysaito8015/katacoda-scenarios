@@ -12,7 +12,7 @@
 
 `apt update`{{execute}}
 
-`apt install postgresql-14`{{execute}}
+`apt install -y postgresql-14`{{execute}}
 
 ### その他のインストール方法
 
@@ -22,7 +22,7 @@
 
 ### PostgreSQL に付属するチュートリアルの取得
 
-`mkdir /work && ch $_`{{execute}}
+`mkdir /work && cd $_`{{execute}}
 
 `wget https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.gz`{{execute}}
 

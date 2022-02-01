@@ -6,23 +6,20 @@
 
 `SELECT first_name FROM customer;`{{execute}}
 
-<pre>
-SELECT
+
+`SELECT
   first_name,
   last_name,
   email
 FROM
-  customer;
-</pre>
+  customer;`{{execute}}
 
 `SELECT * FROM customer;`{{execute}}
 
-<pre>
-SELECT
+`SELECT
   first_name || ' ' || last_name,
   email
 FROM
-  customer;
-</pre>
+  customer;`{{execute}}
 
 `SELECT 5 * 3;`{{execute}}
