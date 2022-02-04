@@ -1,34 +1,22 @@
-## DB Admin へのユーザ変更
+## Where 句
 
-`su - postgres`{{execute}}
+- "FROM" -> "WHERE" -> "SELECT" -> "ORDER BY"
 
-## psql の実行
 
-`psql`{{execute}}
+| 演算子     | 詳細                                                           |
+| :--------: | :------------------------------------------------------------- |
+| =          | 等しい                                                         |
+| >          | より大きい                                                     |
+| <          | 未満                                                           |
+| >=         | 以上                                                           |
+| <=         | 以下                                                           |
+| <> , !=    | と等しくない                                                   |
+| AND        | 論理演算子としての AND                                         |
+| OR         | 論理演算子としての OR                                          |
+| IN         | 与えられた値がリストにある場合に true を返す                   |
+| BETWEEN    | 与えられた値が, 指定した値と値の間にある場合に true を返す     |
+| LIKE       | 与えられた値が, 指定したパターンにマッチした場合に true を返す |
+| IS NULL    | 与えられた値が, NULL の場合に true を返す                      |
+| NOT        | 他の演算子の結果を否定する                                     |
 
-## データベースの作成
 
-`CREATE DATABASE dvdrental;`{{execute}}
-
-`\q`{{execute}}
-
-## データベースデータの取り込み
-
-`pg_restore -U postgres -d dvdrental /work/dvdrental.tar`{{execute}}
-
-## 一般ユーザの作成
-- postgres ユーザのままである前提
-
-`psql -d dvdrental`{{execute}}
-
-`CREATE USER packer WITH PASSWORD 'packer';`{{execute}}
-
-`GRANT ALL PRIVILEGES ON DATABASE dvdrental TO packer;`{{execute}}
-
-`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO packer;`{{execute}}
-
-- postgres ユーザから exit する
-
-`\q`{{execute}}
-
-`exit`{{execute}}
