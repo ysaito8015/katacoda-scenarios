@@ -16,7 +16,7 @@
 
 ### その他のインストール方法
 
-`apt install porstgresql-common`
+`apt install postgresql-common`
 
 `sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh`
 
