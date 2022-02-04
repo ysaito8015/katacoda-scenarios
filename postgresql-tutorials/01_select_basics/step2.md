@@ -2,15 +2,9 @@
 
 `su - postgres`{{execute}}
 
-## psql の実行
-
-`psql`{{execute}}
-
 ## データベースの作成
 
-`CREATE DATABASE dvdrental;`{{execute}}
-
-`\q`{{execute}}
+`createdb dvdrental;`{{execute}}
 
 ## データベースデータの取り込み
 
@@ -32,3 +26,11 @@
 `\q`{{execute}}
 
 `exit`{{execute}}
+
+## 一般ユーザで接続
+- 一般ユーザに切り替える
+
+`su - packer`{{execute}}
+
+`psql -d dvdrental`{{execute}}
+
