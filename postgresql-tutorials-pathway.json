@@ -3,7 +3,12 @@
   "description": "postgreSQL tutorials",
   "courses": [
     {
-      "course_id": "01_basics",
+      "course_id": "01_select_basics",
+      "title": "postgreSQL Basics",
+      "description": "postgreSQL Basics"
+    },
+    {
+      "course_id": "02_where",
       "title": "postgreSQL Basics",
       "description": "postgreSQL Basics"
     }
