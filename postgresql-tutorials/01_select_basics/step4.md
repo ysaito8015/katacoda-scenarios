@@ -1,4 +1,4 @@
-## Column Aliases
+## 列に別名をつける
 
 `
 SELECT

@@ -24,22 +24,11 @@
       {
         "title": "Step 5",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6",
-        "text": "step6.md"
-      },
-      {
-        "title": "Step 7",
-        "text": "step7.md"
-      },
-      {
-        "title": "Step 8",
-        "text": "step8.md"
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -48,6 +37,10 @@
       "host01": [
         {
           "file": "dvdrental.tar",
+          "target": "/work"
+        },
+        {
+          "file": "create_user.sql",
           "target": "/work"
         }
       ]

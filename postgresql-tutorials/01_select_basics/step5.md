@@ -1,4 +1,5 @@
 ## ORDER BY による並べ替え
+- 昇順
 
 `
 SELECT
@@ -19,6 +20,8 @@ FROM
 ORDER BY
   first_name;
 `{{execute}}
+
+- 降順
 
 `
 SELECT

@@ -4,7 +4,7 @@
 
 ## PostgreSQL サーバを Ubuntu にインストールする
 
-`apt install curl ca-certificates gnupg`{{execute}}
+`apt install -y curl ca-certificates gnupg`{{execute}}
 
 `curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg > /dev/null`{{execute}}
 
@@ -16,7 +16,7 @@
 
 ### その他のインストール方法
 
-`apt install porstgresql-common`
+`apt install postgresql-common`
 
 `sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh`
 
