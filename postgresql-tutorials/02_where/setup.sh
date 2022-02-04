@@ -8,6 +8,7 @@ command1() {
 
 command2() {
 	su - postgres
+	sleep 10
 	createdb dvdrental
 	pg_restore -U postgres -d dvdrental /work/dvdrental.tar
 	psql < /work/create_user.sql
