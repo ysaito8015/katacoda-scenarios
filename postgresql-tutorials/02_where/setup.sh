@@ -11,7 +11,6 @@ command2() {
 	su - postgres << EOF
 createdb dvdrental
 pg_restore -U postgres -d dvdrental /work/dvdrental.tar
-psql < /work/create_user.sql
 EOF
 }
 
