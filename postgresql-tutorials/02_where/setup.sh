@@ -8,9 +8,11 @@ command1() {
 }
 
 command2() {
-	su - postgres -c createdb dvdrental
-	su - postgres -c pg_restore -U postgres -d dvdrental /work/dvdrental.tar
-	su - postgres -c psql < /work/create_user.sql
+	su - postgres << EOF
+createdb dvdrental
+pg_restore -U postgres -d dvdrental /work/dvdrental.tar
+psql < /work/create_user.sql
+EOF
 }
 
 command1 && command2
