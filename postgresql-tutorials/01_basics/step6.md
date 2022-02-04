@@ -1,4 +1,5 @@
 ## DISTINCT を使った SELECT
+- 重複した行をひとつにまとめる
 
 `
  CREATE TABLE distinct_demo (
