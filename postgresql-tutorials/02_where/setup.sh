@@ -13,5 +13,4 @@ command2() {
 	psql < /work/create_user.sql
 }
 
-command1 &
-command2 &
+command1 && command2
