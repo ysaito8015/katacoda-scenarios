@@ -1,27 +1,43 @@
-## 一般ユーザで接続
-- 一般ユーザに切り替える
+## LIMIT clause
 
-`su - packer`{{execute}}
+### LIMIT で行を制限する例
 
-`psql -d dvdrental`{{execute}}
-
-## SELECT コマンド
-
-`SELECT first_name FROM customer;`{{execute}}
-
-`SELECT
-  first_name,
-  last_name,
-  email
+`
+SELECT
+  film_id,
+  title,
+  release_year
 FROM
-  customer;`{{execute}}
+  film
+ORDER BY
+  film_id
+LIMIT 5;
+`{{execute}}
 
-`SELECT * FROM customer;`{{execute}}
+### LIMIT と OFFSET で行を制限しかつずらして表示する例
 
-`SELECT
-  first_name || ' ' || last_name,
-  email
+`
+SELECT
+  film_id,
+  title,
+  release_year
 FROM
-  customer;`{{execute}}
+  film
+ORDER BY
+  film_id
+LIMIT 4 OFFSET 3;
+`{{execute}}
 
-`SELECT 5 * 3;`{{execute}}
+### LIMIT と ORDER BY を利用してトップ１０を表示する
+
+`
+SELECT
+  film_id,
+  title,
+  rental_rate
+FROM
+  film
+ORDER BY
+  rental_rate DESC
+LIMIT 10;
+`{{execute}}
