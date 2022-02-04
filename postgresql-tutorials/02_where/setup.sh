@@ -6,11 +6,12 @@ command1() {
 	apt update && apt install -y postgresql-14
 }
 
+command2() {
+	su - postgres
+	createdb dvdrental
+	pg_restore -U postgres -d dvdrental /work/dvdrental.tar
+	psql < /work/create_user.sql
+}
+
 command1 &
-PID=$!
-wait $PID
-su - postgres
-createdb dvdrental
-pg_restore -U postgres -d dvdrental /work/dvdrental.tar
-psql < /work/create_user.sql
-su - packer
+command2 &
