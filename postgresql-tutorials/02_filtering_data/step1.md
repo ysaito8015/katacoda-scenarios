@@ -9,9 +9,7 @@
 
 `su - postgres`{{execute}}
 
-`psql < /work/creat_user.sql`{{execute}}
-
-`\q`{{execute}}
+`psql < /work/create_user.sql`{{execute}}
 
 `exit`{{execute}}
 
