@@ -9,7 +9,15 @@
 
 `su - postgres`{{execute}}
 
-`psql < /work/create_user.sql`{{execute}}
+`psql`{{execute}}
+
+`CREATE USER packer WITH PASSWORD 'packer';`{{execute}}
+
+`GRANT ALL PRIVILEGES ON DATABASE dvdrental TO packer;`{{execute}}
+
+`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO packer;`{{execute}}
+
+`\q`{{execute}}
 
 `exit`{{execute}}
 
